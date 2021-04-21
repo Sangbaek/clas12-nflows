@@ -143,6 +143,7 @@ plt.hist2d(x[:,0], x[:,1],bins =bin_size,norm=mpl.colors.LogNorm())# cmap = plt.
 plt.xlim([1,6.5])
 plt.ylim([0.2,1.1])
 plt.colorbar()
+plt.savefig("raw_distribution_01.pdf")
 
 fig, ax = plt.subplots(figsize =(10, 7)) 
 plt.rcParams["font.size"] = "16"
@@ -153,7 +154,7 @@ plt.hist2d(x[:,2], x[:,3],bins =bin_size,norm=mpl.colors.LogNorm())# cmap = plt.
 plt.xlim([1,9])
 plt.ylim([0,5])
 plt.colorbar()
-plt.savefig("raw_distribution.pdf")
+plt.savefig("raw_distribution_23.pdf")
 
 #construct the model
 num_layers = 10#12
@@ -292,6 +293,7 @@ plt.title('Wasserstein-1 Distance vs. Training Step')
 ax.legend()
 ax.set_xlabel("Training Step")  
 ax.set_ylabel("Earth-Mover Distance")
+plt.savefig("EMD_training.pdf")
 
 
 fig, ax = plt.subplots(figsize =(10, 7)) 
@@ -315,6 +317,7 @@ plt.scatter(np.arange(len(f1_js)),f1_js, c='g', s=20)
 plt.title('Jensen–Shannon Divergence vs. Training Step')
 ax.set_xlabel("Training Step")  
 ax.set_ylabel("Jensen–Shannon Divergence")
+plt.savefig("JSD_training.pdf")
 
 fig, ax = plt.subplots(figsize =(10, 7)) 
 #print(np.arange(len(losses)))
@@ -326,7 +329,7 @@ plt.scatter(np.arange(len(f1_kd)),f1_kd, c='g', s=20)
 plt.title('Kullback–Leibler Divergence vs. Training Step')
 ax.set_xlabel("Training Step")  
 ax.set_ylabel("Kullback–Leibler Divergence")
-plt.savefig("distance_training.pdf")
+plt.savefig("KLD_training.pdf")
 
 #Testing
 

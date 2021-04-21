@@ -14,21 +14,24 @@ Follow the [instruction](https://researchcomputing.princeton.edu/support/knowled
 ```
 ssh eofe7.mit.edu
 module load anaconda3/2020.11
-conda create --name torch-env pytorch torchvision torchaudio cudatoolkit=10.2 matplotlib tensorboard pandas --channel pytorch
+conda create --name torch-env pytorch torchvision torchaudio cudatoolkit=10.2 matplotlib tensorboard pandas scikit-learn scipy --channel pytorch
 conda init bash
 exit
+
 ssh eofe7.mit.edu
 conda activate torch-env
 pip install --user pickle5 nflows
 
 cd /nobackup1c/users/$USER/
 git clone https://github.com/6862-2021SP-team3/clas12-nflows.git
+cd clas12-nflows/data
+wget -O pi0.pkl https://www.dropbox.com/s/hrdhr5o1khtclmy/pi0.pkl?dl=0
 ```
 
 ## Submit the job through batch farm
 
 Following commands will submit one job to slurm farm.
 ```
-cd /nobackup1c/users/$USER/slurm
+cd /nobackup1c/users/$USER/clas12-nflows/slurm
 python submit.py
 ```

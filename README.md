@@ -32,6 +32,6 @@ wget -O pi0.pkl https://www.dropbox.com/s/hrdhr5o1khtclmy/pi0.pkl?dl=0
 
 Following commands will submit one job to slurm farm.
 ```
-cd /nobackup1c/users/$USER/clas12-nflows/slurm
-python submit.py
+cd /nobackup1c/users/$USER/clas12-nflows
+python slurm/submit.py
 ```

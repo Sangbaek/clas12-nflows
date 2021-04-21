@@ -14,20 +14,24 @@ def file_len(f):
 
 for i in range(0, 1):
     command= """#!/bin/bash
-#SBATCH --job-name=clas12-nflow{0}      # create a short name for your job
-#SBATCH --nodes=1                       # node count
-#SBATCH --ntasks=1                      # total number of tasks across all nodes
-#SBATCH --cpus-per-task=1               # cpu-cores per task (>1 if multi-threaded tasks)
-#SBATCH --mem=4G                        # total memory per node (4 GB per cpu-core is default)
-#SBATCH --gres=gpu:1                    # number of gpus per node
-#SBATCH --time=02:00:00                 # total run time limit (HH:MM:SS)
+#SBATCH --job-name=clas12-nflow{0}
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=4G
+#SBATCH --gres=gpu:1
+#SBATCH --time=04:00:00
 #SBATCH --output=/nobackup1c/users/{1}/clas12-nflows/slurm/logs/log_{0}.txt
+#SBATCH -p newnodes
+#SBATCH --exclude=node393,node392,node095,node084
+#SBATCH -t59
+#SBATCH --constraint=centos7
 
 module purge
 module load anaconda3/2020.11
 eval "$(conda shell.bash hook)"
 conda activate torch-env
-python /nobackup1c/users/{1}/clas12-nflows/nflows.py
+python /nobackup1c/users/{1}/clas12-nflows/nflows.py > /nobackup1c/users/{1}/clas12-nflows/slurm/logs/out_{0}.txt
 """.format(str(i), username)
     queue=Popen(args=["squeue","-u",username],stdin=None,stdout=PIPE)
     linecount = file_len(queue.stdout)-1

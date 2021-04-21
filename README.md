@@ -21,7 +21,10 @@ exit
 ssh eofe7.mit.edu
 conda activate torch-env
 pip install --user pickle5 nflows
+conda config --set auto_activate_base false
+exit
 
+ssh eofe7.mit.edu
 cd /nobackup1c/users/$USER/
 git clone https://github.com/6862-2021SP-team3/clas12-nflows.git
 cd clas12-nflows/data
@@ -32,6 +35,7 @@ wget -O pi0.pkl https://www.dropbox.com/s/hrdhr5o1khtclmy/pi0.pkl?dl=0
 
 Following commands will submit one job to slurm farm.
 ```
+ssh eofe7.mit.edu
 cd /nobackup1c/users/$USER/clas12-nflows
 python slurm/submit.py
 ```

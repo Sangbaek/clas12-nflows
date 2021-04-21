@@ -32,7 +32,7 @@ class dataXZ:
   the converting routine is at https://github.com/6862-2021SP-team3/hipo2pickle
   """
   def __init__(self, standard = False):
-    with open('pi0.pkl', 'rb') as f:
+    with open('data/pi0.pkl', 'rb') as f:
         xz = np.array(pickle.load(f), dtype=np.float32)
         #xz = xz[:, 1:]
         # z = xz[:, 16:]

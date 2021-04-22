@@ -1,7 +1,8 @@
 # clas12-nflows
 ## 6.862 Applied Machine Learning, Spring 2021, Team 3
 Project name: Machine Learning Enhancements to Particle Physics Simulations to Reduce Computational Complexity
-Code overview: Sampling target distributions using normalizing flow. Use the [nflow libraries](https://github.com/bayesiains/nflows) that uses pytorch to implement the MAF.
+
+Code overview: Sampling target distributions using normalizing flow. Use the [nflow libraries](https://github.com/bayesiains/nflows) that uses pytorch to implement the MAF. The main file is originally from [https://github.com/robertej19/nflows/blob/master/NewMoon.ipynb](https://github.com/robertej19/nflows/blob/master/NewMoon.ipynb).
 
 ## Test in google colab.
 
@@ -10,7 +11,7 @@ Use the [nflow.ipynb](nflow.ipynb).
 ## deploy the code in a slurm farm
 Follow the [instruction](https://researchcomputing.princeton.edu/support/knowledge-base/pytorch#install), or simply follow the commands.
 
-## Set up an environment
+### Set up an environment
 ```
 ssh eofe7.mit.edu
 module load anaconda3/2020.11
@@ -31,7 +32,7 @@ cd clas12-nflows/data
 wget -O pi0.pkl https://www.dropbox.com/s/hrdhr5o1khtclmy/pi0.pkl?dl=0
 ```
 
-## Submit the job through batch farm
+### Submit the job through batch farm
 
 Following commands will submit one job to slurm farm.
 ```

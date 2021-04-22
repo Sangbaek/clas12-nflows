@@ -144,7 +144,7 @@ plt.hist2d(x[:,0], x[:,1],bins =bin_size,norm=mpl.colors.LogNorm())# cmap = plt.
 plt.xlim([1,6.5])
 plt.ylim([0.2,1.1])
 plt.colorbar()
-plt.savefig("raw_distribution_01.pdf")
+plt.savefig("slurm/figures/raw_distribution_01.pdf")
 
 fig, ax = plt.subplots(figsize =(10, 7)) 
 plt.rcParams["font.size"] = "16"
@@ -155,7 +155,7 @@ plt.hist2d(x[:,2], x[:,3],bins =bin_size,norm=mpl.colors.LogNorm())# cmap = plt.
 plt.xlim([1,9])
 plt.ylim([0,5])
 plt.colorbar()
-plt.savefig("raw_distribution_23.pdf")
+plt.savefig("slurm/figures/raw_distribution_23.pdf")
 
 #construct the model
 num_layers = 10#12
@@ -172,16 +172,16 @@ flow = Flow(transform, base_dist).to(device)
 optimizer = optim.Adam(flow.parameters())
 print("number of params: ", sum(p.numel() for p in flow.parameters()))
 
-# def plot_histo_1D(real_vals, gen_vals, label_real="Physics Data", label_gen="NFlow Model", col2 = "blue",title="Physics vs NFlow Models", saveloc=None):
-#     fig, axes = plt.subplots(1, 4, figsize=(4*5, 5))
-#     for INDEX, ax in zip((0, 1, 2,3 ), axes):
-#         _, bins, _ = ax.hist(real_vals[:, INDEX], bins=100, color = "red", label=label_real, density=True)
-#         ax.hist(gen_vals[:, INDEX], bins=bins, label=label_gen, color = col2,alpha=0.5, density=True)
-#         ax.legend(loc="lower left")
-#         ax.set_title("Feature {}".format(INDEX) )
-#     plt.tight_layout()
-#     if saveloc is not None: plt.savefig(saveloc)
-#     # plt.show()
+def plot_histo_1D(real_vals, gen_vals, label_real="Physics Data", label_gen="NFlow Model", col2 = "blue",title="Physics vs NFlow Models", saveloc=None):
+    fig, axes = plt.subplots(1, 4, figsize=(4*5, 5))
+    for INDEX, ax in zip((0, 1, 2,3 ), axes):
+        _, bins, _ = ax.hist(real_vals[:, INDEX], bins=100, color = "red", label=label_real, density=True)
+        ax.hist(gen_vals[:, INDEX], bins=bins, label=label_gen, color = col2,alpha=0.5, density=True)
+        ax.legend(loc="lower left")
+        ax.set_title("Feature {}".format(INDEX) )
+    plt.tight_layout()
+    if saveloc is not None: plt.savefig(saveloc)
+    # plt.show()
 
 def meter(dist1,dist2,feature):
   kld = entropy(dist1[:,feature],dist2[:,feature])
@@ -252,7 +252,7 @@ for i in range(num_iter):
           sampleDictzz = xz.sample(bbb)
           x = sampleDict["x"]
           x = x.detach().numpy()
-          # plot_histo_1D(x,z, saveloc="training_step{}.pdf".format(i))
+          plot_histo_1D(x,z, saveloc="slurm/figures/training_step{}.pdf".format(i))
           # print("On step {} - loss {:.2f}, Current Running Time = {:.2f} seconds".format(i,loss.item(),elapsedTime.total_seconds())) 
           print("KL Divergence Values: F0: {:.5f}  F1: {:.5f}  F2: {:.5f} ".format((f1[0]),(f2[0]),(f3[0]),))
           # print("EM Distance   Values: F0: {:.5f}  F1: {:.5f}  F2: {:.5f} ".format((f1[1]),(f2[1]),(f3[1]),))
@@ -281,56 +281,56 @@ print("Total Run Time = {:.5f} seconds".format(elapsedTime.total_seconds()))
 #f1_em = []
 #f1_js = []
 
-# fig, ax = plt.subplots(figsize =(10, 7)) 
-# #print(np.arange(len(losses)))
-# plt.rcParams["font.size"] = "16"
+fig, ax = plt.subplots(figsize =(10, 7)) 
+#print(np.arange(len(losses)))
+plt.rcParams["font.size"] = "16"
 
-# plt.plot(np.arange(len(f1_em)),f1_em, '-b',label="Feature 0")
-# plt.plot(np.arange(len(f1_em)),f2_em, '-g',label="Feature 1")
-# plt.plot(np.arange(len(f1_em)),f3_em, '-r',label="Feature 2")
-# #plt.ylim([1000000000,0.0001])
-# ax.set_yscale('log')
-# plt.title('Wasserstein-1 Distance vs. Training Step')
-# ax.legend()
-# ax.set_xlabel("Training Step")  
-# ax.set_ylabel("Earth-Mover Distance")
-# plt.savefig("EMD_training.pdf")
+plt.plot(np.arange(len(f1_em)),f1_em, '-b',label="Feature 0")
+plt.plot(np.arange(len(f1_em)),f2_em, '-g',label="Feature 1")
+plt.plot(np.arange(len(f1_em)),f3_em, '-r',label="Feature 2")
+#plt.ylim([1000000000,0.0001])
+ax.set_yscale('log')
+plt.title('Wasserstein-1 Distance vs. Training Step')
+ax.legend()
+ax.set_xlabel("Training Step")  
+ax.set_ylabel("Earth-Mover Distance")
+plt.savefig("slurm/figures/EMD_training.pdf")
 
 
-# fig, ax = plt.subplots(figsize =(10, 7)) 
-# #print(np.arange(len(losses)))
-# plt.rcParams["font.size"] = "16"
+fig, ax = plt.subplots(figsize =(10, 7)) 
+#print(np.arange(len(losses)))
+plt.rcParams["font.size"] = "16"
 
-# plt.scatter(np.arange(len(f1_em)),f3_em, c='b', s=20)
-# #plt.ylim([1000000000,0.0001])
-# ax.set_yscale('log')
-# plt.title('Loss vs. Training Step')
-# ax.set_xlabel("Training Step")  
-# ax.set_ylabel("Loss")
+plt.scatter(np.arange(len(f1_em)),f3_em, c='b', s=20)
+#plt.ylim([1000000000,0.0001])
+ax.set_yscale('log')
+plt.title('Loss vs. Training Step')
+ax.set_xlabel("Training Step")  
+ax.set_ylabel("Loss")
 
-# fig, ax = plt.subplots(figsize =(10, 7)) 
-# #print(np.arange(len(losses)))
-# plt.rcParams["font.size"] = "16"
+fig, ax = plt.subplots(figsize =(10, 7)) 
+#print(np.arange(len(losses)))
+plt.rcParams["font.size"] = "16"
 
-# plt.scatter(np.arange(len(f1_js)),f1_js, c='g', s=20)
-# #plt.ylim([1000000000,0.0001])
-# #ax.set_yscale('log')
-# plt.title('Jensen–Shannon Divergence vs. Training Step')
-# ax.set_xlabel("Training Step")  
-# ax.set_ylabel("Jensen–Shannon Divergence")
-# plt.savefig("JSD_training.pdf")
+plt.scatter(np.arange(len(f1_js)),f1_js, c='g', s=20)
+#plt.ylim([1000000000,0.0001])
+#ax.set_yscale('log')
+plt.title('Jensen–Shannon Divergence vs. Training Step')
+ax.set_xlabel("Training Step")  
+ax.set_ylabel("Jensen–Shannon Divergence")
+plt.savefig("slurm/figures/JSD_training.pdf")
 
-# fig, ax = plt.subplots(figsize =(10, 7)) 
-# #print(np.arange(len(losses)))
-# plt.rcParams["font.size"] = "16"
+fig, ax = plt.subplots(figsize =(10, 7)) 
+#print(np.arange(len(losses)))
+plt.rcParams["font.size"] = "16"
 
-# plt.scatter(np.arange(len(f1_kd)),f1_kd, c='g', s=20)
-# #plt.ylim([1000000000,0.0001])
-# #ax.set_yscale('log')
-# plt.title('Kullback–Leibler Divergence vs. Training Step')
-# ax.set_xlabel("Training Step")  
-# ax.set_ylabel("Kullback–Leibler Divergence")
-# plt.savefig("KLD_training.pdf")
+plt.scatter(np.arange(len(f1_kd)),f1_kd, c='g', s=20)
+#plt.ylim([1000000000,0.0001])
+#ax.set_yscale('log')
+plt.title('Kullback–Leibler Divergence vs. Training Step')
+ax.set_xlabel("Training Step")  
+ax.set_ylabel("Kullback–Leibler Divergence")
+plt.savefig("slurm/figures/KLD_training.pdf")
 
 #Testing
 
@@ -349,8 +349,8 @@ y = y.detach().numpy()
 x = sampleDict["x"]
 x = x.detach().numpy()
 
-# plot_histo_1D(x,z, saveloc="training_xz.pdf")
-# plot_histo_1D(x,y,label_real="Physics Sample 1", label_gen="Physics Sample 2",col2="green", saveloc="training_xy.pdf")
+plot_histo_1D(x,z, saveloc="slurm/figures/training_xz.pdf")
+plot_histo_1D(x,y,label_real="Physics Sample 1", label_gen="Physics Sample 2",col2="green", saveloc="slurm/figures/training_xy.pdf")
 
 f1 = meter(x,z,0)
 f2 = meter(x,z,1)

@@ -349,8 +349,8 @@ y = y.detach().numpy()
 x = sampleDict["x"]
 x = x.detach().numpy()
 
-plot_histo_1D(x,z, saveloc="slurm/figures/training_xz.pdf")
-plot_histo_1D(x,y,label_real="Physics Sample 1", label_gen="Physics Sample 2",col2="green", saveloc="slurm/figures/training_xy.pdf")
+plot_histo_1D(x,z, saveloc="slurm/figures/testing_xz.pdf")
+plot_histo_1D(x,y,label_real="Physics Sample 1", label_gen="Physics Sample 2",col2="green", saveloc="slurm/figures/testing_xy.pdf")
 
 f1 = meter(x,z,0)
 f2 = meter(x,z,1)

@@ -133,29 +133,29 @@ x = sampleDict["x"]
 x = x.detach().numpy()
 
 # #visualize the data
-# bin_size = [80,80]
-# fig, ax = plt.subplots(figsize =(10, 7)) 
-# plt.rcParams["font.size"] = "16"
-# ax.set_xlabel("Electron Momentum")  
-# ax.set_ylabel("Proton Momentum")
-# plt.title('Microphysics Simulated EP Distribution')
+bin_size = [80,80]
+fig, ax = plt.subplots(figsize =(10, 7)) 
+plt.rcParams["font.size"] = "16"
+ax.set_xlabel("Electron Momentum")  
+ax.set_ylabel("Proton Momentum")
+plt.title('Microphysics Simulated EP Distribution')
 
-# plt.hist2d(x[:,0], x[:,1],bins =bin_size,norm=mpl.colors.LogNorm())# cmap = plt.cm.nipy_spectral) 
-# plt.xlim([1,6.5])
-# plt.ylim([0.2,1.1])
-# plt.colorbar()
-# plt.savefig("raw_distribution_01.pdf")
+plt.hist2d(x[:,0], x[:,1],bins =bin_size,norm=mpl.colors.LogNorm())# cmap = plt.cm.nipy_spectral) 
+plt.xlim([1,6.5])
+plt.ylim([0.2,1.1])
+plt.colorbar()
+plt.savefig("raw_distribution_01.pdf")
 
-# fig, ax = plt.subplots(figsize =(10, 7)) 
-# plt.rcParams["font.size"] = "16"
-# ax.set_xlabel("Photon 1 Momentum")  
-# ax.set_ylabel("Photon 2 Momentum")
-# plt.title('Microphysics Simulated GG Distribution')
-# plt.hist2d(x[:,2], x[:,3],bins =bin_size,norm=mpl.colors.LogNorm())# cmap = plt.cm.nipy_spectral) 
-# plt.xlim([1,9])
-# plt.ylim([0,5])
-# plt.colorbar()
-# plt.savefig("raw_distribution_23.pdf")
+fig, ax = plt.subplots(figsize =(10, 7)) 
+plt.rcParams["font.size"] = "16"
+ax.set_xlabel("Photon 1 Momentum")  
+ax.set_ylabel("Photon 2 Momentum")
+plt.title('Microphysics Simulated GG Distribution')
+plt.hist2d(x[:,2], x[:,3],bins =bin_size,norm=mpl.colors.LogNorm())# cmap = plt.cm.nipy_spectral) 
+plt.xlim([1,9])
+plt.ylim([0,5])
+plt.colorbar()
+plt.savefig("raw_distribution_23.pdf")
 
 #construct the model
 num_layers = 10#12

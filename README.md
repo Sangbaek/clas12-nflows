@@ -19,12 +19,10 @@ ssh eofe7.mit.edu
 module load anaconda3/2020.11
 conda create --name torch-env pytorch torchvision torchaudio cudatoolkit=10.2 matplotlib tensorboard pandas scikit-learn scipy --channel pytorch
 conda init bash
-exit
 ```
 
 Manually download nflow related libs using pypi.
 ```
-ssh eofe7.mit.edu
 conda activate torch-env
 pip install --user pickle5 nflows UMNN icecream
 ./setup.sh
@@ -39,9 +37,10 @@ wget -O pi0_cartesian.pkl https://www.dropbox.com/s/0nkht1xls2tmdrm/pi0_cartesia
 python utils/manual_split.py
 ```
 
-Optional) To make conda deactivate default,
+Make conda deactivate default,
 ```
 conda config --set auto_activate_base false
+exit
 ```
 
 ### Submit the job through batch farm

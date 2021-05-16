@@ -38,7 +38,7 @@ class dataXZ:
   the converting routine is at https://github.com/6862-2021SP-team3/hipo2pickle
   """
   def __init__(self, standard = False, feature_subset = "all"):
-    with open('data/pi0_cartesian_train.pkl', 'rb') as f:
+    with open('data/epgg_cartesian_train.pkl', 'rb') as f:
         #Since we already converted to cartesian, the below 2 lines are not needed
         #xz = np.array(pickle.load(f), dtype=np.float64)
         #x = cartesian_converter(xz)

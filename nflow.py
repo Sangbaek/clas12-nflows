@@ -40,7 +40,7 @@ dev = "cuda:0" if torch.cuda.is_available() else "cpu"
 device = torch.device(dev)
 
 #read the data, with the defined data class
-xz = dataXZ()
+xz = dataXZ.dataXZ()
 sampleDict = xz.sample(100000) #Get a subset of the datapoints
 x = sampleDict["x"]
 x = x.detach().numpy()

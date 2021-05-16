@@ -43,15 +43,22 @@ class dataXZ:
         #xz = np.array(pickle.load(f), dtype=np.float64)
         #x = cartesian_converter(xz)
 
-        x = np.array(pickle.load(f), dtype=np.float64)
-        if feature_subset != "all": 
-          x = x[:,feature_subset]
+        xz = np.array(pickle.load(f), dtype=np.float64)
+        if feature_subset == "all": 
+          feature_subset = [i for i in range(16)]
+        xfeature_subset = [i+1 for i in feature_subset]
+        zfeature_subset = [i+20 for i in feature_subset]
+        xz = xz[:, xfeature_subset + zfeature_subset]
 
-        self.qt = self.quant_tran(x)
+        self.qt = self.quant_tran(xz)
 
-        df_x = pd.DataFrame(self.qt.transform(x)) #Don't know how to do this without first making it a DF
-        x_np = df_x.to_numpy() #And then converting back to numpy
+        df_xz = pd.DataFrame(self.qt.transform(xz)) #Don't know how to do this without first making it a DF
+        xz_np = df_xz.to_numpy() #And then converting back to numpy
+        x_np = xz_np[:, xfeature_subset]
+        zfeature_subset2 = [i+len(feature_subset) for i in feature_subset]
+        z_np = xz_np[:, zfeature_subset2]
         self.x = torch.from_numpy(np.array(x_np))
+        self.z = torch.from_numpy(np.array(z_np))
 
 
     if standard:
@@ -80,5 +87,6 @@ class dataXZ:
   def sample(self, n):
         randint = np.random.randint( self.x.shape[0], size =n)
         x = self.x[randint]
-        return {"x": x}
+        z = self.z[randint]
+        return {"x": x, "z": z}
 

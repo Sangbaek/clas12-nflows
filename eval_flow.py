@@ -17,8 +17,6 @@ from matplotlib.patches import Rectangle
 from utils import make_histos
 from utils.utilities import meter
 
-
-sys.path.insert(0,'/mnt/c/Users/rober/Dropbox/Bobby/Linux/classes/GAML/GAMLX/nflows/nflows')
 from nflows.transforms.autoregressive import MaskedUMNNAutoregressiveTransform
 from nflows.flows.base import Flow
 from nflows.distributions.normal import StandardNormal
@@ -28,8 +26,8 @@ from nflows.transforms.autoregressive import MaskedAffineAutoregressiveTransform
 from nflows.transforms.permutations import ReversePermutation
 
 
-data_path = "gendata/4features/" #Just electorn features
-data_path_16 = "gendata/16features/" #All 16 features
+data_path = "slurm/gendata/4features/" #Just electorn features
+data_path_16 = "slurm/gendata/16features/" #All 16 features
 
 
 dfs16 = []
@@ -108,7 +106,7 @@ if physics_cuts:
     bin_size = [100,100]
     xvals = df["pmass"]
     x_name = "NF Model Proton Mass"
-    output_dir = "./"
+    output_dir = "slurm/figures"
     #ranges = "none"
     ranges = [.925,.951,100]
 
@@ -122,7 +120,7 @@ if physics_cuts:
     y_data = df[2]
     var_names = ["E Px","E Py"]
     saveplots = True
-    output_dir = "./"
+    output_dir = "slurm/figures"
     title = "Electron $P_X$ vs. $P_Y$, NF 4-Feat. Model"
     filename = title
     units = ["GeV","Gev"]
@@ -193,7 +191,7 @@ if gen_all_emd:
     plt.xlim([-.5,3.5])
     plt.ylim([0,10])
     plt.show()
-    plotname = "nflow_emd_4.png"
+    plotname = "slurm/figures/nflow_emd_4.png"
     plt.savefig(plotname)
     plt.close()
 
@@ -267,7 +265,7 @@ if gen_emd_comp:
     plt.xlim([-.5,3.5])
     plt.ylim([0,10])
     plt.show()
-    plotname = "nflow_emd_4.png"
+    plotname = "slurm/figures/nflow_emd_4.png"
     plt.savefig(plotname)
     plt.close()
 
@@ -284,7 +282,7 @@ if gen_emd_comp:
 
 
 if gen_1d_histos:
-    output_dir = "hists_1D/"
+    output_dir = "slurm/figures/hists_1D/"
 
     import itertools
     parts = ["Electron","Proton","Photon 1","Photon 2"]

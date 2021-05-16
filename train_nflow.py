@@ -20,7 +20,6 @@ from utils.utilities import make_model
 from utils import make_histos
 from utils import dataXZ
 
-sys.path.insert(0,'/mnt/c/Users/rober/Dropbox/Bobby/Linux/classes/GAML/GAMLX/nflows/nflows')
 from nflows.transforms.autoregressive import MaskedUMNNAutoregressiveTransform
 from nflows.flows.base import Flow
 from nflows.distributions.normal import StandardNormal
@@ -85,21 +84,11 @@ for i in range(num_epoch):
       print("Elapsed time is {}".format(elapsedTime))
       print("Rate is {} seconds per epoch".format(elapsedTime/i))
       print("Total estimated run time is {}".format(elapsedTime+elapsedTime/i*(num_epoch+1-i)))
-      if ((i+1)%100) == 0:
-        torch.save(flow.state_dict(), "models/TM_{}_{}_{}_{}_{}_{:.2f}.pt".format(num_features,
-          num_layers,num_hidden_features,training_sample_size,i,loss.item()))
+      # if ((i+1)%100) == 0:
+        # torch.save(flow.state_dict(), "models/TM_{}_{}_{}_{}_{}_{:.2f}.pt".format(num_features,
+        #   num_layers,num_hidden_features,training_sample_size,i,loss.item()))
 
 tm_name = "models/4features/TM-Final_{}_{}_{}_{}_{:.2f}.pt".format(num_features,
           num_layers,num_hidden_features,training_sample_size,losses[-1])
 torch.save(flow.state_dict(), tm_name)
 print("trained model saved to {}".format(tm_name))
-
-
-if email:
-  from pytools import circle_emailer
-  now = datetime.now()
-  script_end_time = now.strftime("%H:%M:%S")
-  s_name = os.path.basename(__file__)
-  subject = "Completion of {}".format(s_name)
-  body = "Your script {} finished running at {}".format(s_name,script_end_time)
-  circle_emailer.send_email(subject,body)

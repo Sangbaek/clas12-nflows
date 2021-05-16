@@ -24,6 +24,8 @@ for i in range(0, 1):
 #SBATCH --output=/nobackup1c/users/{1}/clas12-nflows/slurm/logs/log_{0}.txt
 #SBATCH -p sched_any, sched_mit_hill, sched_mit_redwine
 #SBATCH -F=/nobackup1c/users/{1}/clas12-nflows/slurm/nodelist
+#SBATCH --mail-user={1}@mit.edu
+#SBATCH --mail-type=ALL
 
 module purge
 module load anaconda3/2020.11

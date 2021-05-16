@@ -18,7 +18,6 @@ from utils.utilities import cartesian_converter
 from utils.utilities import make_model
 from utils import dataXZ
 
-sys.path.insert(0,'/mnt/c/Users/rober/Dropbox/Bobby/Linux/classes/GAML/GAMLX/nflows/nflows')
 from nflows.transforms.autoregressive import MaskedUMNNAutoregressiveTransform
 from nflows.flows.base import Flow
 from nflows.distributions.normal import StandardNormal
@@ -101,7 +100,7 @@ for loop_num in range(maxloops):
         z = QuantTran.inverse_transform(X)
 
         df = pd.DataFrame(z)
-        df.to_pickle("gendata/4features/GenData_{}_{}_{}_{}_{}_set_6{}.pkl".format(num_features,
+        df.to_pickle("slurm/gendata/4features/GenData_{}_{}_{}_{}_{}_set_6{}.pkl".format(num_features,
                 num_layers,num_hidden_features,training_sample_size,training_loss,loop_num))
     except Exception as e:
         print("sorry, that didn't work, exception was:")
@@ -112,7 +111,7 @@ x_data = df[1]
 y_data = df[2]
 var_names = ["E Px","E Py"]
 saveplots = False
-output_dir = "."
+output_dir = "slurm/figures/4features/"
 title = "Px vs Py"
 filename = title
 units = ["GeV","Gev"]

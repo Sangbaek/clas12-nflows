@@ -24,11 +24,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import RobustScaler, MaxAbsScaler, QuantileTransformer
 import pandas as pd
 
-
-#Change this line when not running on Bobby's computer!
-sys.path.insert(0,'/mnt/c/Users/rober/Dropbox/Bobby/Linux/classes/GAML/GAMLX/nflows/nflows')
 from nflows.transforms.autoregressive import MaskedUMNNAutoregressiveTransform
-
 from nflows.distributions.normal import StandardNormal, ConditionalDiagonalNormal
 from nflows.flows.base import Flow
 from nflows.distributions.normal import StandardNormal
@@ -36,108 +32,8 @@ from nflows.distributions.normal import DiagonalNormal
 from nflows.transforms.base import CompositeTransform
 from nflows.transforms.autoregressive import MaskedAffineAutoregressiveTransform
 from nflows.transforms.permutations import ReversePermutation
-#Create data class
-class dataXZ:
-  """
-  read the data stored in pickle format
-  the converting routine is at https://github.com/6862-2021SP-team3/hipo2pickle
-  """
-  def __init__(self, standard = False):
-    with open('data/pi0.pkl', 'rb') as f:
-        xz = np.array(pickle.load(f), dtype=np.float32)
-        x = cartesian_converter(xz,type='x')
-        z = cartesian_converter(xz,type='z')
-        xwithoutPid = x
 
-        self.xz = xz
-        self.x = torch.from_numpy(np.array(x))
-        self.xwithoutPid = torch.from_numpy(np.array(xwithoutPid))
-        self.z = torch.from_numpy(np.array(z))
-    if standard:
-      self.standardize()
-
-  def standardize(self):
-    self.xMu = self.xwithoutPid.mean(0)
-    self.xStd = self.xwithoutPid.std(0)
-    self.zMu = self.zwithoutPid.mean(0)
-    self.zStd = self.zwithoutPid.std(0)
-    self.xwithoutPid = (self.xwithoutPid - self.xMu) / self.xStd
-    self.zwithoutPid = (self.zwithoutPid - self.zMu) / self.zStd
-
-  def restore(self, data, type = "x"):
-    mu = self.xMu
-    std = self.xStd
-    if type == "z":
-      mu = self.zMu
-      std = self.zStd
-    return data * std + mu
-
-  def sample(self, n):
-        randint = np.random.randint( self.xz.shape[0], size =n)
-        xz = self.xz[randint]
-        x = self.x[randint]
-        z = self.z[randint]
-        xwithoutPid = self.xwithoutPid[randint]
-        # zwithoutPid = self.zwithoutPid[randint]
-        # return {"xz":xz, "x": x, "z": z, "xwithoutPid": xwithoutPid, "zwithoutPid": zwithoutPid}
-        return {"xz":xz, "x": x,"z": z, "xwithoutPid": xwithoutPid}
-
-#returns an nx16 array, of energy, px, py, pz, for electron, proton, g1, g2
-#You should just pass it the xz object from the dataXZ() class
-def cartesian_converter(xznp,type='x'):
-  #split into electron, proton, gammas
-  if type=='x':
-    e_vec = xznp[:,1:5]
-    p_vec = xznp[:,5:9]
-    g1_vec = xznp[:,9:13]
-    g2_vec = xznp[:,13:17]
-  if type=='z':
-    e_vec = xznp[:,17:21]
-    p_vec = xznp[:,21:25]
-    g1_vec = xznp[:,25:29]
-    g2_vec = xznp[:,29:33]
-
-    # print("evec")
-    # print(e_vec)
-    # print("pvec")
-    # print(p_vec)
-    # print("g1vec")
-    # print(g1_vec)
-    # print("g2vec")
-    # print(g2_vec)
-
-
-  mass_e = .000511
-  mass_p = 0.938
-  mass_g = 0
-
-  particles = [e_vec,p_vec,g1_vec,g2_vec]
-  masses = [mass_e,mass_p,mass_g,mass_g]
-
-  parts_new = []
-  #convert from spherical to cartesian
-  for part_vec, mass in zip(particles,masses):
-    mom = part_vec[:,0]
-    thet = part_vec[:,1]*np.pi/180
-    phi = part_vec[:,2]*np.pi/180
-
-    pz = mom*np.cos(thet)
-    px = mom*np.sin(thet)*np.cos(phi)
-    py = mom*np.sin(thet)*np.sin(phi)
-    p2 = pz*pz+px*px+py*py
-    E = np.sqrt(mass**2+p2)
-    
-    x_new = np.array([E,px,py,pz])
-    parts_new.append(x_new)
-
-  #reshape output into 1x16 arrays for each event
-  e = parts_new[0]
-  p = parts_new[1]
-  g1 = parts_new[2]
-  g2 = parts_new[3]
-  out = np.concatenate((e.T,p.T,g1.T,g2.T), axis=1)
-
-  return out
+from utils import dataXZ
 
 # Define device to be used
 dev = "cuda:0" if torch.cuda.is_available() else "cpu"

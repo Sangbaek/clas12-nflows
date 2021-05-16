@@ -28,19 +28,20 @@ ssh eofe7.mit.edu
 conda activate torch-env
 pip install --user pickle5 nflows UMNN icecream
 ./setup.sh
-conda config --set auto_activate_base false
-exit
 ```
 
-Download the data files
+Download the codes with the data files
 ```
-ssh eofe7.mit.edu
-cd /nobackup1c/users/$USER/
 git clone https://github.com/6862-2021SP-team3/clas12-nflows.git
 cd clas12-nflows/data
 wget -O epgg.pkl https://www.dropbox.com/s/t7nkp2jfp2uennm/epgg.pkl?dl=0
 wget -O pi0_cartesian.pkl https://www.dropbox.com/s/0nkht1xls2tmdrm/pi0_cartesian.pkl?dl=0
-python manual_split.py
+python utils/manual_split.py
+```
+
+Optional) To make conda deactivate default,
+```
+conda config --set auto_activate_base false
 ```
 
 ### Submit the job through batch farm

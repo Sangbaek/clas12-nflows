@@ -3,7 +3,7 @@ import matplotlib.patches as patches
 from PIL import Image, ImageDraw, ImageFont
 import sys
 
-plotname = "nflow_emd.png"
+plotname = "../slurm/nflow_emd.png"
 
 im = Image.open(plotname)
 

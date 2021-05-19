@@ -27,7 +27,6 @@ for i in range(0, 1):
 #SBATCH --mail-type=ALL
 
 module purge
-module load anaconda3/2020.11
 eval "$(conda shell.bash hook)"
 conda activate torch-env
 python /pool001/{1}/clas12-nflows/train_nflow.py

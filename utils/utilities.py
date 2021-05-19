@@ -11,7 +11,7 @@ from torch import optim
 sys.path.insert(0,'/mnt/c/Users/rober/Dropbox/Bobby/Linux/classes/GAML/GAMLX/nflows/nflows')
 from nflows.transforms.autoregressive import MaskedUMNNAutoregressiveTransform
 from nflows.flows.base import Flow
-from nflows.distributions.normal import StandardNormal
+from nflows.distributions.normal import StandardNormal, ConditionalDiagonalNormal
 from nflows.distributions.normal import DiagonalNormal
 from nflows.transforms.base import CompositeTransform
 from nflows.transforms.autoregressive import MaskedAffineAutoregressiveTransform
@@ -24,19 +24,42 @@ def split_data(data,test_size=0.2,random_state=42):
     return data_train, data_test
 
 def make_model(num_layers,num_features,num_hidden_features,device):
-    base_dist = StandardNormal(shape=[num_features])
+
+
+    context_encoder = nn.Sequential(
+            nn.Linear(num_features, 2*num_features),
+            nn.ReLU(),
+            nn.Linear(2*num_features, 2*num_features),
+            nn.ReLU(),
+            nn.Linear(2*num_features, 2*num_features)
+            )
+
+    base_dist = ConditionalDiagonalNormal(shape=[num_features],context_encoder=context_encoder)
+
+    #base_dist = StandardNormal(shape=[num_features])
     #base_dist = DiagonalNormal(shape=[num_features])
     transforms = []
     for _ in range(num_layers):
         transforms.append(ReversePermutation(features=num_features))
+        #UMNN
+        #transforms.append(MaskedUMNNAutoregressiveTransform(features=num_features, 
+        #                                                    hidden_features=num_hidden_features)) 
+
+        #Conditional MAA
+        #transforms.append(MaskedAffineAutoregressiveTransform(features=num_features, 
+        #                                                 hidden_features=num_hidden_features,
+        #                                                  context_features=num_features))
+        
+        #Conditional UMNN
         transforms.append(MaskedUMNNAutoregressiveTransform(features=num_features, 
-                                                            hidden_features=num_hidden_features)) 
+                                                              hidden_features=num_hidden_features,
+                                                              context_features=num_features))
     transform = CompositeTransform(transforms)
     
     #Uncomment the below if float64
-    flow = Flow(transform, base_dist).double().to(device)
+    #flow = Flow(transform, base_dist).double().to(device)
     #Uncomment the below if float32
-    #flow = Flow(transform, base_dist).to(device)
+    flow = Flow(transform, base_dist).to(device)
     
     optimizer = optim.Adam(flow.parameters())
 
@@ -50,12 +73,19 @@ def meter(dist1,dist2,feature):
 
 #returns an nx16 array, of energy, px, py, pz, for electron, proton, g1, g2
 #You should just pass it the xz object from the dataXZ() class
-def cartesian_converter(xznp):
+def cartesian_converter(xznp,type='x'):
   #split into electron, proton, gammas
-  e_vec = xznp[:,1:5]
-  p_vec = xznp[:,5:9]
-  g1_vec = xznp[:,9:13]
-  g2_vec = xznp[:,13:17]
+  if type=='x':
+    e_vec = xznp[:,1:5]
+    p_vec = xznp[:,5:9]
+    g1_vec = xznp[:,9:13]
+    g2_vec = xznp[:,13:17]
+  if type=='z':
+    e_vec = xznp[:,17:21]
+    p_vec = xznp[:,21:25]
+    g1_vec = xznp[:,25:29]
+    g2_vec = xznp[:,29:33]
+
 
   mass_e = .000511
   mass_p = 0.938
@@ -86,7 +116,7 @@ def cartesian_converter(xznp):
   g1 = parts_new[2]
   g2 = parts_new[3]
   out = np.concatenate((e.T,p.T,g1.T,g2.T), axis=1)
-  
+
   return out
 
 

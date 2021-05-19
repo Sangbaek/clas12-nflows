@@ -38,27 +38,34 @@ class dataXZ:
   the converting routine is at https://github.com/6862-2021SP-team3/hipo2pickle
   """
   def __init__(self, standard = False, feature_subset = "all"):
-    with open('data/epgg_cartesian_train.pkl', 'rb') as f:
-        #Since we already converted to cartesian, the below 2 lines are not needed
-        #xz = np.array(pickle.load(f), dtype=np.float64)
-        #x = cartesian_converter(xz)
+    #use if already converted to cartesian
+    #with open('data/pi0_cartesian_train.pkl', 'rb') as f:
+       #x = np.array(pickle.load(f), dtype=np.float32)
 
-        xz = np.array(pickle.load(f), dtype=np.float64)
-        if feature_subset == "all": 
-          feature_subset = [i for i in range(16)]
-        xfeature_subset = [i+1 for i in feature_subset]
-        zfeature_subset = [i+20 for i in feature_subset]
-        xz = xz[:, xfeature_subset + zfeature_subset]
+    #Use if not already converted
+    with open('data/pi0.pkl', 'rb') as f:
+        xz = np.array(pickle.load(f), dtype=np.float32)
+        x = cartesian_converter(xz,type='x')
+        z = cartesian_converter(xz,type='z')
+        
 
-        self.qt = self.quant_tran(xz)
+        if feature_subset != "all": 
+          x = x[:,feature_subset]
+          z = z[:,feature_subset]
 
-        df_xz = pd.DataFrame(self.qt.transform(xz)) #Don't know how to do this without first making it a DF
-        xz_np = df_xz.to_numpy() #And then converting back to numpy
-        x_np = xz_np[:, xfeature_subset]
-        zfeature_subset2 = [i+len(feature_subset) for i in feature_subset]
-        z_np = xz_np[:, zfeature_subset2]
-        self.x = torch.from_numpy(np.array(x_np))
-        self.z = torch.from_numpy(np.array(z_np))
+        xwithoutPid = x
+
+        self.qt = self.quant_tran(x)
+
+        #Commented out because currently ton using Quant trans.
+        # df_x = pd.DataFrame(self.qt.transform(x)) #Don't know how to do this without first making it a DF
+        # x_np = df_x.to_numpy() #And then converting back to numpy
+        # self.x = torch.from_numpy(np.array(x_np))
+
+        self.xz = xz
+        self.x = torch.from_numpy(np.array(x))
+        self.xwithoutPid = torch.from_numpy(np.array(xwithoutPid))
+        self.z = torch.from_numpy(np.array(z))
 
 
     if standard:
@@ -85,8 +92,11 @@ class dataXZ:
     return data * std + mu
 
   def sample(self, n):
-        randint = np.random.randint( self.x.shape[0], size =n)
+        randint = np.random.randint( self.xz.shape[0], size =n)
+        xz = self.xz[randint]
         x = self.x[randint]
         z = self.z[randint]
-        return {"x": x, "z": z}
-
+        xwithoutPid = self.xwithoutPid[randint]
+        # zwithoutPid = self.zwithoutPid[randint]
+        # return {"xz":xz, "x": x, "z": z, "xwithoutPid": xwithoutPid, "zwithoutPid": zwithoutPid}
+        return {"xz":xz, "x": x,"z": z, "xwithoutPid": xwithoutPid}

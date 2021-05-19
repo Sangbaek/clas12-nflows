@@ -16,7 +16,7 @@ from matplotlib.patches import Rectangle
 
 from utils import make_histos
 from utils.utilities import meter
-
+from utils.utilities import cartesian_converter
 
 sys.path.insert(0,'/mnt/c/Users/rober/Dropbox/Bobby/Linux/classes/GAML/GAMLX/nflows/nflows')
 from nflows.transforms.autoregressive import MaskedUMNNAutoregressiveTransform
@@ -28,24 +28,16 @@ from nflows.transforms.autoregressive import MaskedAffineAutoregressiveTransform
 from nflows.transforms.permutations import ReversePermutation
 
 
-data_path = "gendata/4features/" #Just electorn features
-data_path_16 = "gendata/16features/" #All 16 features
+#data_path = "gendata/4features/" #Just electorn features
+#data_path = "gendata/16features/" #All 16 features
+#data_path = "gendata/Cond/16features/maaf/"
+data_path = "gendata/Cond/16features/UMNN/"
 
 
-dfs16 = []
-    
-filenames16 = os.listdir(data_path_16)
 
-for f in filenames16:
-    df0 = pd.read_pickle(data_path_16+f)
-    dfs16.append(df0)
-
-df_nflow_data_16 = pd.concat(dfs16)
-
-
-physics_cuts = True
+physics_cuts = False
 gen_all_emd = False
-gen_1d_histos = False
+gen_1d_histos = True
 gen_emd_comp = False
 
 dfs = []
@@ -59,18 +51,34 @@ for f in filenames:
 df_nflow_data = pd.concat(dfs)
 nflow_data_len = len(df_nflow_data.index)
 print("The Generated dataset has {} events".format(nflow_data_len))
-df_test_data_all = pd.read_pickle("data/pi0_cartesian_test.pkl")
 
-df_test_data = df_test_data_all
+
+with open('data/pi0.pkl', 'rb') as f:
+    xz = np.array(pickle.load(f), dtype=np.float32)
+    x = cartesian_converter(xz,type='x')
+    z = cartesian_converter(xz,type='z')
+        
+
+
+df_test_data = pd.DataFrame(x)
+df_test_data_z = pd.DataFrame(z)
+#df_nflow_data = df_test_data_z
+
 #df_test_data = df_test_data_all.sample(n=nflow_data_len)
 
-# if len(df_nflow_data) > len(df_test_data):
-#     df_nflow_data = df_nflow_data.sample(n=len(df_test_data))
-# else:
-#     df_test_data = df_test_data.sample(n=len(df_nflow_data))
+if len(df_nflow_data) > len(df_test_data):
+    df_nflow_data = df_nflow_data.sample(n=len(df_test_data))
+else:
+    df_test_data = df_test_data.sample(n=len(df_nflow_data))
+    df_test_data_z = df_test_data_z.sample(n=len(df_nflow_data))
+
+
+#df_nflow_data = df_nflow_data.sample(n=100000)
+#df_test_data = df_test_data.sample(n=100000)
+
 
 if physics_cuts:
-    df = df_nflow_data_16
+    df = df_nflow_data
     #df = df_test_data
     print(len(df.index))
     # e = 0
@@ -114,18 +122,18 @@ if physics_cuts:
     # print(df2)
     # #sys.exit()
 
-    if len(df_nflow_data_16) > len(df_test_data):
-        df_nflow_data_16 = df_nflow_data_16.sample(n=len(df_test_data))
+    if len(df_nflow_data) > len(df_test_data):
+        df_nflow_data_16 = df_nflow_data.sample(n=len(df_test_data))
     else:
-        df_test_data = df_test_data.sample(n=len(df_nflow_data_16))
+        df_test_data = df_test_data.sample(n=len(df_nflow_data))
 
 
 
 
 
-##################################
+    ##################################
 
-    dvpi0p = df_nflow_data_16
+    dvpi0p = df_nflow_data
     #dvpi0p = df_test_data
 
     e=4
@@ -155,7 +163,7 @@ if physics_cuts:
     
     dvpi0p16 = dvpi0p
 
-#################################
+    #################################
 
 
 
@@ -259,8 +267,9 @@ if gen_all_emd:
     nflow_vals = np.empty(shape=(num_vars,num_iters))
     test_vals = np.empty(shape=(num_vars,num_iters))
     for i in range(num_iters):
-        df_test_data_0 = df_test_data_all.sample(n=int(nflow_data_len/10))
-        df_test_data_1 = df_test_data_all.sample(n=int(nflow_data_len/10))
+        df_test_data_0 = df_test_data.sample(n=int(nflow_data_len/10))
+        df_test_data_1 = df_test_data.sample(n=int(nflow_data_len/10))
+        #df_nflow_data_0 = df_test_data.sample(n=int(nflow_data_len/10))
         df_nflow_data_0 = df_nflow_data.sample(n=int(nflow_data_len/10))
         for feature_num in range(num_vars):
             emd_nflow, _, _ = meter(df_test_data_0.to_numpy(),df_nflow_data_0.to_numpy(),feature_num)
@@ -291,21 +300,16 @@ if gen_all_emd:
 
     emd_plot = plt.errorbar(x,ratio_2,yerr=ratio_std_2,fmt='o',label="EMD Ratio",linewidth=2)
     ideal_line = plt.axhline(y = 1, color = 'r', linestyle = '-',label="Ideal Case",linewidth=2)
-    plt.title("Earth Mover's Distance Ratio, 4-Feature Model")
+    plt.title("EMD Ratio, Gen vs. Recon")
     #ax.legend([emd_plot, ideal_line])
     plt.legend(loc='upper center')
 
-    plt.xlim([-.5,3.5])
+    plt.xlim([-.5,15.5])
     plt.ylim([0,10])
     plt.show()
     plotname = "nflow_emd_4.png"
     plt.savefig(plotname)
     plt.close()
-
-
-
-
-
 
 
 
@@ -324,8 +328,8 @@ if gen_emd_comp:
     nflow_vals_16 = np.empty(shape=(num_vars,num_iters))
     test_vals = np.empty(shape=(num_vars,num_iters))
     for i in range(num_iters):
-        df_test_data_0 = df_test_data_all.sample(n=int(len(df_nflow_data_16.index)))
-        df_test_data_1 = df_test_data_all.sample(n=int(len(df_nflow_data_16.index)))
+        df_test_data_0 = df_test_data.sample(n=int(len(df_nflow_data_16.index)))
+        df_test_data_1 = df_test_data.sample(n=int(len(df_nflow_data_16.index)))
         df_nflow_data_0 = df_nflow_data.sample(n=int(len(df_nflow_data_16.index)))
         for feature_num in range(num_vars):
             emd_nflow, _, _ = meter(df_test_data_0.to_numpy(),df_nflow_data_0.to_numpy(),feature_num)
@@ -382,12 +386,6 @@ if gen_emd_comp:
 
 
 
-
-
-
-
-
-
 if gen_1d_histos:
     output_dir = "hists_1D/"
 
@@ -400,20 +398,20 @@ if gen_1d_histos:
     names = [r for r in itertools.product(a, b)]#: print r[0] + r[1]
 
     
-    df = df_nflow_data
-    e = 0
-    df['emass2'] = df[e]**2-df[e+1]**2-df[e+2]**2-df[e+3]**2
-    epsilon = 2
-    df_nflow_data = df.query("emass2>(0-{}) and emass2<(0+{})".format(epsilon,epsilon))
+    # df = df_nflow_data
+    # e = 0
+    # df['emass2'] = df[e]**2-df[e+1]**2-df[e+2]**2-df[e+3]**2
+    # epsilon = 2
+    # df_nflow_data = df.query("emass2>(0-{}) and emass2<(0+{})".format(epsilon,epsilon))
 
-    if len(df_nflow_data) > len(df_test_data):
-        df_nflow_data = df_nflow_data.sample(n=len(df_test_data))
-    else:
-        df_test_data = df_test_data.sample(n=len(df_nflow_data))
+    # if len(df_nflow_data) > len(df_test_data):
+    #     df_nflow_data = df_nflow_data.sample(n=len(df_test_data))
+    # else:
+    #     df_test_data = df_test_data.sample(n=len(df_nflow_data))
 
 
-    # # Uncomment for plotting all 1D histograms
-    # for feature_ind in range(4):
+    #Uncomment for plotting all 1D histograms
+    # for feature_ind in range(16):
     #         name = names[feature_ind]
     #         x_name = "{} {}".format(name[0],name[1])
     #         print("Creating 1 D Histogram for: {} ".format(name))
@@ -438,17 +436,23 @@ if gen_1d_histos:
     # title = "Proton $P_X$ vs. Photon 1 $P_Z$"
     # ranges = [[-.75,.75,100],[1,9,100]]
 
+    x,y = 4,7
+    var_names = ["Proton Energy","Proton Z-Momentum"]
+    title = "Proton E vs. Proton $P_Z$"
+    ranges = [[1,1.5,100],[0,1.2,100]]
+
     #electron x mom, proton x mom
-    # x,y = 1,5 
-    # var_names = ["Electron X-Momentum","Proton X-Momentum"]
-    # title = "Electon $P_X$ vs. Proton $P_X$"
-    # ranges = [[-1.5,1.5,100],[-.75,.75,100]]
+    #x,y = 1,5 
+    #var_names = ["Electron X-Momentum","Proton X-Momentum"]
+    #title = "Electon $P_X$ vs. Proton $P_X$"
+    #ranges = [[-1.5,1.5,100],[-.75,.75,100]]
 
     #electron x mom, electron y mom
     # x,y = 1,2
     # var_names = ["Electron X-Momentum","Electron Y-Momentum"]
     # title = "Electon $P_X$ vs. Electron $P_Y$"
-    # ranges = [[-1.5,1.5,100],[-1.5,1.5,100]]
+    # #ranges = [[-3,3,100],[1,9,100]]
+    # ranges = [[-1.5,1.5,200],[-1.5,1.5,200]]
 
     # #electron x mom, electron y mom
     # x,y = 1,2
@@ -464,18 +468,21 @@ if gen_1d_histos:
 
 
     #electron mass squared, electron energy
-    x,y = 'emass2',1
-    var_names = ["Electron Mass Squared","Electron Z Mom."]
-    title = "Electon Mass Squared vs. Electron Z Mom."
-    ranges = [[-1.5,1.5,100],[-1.5,1.5,100]]
+    # x,y = 'emass2',1
+    # var_names = ["Electron Mass Squared","Electron Z Mom."]
+    # title = "Electon Mass Squared vs. Electron Z Mom."
+    # ranges = [[-1.5,1.5,100],[-1.5,1.5,100]]
 
 
     title_phys = title+ ", Physics Data"
-    title_nf = title + ", NF 4-Feature Model"
+    title_phys_z = title+ ", Gen Events Data"
+    title_nf = title + ", NF 16-Feature Cond Model"
     filename = title
     units = ["GeV","Gev"]
-    x_data = df_test_data[y]
+    x_data = df_test_data[x]
     y_data = df_test_data[y]
+    x_data_z = df_test_data_z[x]
+    y_data_z = df_test_data_z[y]
     x_data_nf = df_nflow_data[x]
     y_data_nf = df_nflow_data[y]
 
@@ -484,6 +491,10 @@ if gen_1d_histos:
 
     make_histos.plot_2dhist(x_data,y_data,var_names,ranges,colorbar=False,
                                 saveplot=saveplots,pics_dir=output_dir,plot_title=title_phys.replace("/",""),
+                                filename=filename,units=units)
+
+    make_histos.plot_2dhist(x_data_z,y_data_z,var_names,ranges,colorbar=False,
+                                saveplot=saveplots,pics_dir=output_dir,plot_title=title_phys_z.replace("/",""),
                                 filename=filename,units=units)
 
     

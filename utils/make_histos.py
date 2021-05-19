@@ -110,11 +110,14 @@ def plot_1dhist(x_data,vars,ranges="none",second_x=None,
         #bar_0_10 = ax.hist(range=[xmin,xmax], color=first_color, label=xlabel_1)# cmap = plt.cm.nipy_spectral) 
 
         # create blank rectangle
-        extra = Rectangle((0, 0), 1, 1, fc="w", fill=False, edgecolor='none', linewidth=0)
-        ax.legend([bar_0_10, bar_10_100,extra], ("  {}  ".format(xlabel_1),"  {}  ".format(xlabel_2),"EMD Value: {:.4f}".format(annotation)))  
+        if annotation is not None:
+            extra = Rectangle((0, 0), 1, 1, fc="w", fill=False, edgecolor='none', linewidth=0)
+            ax.legend([bar_0_10, bar_10_100,extra], ("  {}  ".format(xlabel_1),"  {}  ".format(xlabel_2),"EMD Value: {:.4f}".format(annotation)))  
+        else:
+             ax.legend([bar_0_10, bar_10_100], ("  {}  ".format(xlabel_1),"  {}  ".format(xlabel_2)))  
 
     if proton_line:
-        plt.axvline(x=0.938,color = 'r', linestyle = '-',label="Proton Mass",linewidth=3.5)
+        plt.axvline(x=proton_line,color = 'r', linestyle = '-',label="Pion Mass",linewidth=3.5)
         ax.legend(loc="best")
     # Creating plot
         

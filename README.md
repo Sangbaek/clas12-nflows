@@ -30,10 +30,11 @@ pip install --user pickle5 nflows UMNN icecream
 
 Download the codes with the data files
 ```
+cd /pool001/$USER/
 git clone https://github.com/6862-2021SP-team3/clas12-nflows.git
 cd clas12-nflows/data
 wget -O epgg.pkl https://www.dropbox.com/s/t7nkp2jfp2uennm/epgg.pkl?dl=0
-wget -O pi0_cartesian.pkl https://www.dropbox.com/s/0nkht1xls2tmdrm/pi0_cartesian.pkl?dl=0
+wget -O pi0.pkl https://www.dropbox.com/s/bqf8vv073zc4wdb/pi0.pkl?dl=0
 python utils/manual_split.py
 ```
 
@@ -48,7 +49,7 @@ exit
 Following commands will submit one job to slurm farm.
 ```
 ssh eofe7.mit.edu
-cd /nobackup1c/users/$USER/clas12-nflows
+cd /pool001/$USER/clas12-nflows
 python slurm/submit.py
 ```
 Check logs in slurm/logs/, figures in slurm/figures, models in slurm/models, and generated data in slurm/gendata.

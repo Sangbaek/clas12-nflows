@@ -30,7 +30,7 @@ module purge
 module load anaconda3/2020.11
 eval "$(conda shell.bash hook)"
 conda activate torch-env
-python /nobackup1c/users/{1}/clas12-nflows/train_nflow.py
+python /pool001/{1}/clas12-nflows/train_nflow.py
 """.format(str(i), username)
     queue=Popen(args=["squeue","-u",username],stdin=None,stdout=PIPE)
     linecount = file_len(queue.stdout)-1

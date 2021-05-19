@@ -19,7 +19,7 @@ for i in range(0, 1):
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=4G
-#SBATCH --time=04:00:00
+#SBATCH --time=10:00:00
 #SBATCH --error=/pool001/users/{1}/clas12-nflows/slurm/logs/log_{0}.err
 #SBATCH --output=/pool001/users//{1}/clas12-nflows/slurm/logs/log_{0}.out
 #SBATCH --partition=sched_any, sched_mit_hill, sched_mit_redwine

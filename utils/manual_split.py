@@ -7,10 +7,18 @@ import pickle5 as pickle
 if __name__ == "__main__":
     with open('data/pi0.pkl', 'rb') as f:
         xz = np.array(pickle.load(f), dtype=np.float64)
-    x = cartesian_converter(xz) #pi0.pkl is in spherical coordinates, need to convert to cartesian
-    dfx = pd.DataFrame(x)
-    train,test = split_data(dfx)
 
-    train.to_pickle("data/pi0_cartesian_train.pkl")
-    test.to_pickle("data/pi0_cartesian_test.pkl")
+    dfxz = pd.DataFrame(xz)
+    train,test = split_data(dfxz)
 
+    train.to_pickle("data/pi0_train.pkl")
+    test.to_pickle("data/pi0_test.pkl")
+
+    with open('data/epgg.pkl', 'rb') as f:
+        xz = np.array(pickle.load(f), dtype=np.float64)
+
+    dfxz = pd.DataFrame(xz)
+    train,test = split_data(dfxz)
+
+    train.to_pickle("data/epgg_train.pkl")
+    test.to_pickle("data/epgg_test.pkl")

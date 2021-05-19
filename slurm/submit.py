@@ -45,4 +45,4 @@ python /nobackup1c/users/{1}/clas12-nflows/train_nflow.py
         linecount = file_len(queue.stdout)            
 
     p=Popen(args=["sbatch"],stdin=PIPE);
-    p.communicate(bytes(command), encoding='utf-8')
+    p.communicate(bytes(command, encoding='utf-8'))

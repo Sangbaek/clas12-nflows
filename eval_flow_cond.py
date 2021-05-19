@@ -18,7 +18,6 @@ from utils import make_histos
 from utils.utilities import meter
 from utils.utilities import cartesian_converter
 
-sys.path.insert(0,'/mnt/c/Users/rober/Dropbox/Bobby/Linux/classes/GAML/GAMLX/nflows/nflows')
 from nflows.transforms.autoregressive import MaskedUMNNAutoregressiveTransform
 from nflows.flows.base import Flow
 from nflows.distributions.normal import StandardNormal

@@ -20,7 +20,6 @@ from utils.utilities import make_model
 from utils import make_histos
 from utils import dataXZ
 
-sys.path.insert(0,'/mnt/c/Users/rober/Dropbox/Bobby/Linux/classes/GAML/GAMLX/nflows/nflows')
 from nflows.transforms.autoregressive import MaskedUMNNAutoregressiveTransform
 from nflows.flows.base import Flow
 from nflows.distributions.normal import StandardNormal
@@ -45,9 +44,22 @@ class dataXZ:
     #Use if not already converted
     with open('data/pi0.pkl', 'rb') as f:
         xz = np.array(pickle.load(f), dtype=np.float32)
-        x = cartesian_converter(xz,type='x')
-        z = cartesian_converter(xz,type='z')
-        
+        '''
+        data structure changed.
+        epgg.pkl : all epgg events
+        pi0.pkl : only pi0 events
+         0 column : event
+         1–16 column : x
+         17: e sector
+         18: g1 sector
+         19: g2 sector
+         20–35 column: z
+        '''
+
+        # x = cartesian_converter(xz,type='x')
+        # z = cartesian_converter(xz,type='z')
+        x = xz[:, 1:17]
+        z = xz[:, 20:]
 
         if feature_subset != "all": 
           x = x[:,feature_subset]

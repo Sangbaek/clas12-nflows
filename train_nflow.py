@@ -20,7 +20,6 @@ from utils.utilities import make_model
 from utils import make_histos
 from utils import dataXZ
 
-sys.path.insert(0,'/mnt/c/Users/rober/Dropbox/Bobby/Linux/classes/GAML/GAMLX/nflows/nflows')
 from nflows.transforms.autoregressive import MaskedUMNNAutoregressiveTransform
 from nflows.flows.base import Flow
 from nflows.distributions.normal import StandardNormal

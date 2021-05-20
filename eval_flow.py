@@ -212,7 +212,7 @@ if physics_cuts:
     
     
     x_name = "Gamma-Gamma Invariant Mass (GeV)"
-    output_dir = "./"
+    output_dir = "figures/"
     #ranges = "none"
     ranges = [0,0.3,100]
 
@@ -225,7 +225,7 @@ if physics_cuts:
     y_data = df["pmass"]
     var_names = ["E Px","E Py"]
     saveplots = False
-    output_dir = "./"
+    output_dir = "figures/"
     title = "Pi Mass vs EPx"
     filename = title
     units = ["GeV","Gev"]
@@ -388,7 +388,7 @@ if gen_emd_comp:
 
 
 if gen_1d_histos:
-    output_dir = "hists_1D/"
+    output_dir = "figures/hists_1D/"
 
     import itertools
     parts = ["Electron","Proton","Photon 1","Photon 2"]

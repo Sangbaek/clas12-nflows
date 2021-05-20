@@ -52,4 +52,4 @@ def mag(vec1):
     return np.sqrt(dot(vec1, vec1))
 dvpi0p.loc[:, "Mpi0"] = np.sqrt((mag(gam1)+mag(gam2))**2 - mag(pi0)**2)
 dvpi0p["Mpi0"].hist(bins = 101)
-plt.show()
+plt.savefig("figures/test.pdf")

@@ -220,7 +220,7 @@ if physics_cuts:
     
     
     x_name = "Gamma-Gamma Invariant Mass (GeV)"
-    output_dir = "./"
+    output_dir = "figures/"
     #ranges = "none"
     ranges = [0,0.3,100]
 
@@ -306,7 +306,7 @@ if gen_all_emd:
     plt.xlim([-.5,15.5])
     plt.ylim([0,10])
     plt.show()
-    plotname = "nflow_emd_4.png"
+    plotname = "figures/nflow_emd_4.png"
     plt.savefig(plotname)
     plt.close()
 
@@ -375,7 +375,7 @@ if gen_emd_comp:
     plt.xlim([-.5,3.5])
     plt.ylim([0,10])
     plt.show()
-    plotname = "nflow_emd_4.png"
+    plotname = "figures/nflow_emd_4.png"
     plt.savefig(plotname)
     plt.close()
 
@@ -386,7 +386,7 @@ if gen_emd_comp:
 
 
 if gen_1d_histos:
-    output_dir = "hists_1D/"
+    output_dir = "figures/hists_1D/"
 
     import itertools
     parts = ["Electron","Proton","Photon 1","Photon 2"]

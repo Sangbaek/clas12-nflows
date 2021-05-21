@@ -24,6 +24,7 @@ for i in range(0, 1):
 #SBATCH --threads-per-core=1
 #SBATCH --mem-per-cpu=16G
 #SBATCH --nodelist=node235
+#SBATCH --partition=sched_mit_hill
 #SBATCH --time=10:00:00
 #SBATCH --exclusive 
 #SBATCH --error=/pool001/{1}/clas12-nflows/slurm/logs/log_{0}.err

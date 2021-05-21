@@ -29,7 +29,6 @@ for i in range(0, 1):
 #SBATCH --mail-user={1}@mit.edu
 #SBATCH --mail-type=ALL
 
-module load anaconda3/2020.11
 eval "$(conda shell.bash hook)"
 conda activate torch-env
 python train_nflow.py

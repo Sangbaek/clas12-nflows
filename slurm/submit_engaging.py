@@ -17,16 +17,11 @@ for i in range(0, 1):
 
 #SBATCH --job-name=clas12-nflow{0}
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=1
+#SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
-#SBATCH --gres=gpu:4
-#SBATCH --ntasks-per-core=1
-#SBATCH --threads-per-core=1
-#SBATCH --mem-per-cpu=16G
-#SBATCH --nodelist=node235
-#SBATCH --partition=sched_mit_hill
-#SBATCH --time=10:00:00
-#SBATCH --exclusive 
+#SBATCH --gres=gpu:1
+#SBATCH --mem=4G
+#SBATCH --time=04:00:00
 #SBATCH --error=/pool001/{1}/clas12-nflows/slurm/logs/log_{0}.err
 #SBATCH --output=/pool001/{1}/clas12-nflows/slurm/logs/log_{0}.out
 #SBATCH --mail-user={1}@mit.edu

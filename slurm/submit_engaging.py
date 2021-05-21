@@ -22,6 +22,8 @@ for i in range(0, 1):
 #SBATCH --gres=gpu:1
 #SBATCH --mem=4G
 #SBATCH --time=04:00:00
+#SBATCH --nodelist=node235
+#SBATCH --partition=sched_mit_hill
 #SBATCH --error=/pool001/{1}/clas12-nflows/slurm/logs/log_{0}.err
 #SBATCH --output=/pool001/{1}/clas12-nflows/slurm/logs/log_{0}.out
 #SBATCH --mail-user={1}@mit.edu

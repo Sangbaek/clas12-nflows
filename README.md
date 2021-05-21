@@ -58,7 +58,7 @@ conda activate torch-env
 Manually download nflow related libs using pypi.
 ```
 pip install --user pickle5 nflows UMNN icecream
-./setup.sh
+./setup_satori.sh
 conda config --set auto_activate_base false
 exit
 ```
@@ -84,7 +84,7 @@ pip install --user nflows UMNN icecream
 cd /pool001/$USER/
 git clone https://github.com/6862-2021SP-team3/clas12-nflows.git
 cd clas12-nflows
-./slurm/setup.sh
+./slurm/setup_engaging.sh
 ```
 
 Download the data

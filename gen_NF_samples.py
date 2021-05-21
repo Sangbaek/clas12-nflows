@@ -28,7 +28,7 @@ from nflows.transforms.permutations import ReversePermutation
 
 
 
-dev = "cuda:0" if torch.cuda.is_available() else "cpu"
+dev = "cuda" if torch.cuda.is_available() else "cpu"
 #dev = "cpu"
 print(dev)
 device = torch.device(dev)

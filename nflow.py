@@ -36,7 +36,7 @@ from nflows.transforms.permutations import ReversePermutation
 from utils import dataXZ
 
 # Define device to be used
-dev = "cuda:0" if torch.cuda.is_available() else "cpu"
+dev = "cuda" if torch.cuda.is_available() else "cpu"
 device = torch.device(dev)
 
 #read the data, with the defined data class

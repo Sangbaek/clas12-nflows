@@ -30,7 +30,7 @@ for i in range(0, 1):
 #SBATCH --mail-user={1}@mit.edu
 #SBATCH --mail-type=ALL
 
-module wmlce
+module load wmlce
 python train_nflow.py
 """.format(str(i), username)
     queue=Popen(args=["squeue","-u",username],stdin=None,stdout=PIPE)

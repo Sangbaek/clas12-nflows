@@ -25,14 +25,28 @@ def split_data(data,test_size=0.2,random_state=42):
 def make_model(num_layers,num_features,num_hidden_features,device):
 
 
-    context_encoder = nn.Sequential(
-            nn.Linear(num_features, 2*num_features),
-            nn.ReLU(),
-            nn.Linear(2*num_features, 2*num_features),
-            nn.ReLU(),
-            nn.Linear(2*num_features, 2*num_features)
-            )
+    #context_encoder = nn.Sequential(
+    #        nn.Linear(num_features, 4*num_features),
+    #        nn.ReLU(),
+    #        nn.Linear(4*num_features, 4*num_features),
+    #        nn.ReLU(),
+    #        nn.Linear(4*num_features, 2*num_features)
+    #        )
+    #context_encoder = nn.Sequential(
+    #        nn.Linear(num_features, 2*num_features),
+    #        nn.ReLU(),
+    #        nn.Linear(2*num_features, 2*num_features),
+    #        nn.ReLU(),
+    #        nn.Linear(2*num_features, 2*num_features)
+    #        )
 
+    context_encoder = nn.Sequential(
+            nn.Linear(num_features, 256),
+            nn.ReLU(),
+            nn.Linear(256, 256),
+            nn.ReLU(),
+            nn.Linear(256, 2*num_features)
+            )
     base_dist = ConditionalDiagonalNormal(shape=[num_features],context_encoder=context_encoder)
 
     #base_dist = StandardNormal(shape=[num_features])
@@ -69,6 +83,56 @@ def meter(dist1,dist2,feature):
   emd = wasserstein_distance(dist1[:,feature],dist2[:,feature])
   jsd = distance.jensenshannon(dist1[:,feature],dist2[:,feature]) ** 2
   return [emd, kld, jsd]
+
+#returns an nx16 array, of energy, px, py, pz, for electron, proton, g1, g2
+#You should just pass it the xz object from the dataXZ() class
+def spherical_converter(vecnp, mode = 'epg'):
+  #split into electron, proton, gammas
+  mass_e = .000511
+  mass_p = 0.938
+  mass_g = 0
+  if mode == "epgg":
+    e_vec = vecnp[:,0:4]
+    p_vec = vecnp[:,4:8]
+    g1_vec = vecnp[:,8:12]
+    g2_vec = vecnp[:,12:16]
+    particles = [e_vec,p_vec,g1_vec,g2_vec]
+    masses = [mass_e,mass_p,mass_g,mass_g]
+  elif mode == "epg":
+    e_vec = vecnp[:,0:4]
+    p_vec = vecnp[:,4:8]
+    g1_vec = vecnp[:,8:12]
+    particles = [e_vec,p_vec,g1_vec]
+    masses = [mass_e,mass_p,mass_g]
+  parts_new = []
+  #convert from spherical to cartesian
+  for part_vec, mass in zip(particles,masses):
+    mom = np.sqrt(part_vec[:,1]**2 + part_vec[:,2]**2 + part_vec[:,3]**2)
+    thet = np.arctan2(np.sqrt(part_vec[:,1]**2 + part_vec[:,2]**2), part_vec[:,3])
+    phi = np.arctan2(part_vec[:,2], part_vec[:,1])
+
+    #pz = mom*np.cos(thet)
+    #px = mom*np.sin(thet)*np.cos(phi)
+    #py = mom*np.sin(thet)*np.sin(phi)
+    #p2 = pz*pz+px*px+py*py
+    #E = np.sqrt(mass**2+p2)
+    
+    x_new = np.array([part_vec[:,0],mom, thet,phi])
+    parts_new.append(x_new)
+
+  #reshape output into 1x16 arrays for each event
+  if mode == "epgg":
+    e = parts_new[0]
+    p = parts_new[1]
+    g1 = parts_new[2]
+    g2 = parts_new[3]
+    out = np.concatenate((e.T,p.T,g1.T,g2.T), axis=1)
+  if mode == "epg":
+    e = parts_new[0]
+    p = parts_new[1]
+    g1 = parts_new[2]
+    out = np.concatenate((e.T,p.T,g1.T), axis=1)
+  return out
 
 #returns an nx16 array, of energy, px, py, pz, for electron, proton, g1, g2
 #You should just pass it the xz object from the dataXZ() class

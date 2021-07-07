@@ -15,7 +15,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import RobustScaler, MaxAbsScaler, QuantileTransformer
 
 from utils.utilities import meter
-from utils.utilities import cartesian_converter
+from utils.utilities import cartesian_converter, spherical_converter
 from utils.utilities import make_model
 from utils import make_histos
 from utils import dataXZ
@@ -36,13 +36,13 @@ class dataXZ:
   read the data stored in pickle format
   the converting routine is at https://github.com/6862-2021SP-team3/hipo2pickle
   """
-  def __init__(self, standard = False, feature_subset = "all"):
+  def __init__(self, standard = False, feature_subset = "all", file = "data/pi0toepg.pkl", mode = "epg"):
     #use if already converted to cartesian
     #with open('data/pi0_cartesian_train.pkl', 'rb') as f:
        #x = np.array(pickle.load(f), dtype=np.float32)
 
     #Use if not already converted
-    with open('data/pi0_train.pkl', 'rb') as f:
+    with open(file, 'rb') as f:
         xz = np.array(pickle.load(f), dtype=np.float32)
     '''
     data structure changed.
@@ -56,11 +56,18 @@ class dataXZ:
      20–35 column: z
     '''
 
-    # x = cartesian_converter(xz,type='x')
-    # z = cartesian_converter(xz,type='z')
-    x = xz[:, 1:17]
-    z = xz[:, 20:]
+    #x = xz[:, 1:17]
+    #z = xz[:, 20:]
+    if mode == "epgg":
+        z = xz[:, 1:17]
+        x = xz[:, 20:]
+    else:
+        z = xz[:, 1:13]
+        x = xz[:, 13:]
 
+    #x = spherical_converter(x, mode = mode)
+    #z = spherical_converter(z, mode = mode)
+    
     if feature_subset != "all": 
       x = x[:,feature_subset]
       z = z[:,feature_subset]

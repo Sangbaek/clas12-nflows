@@ -28,27 +28,32 @@ from nflows.transforms.base import CompositeTransform
 from nflows.transforms.autoregressive import MaskedAffineAutoregressiveTransform
 from nflows.transforms.permutations import ReversePermutation
 
-
 # Define device to be used
 dev = "cuda" if torch.cuda.is_available() else "cpu"
 #dev = "cpu"
 device = torch.device(dev)
 print(dev)
 
+print("debug")
+exit()
 #Define hyperparameters
 #The number of featuers is just the length of the feature subset, or 16 if "all"
 #feature_subset = [1,2,3,5,6,7,9,10,11,13,14,15] #Only 3 momenta (assuming PID is known)
-#feature_subset = [0,1,2,3] #Just electron features
-#feature_subset = [4,5,6,7] #Just proton features
-feature_subset = "all" #All 16 features
+#feature_subset = [1,2,3] #Just electron features
+#part = "elec"
+feature_subset = [5,6,7] #Just proton features
+part = "prot"
+#feature_subset = [9,10,11] #Just photon features
+#part = "phot"
+#feature_subset = "all" #All 16 features
 
 #These are parameters for the Normalized Flow model
-num_layers = 6
+num_layers = 2
 num_hidden_features = 80
 
 #These are training parameters
-num_epoch = 10000
-training_sample_size = 400
+num_epoch = 3000
+training_sample_size = 128
 
 
 if feature_subset == "all":
@@ -58,12 +63,14 @@ else:
 
 
 #read the data, with the defined data class
-xz = dataXZ.dataXZ(feature_subset=feature_subset)
-
-
+xz = dataXZ.dataXZ(feature_subset=feature_subset, file = "data/train.pkl", mode="epg")
+print("done with reading data")
+print(xz.x)
+print(xz.z)
 #construct an nflow model
 flow, optimizer = make_model(num_layers,num_features,num_hidden_features,device)
 print("number of params: ", sum(p.numel() for p in flow.parameters()))
+
 
 
 start = datetime.now()
@@ -90,21 +97,10 @@ for i in range(num_epoch):
       print("Rate is {} seconds per epoch".format(elapsedTime/i))
       print("Total estimated run time is {}".format(elapsedTime+elapsedTime/i*(num_epoch+1-i)))
       if ((i+1)%100) == 0:
-        torch.save(flow.state_dict(), "models/Cond/16features/TM-UMNN_{}_{}_{}_{}_{}_{:.2f}.pt".format(num_features,
+        torch.save(flow.state_dict(), "models/Cond/3features/TM-UMNN_"+part+"_{}_{}_{}_{}_{}_{:.2f}.pt".format(num_features,
           num_layers,num_hidden_features,training_sample_size,i,loss.item()))
 
-tm_name = "models/Cond/16features/TM-Final-UMNN_{}_{}_{}_{}_{:.2f}.pt".format(num_features,
+tm_name = "models/Cond/3features/TM-Final-UMNN_"+part+"_{}_{}_{}_{}_{:.2f}.pt".format(num_features,
           num_layers,num_hidden_features,training_sample_size,losses[-1])
 torch.save(flow.state_dict(), tm_name)
 print("trained model saved to {}".format(tm_name))
-
-
-email = True
-if email:
-  from pytools import circle_emailer
-  now = datetime.now()
-  script_end_time = now.strftime("%H:%M:%S")
-  s_name = os.path.basename(__file__)
-  subject = "Completion of {}".format(s_name)
-  body = "Your script {} finished running at {}".format(s_name,script_end_time)
-  circle_emailer.send_email(subject,body)

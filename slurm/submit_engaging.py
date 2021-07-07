@@ -12,7 +12,7 @@ def file_len(f):
         pass
     return i + 1
 
-for i in range(0, 1):
+for i in range(2, 3):
     command= """#!/bin/bash
 
 #SBATCH --job-name=clas12-nflow{0}
@@ -31,6 +31,7 @@ for i in range(0, 1):
 
 eval "$(conda shell.bash hook)"
 conda activate torch-env
+#python gen_NF_samples.py
 python train_nflow.py
 """.format(str(i), username)
     queue=Popen(args=["squeue","-u",username],stdin=None,stdout=PIPE)

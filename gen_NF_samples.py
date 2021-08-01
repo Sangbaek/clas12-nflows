@@ -58,7 +58,10 @@ feature_subset = "all" #All 16 features
 
 print(" reading electron NF model ")
 #model_name = "TM-Final-UMNN_elec_4_6_80_400_-9.76.pt"
-model_name = "TM-Final-UMNN_elec_3_6_80_400_-8.08.pt"
+#model_name = "TM-Final-UMNN_elec_3_2_80_128_-6.75.pt"
+#model_name = "TM-Final-UMNN_elec_3_2_80_128_-6.62.pt"
+#model_name = "TM-Final-UMNN_elec_3_2_80_128_-9.88.pt"
+model_name = "TM-Final-UMNN_elec_3_6_80_128_-9.54.pt"
 params = model_name.split("_")
 num_features = int(params[2])
 num_layers = int(params[3])
@@ -82,8 +85,11 @@ flow_e.eval()
 
 print(" reading proton NF model ")
 
-#model_name = "TM-Final-UMNN_prot_4_6_80_400_-13.90.pt"
-model_name = "TM-Final-UMNN_prot_3_6_40_400_-7.74.pt"
+#model_name = "TM-Final-UMNN_prot_3_2_80_128_-9.13.pt"
+#model_name = "TM-Final-UMNN_prot_3_2_80_128_-9.13.pt"
+#model_name = "TM-Final-UMNN_prot_3_2_80_128_-7.38.pt"
+#model_name = "TM-Final-UMNN_prot_3_2_80_128_-9.74.pt"
+model_name = "TM-Final-UMNN_prot_3_6_80_128_-9.97.pt"
 params = model_name.split("_")
 num_features = int(params[2])
 num_layers = int(params[3])
@@ -110,7 +116,10 @@ print(" reading photon NF model ")
 
 
 #model_name = "TM-Final-UMNN_phot_4_6_40_400_-10.24.pt"
-model_name = "TM-Final-UMNN_phot_3_6_40_400_-3.96.pt"
+#model_name = "TM-Final-UMNN_phot_3_6_40_400_-3.96.pt"
+#model_name = "TM-Final-UMNN_phot_3_2_80_128_-5.87.pt"
+#model_name = "TM-Final-UMNN_phot_3_2_80_128_-5.53.pt"
+model_name = "TM-Final-UMNN_phot_3_2_80_128_-6.81.pt"
 params = model_name.split("_")
 num_features = int(params[2])
 num_layers = int(params[3])
@@ -136,10 +145,11 @@ flow_g.eval()
 
 print (" reading data")
 #Initialize dataXZ object for quantile inverse transform
-xz = dataXZ.dataXZ(feature_subset=feature_subset, file = "data/pi0toepg.pkl", mode = "epg")
-xentire = xz.x.detach().numpy()
-zentire = xz.z.detach().numpy()
-#QuantTran = xz.qt
+#xb = dataXZ.dataXZ(feature_subset=feature_subset, file = "data/pi0toepg.pkl", mode = "epg")
+xb = dataXZ.dataXZ(feature_subset=feature_subset, file = "data/train.pkl", mode = "epg")
+xentire = xb.x.detach().numpy()
+bentire = xb.b.detach().numpy()
+#QuantTran = xb.qt
 
 print (" done with reading data")
 
@@ -150,7 +160,7 @@ maxloops = len(xentire)//(max_range*sample_size) #Number of overall loops
 for loop_num in range(maxloops):
     print("new loop "+str(loop_num))
     xs = []
-    zs = []
+    bs = []
     gens = []
     start = datetime.now()
     start_time = start.strftime("%H:%M:%S")
@@ -164,22 +174,22 @@ for loop_num in range(maxloops):
         #For conditional flows:
         #z = sampleDict["z"]
         #x = sampleDict["x"]
-        z = zentire[sample_size*(max_range*loop_num+i-1):sample_size*(max_range*loop_num+i), :]
+        b = bentire[sample_size*(max_range*loop_num+i-1):sample_size*(max_range*loop_num+i), :]
         x = xentire[sample_size*(max_range*loop_num+i-1):sample_size*(max_range*loop_num+i), :]
-        zs.append(z)
+        bs.append(b)
         xs.append(x)
         #electron
-        context_val_e = torch.tensor(z[:, [1,2,3]], dtype=torch.float32).to(device)
+        context_val_e = torch.tensor(b[:, [1,2,3]], dtype=torch.float32).to(device)
         val_gen_e = flow_e.sample(1,context=context_val_e).cpu().detach().numpy().reshape((sample_size,-1))
-        E_gen_e = np.sqrt(val_gen_e[:, 0]**2 + (0.5109989461 * 0.001)**2).reshape((-1, 1))
+        E_gen_e = np.sqrt(val_gen_e[:, 0]**2 + val_gen_e[:, 1]**2  + val_gen_e[:, 2]**2  +  (0.5109989461 * 0.001)**2).reshape((-1, 1))
         #proton
-        context_val_p = torch.tensor(z[:, [5,6,7]], dtype=torch.float32).to(device)
+        context_val_p = torch.tensor(b[:, [5,6,7]], dtype=torch.float32).to(device)
         val_gen_p = flow_p.sample(1,context=context_val_p).cpu().detach().numpy().reshape((sample_size,-1))
-        E_gen_p = np.sqrt(val_gen_p[:, 0]**2 + (0.938272081)**2).reshape((-1, 1))
+        E_gen_p = np.sqrt(val_gen_p[:, 0]**2 + val_gen_p[:, 1]**2  + val_gen_p[:, 2]**2 + (0.938272081)**2).reshape((-1, 1))
         #photon
-        context_val_g = torch.tensor(z[:, [9,10,11]], dtype=torch.float32).to(device)
+        context_val_g = torch.tensor(b[:, [9,10,11]], dtype=torch.float32).to(device)
         val_gen_g = flow_g.sample(1,context=context_val_g).cpu().detach().numpy().reshape((sample_size,-1))
-        E_gen_g = val_gen_g[:, 0].reshape((-1, 1))
+        E_gen_g = np.sqrt(val_gen_g[:, 0]**2 + val_gen_g[:,1]**2 + val_gen_g[:, 2]**2).reshape((-1, 1))
         gens.append( np.hstack( (E_gen_e, val_gen_e, E_gen_p, val_gen_p, E_gen_g, val_gen_g)))
         now = datetime.now()
         elapsedTime = (now - start )
@@ -187,17 +197,19 @@ for loop_num in range(maxloops):
         print("Elapsed time is {}".format(elapsedTime))
         print("Total estimated run time is {}".format(elapsedTime+elapsedTime/i*(max_range+1-i)))
     X = np.concatenate(xs)
-    Z = np.concatenate(zs)
+    B = np.concatenate(bs)
     Gens = np.concatenate(gens)
     #z = QuantTran.inverse_transform(X)
-    df_Z = pd.DataFrame(Z)
-    df_Z.to_pickle("gendata/Cond/3features/UMNN/Z_UMNN_{}_{}_{}_{}_{}_pi0_{}.pkl".format(num_features,
+    df_B = pd.DataFrame(B)
+    df_B.to_pickle("gendata/Cond/3features/UMNN/B_UMNN_{}_{}_{}_{}_{}_dvcs_{}.pkl".format(num_features,
             num_layers,num_hidden_features,training_sample_size,training_loss,loop_num))
     df_X = pd.DataFrame(X)
-    df_X.to_pickle("gendata/Cond/3features/UMNN/X_UMNN_{}_{}_{}_{}_{}_pi0_{}.pkl".format(num_features,
+    df_X = df_B + df_X
+    df_X.to_pickle("gendata/Cond/3features/UMNN/X_UMNN_{}_{}_{}_{}_{}_dvcs_{}.pkl".format(num_features,
             num_layers,num_hidden_features,training_sample_size,training_loss,loop_num))
     df_Gens = pd.DataFrame(Gens)
-    df_Gens.to_pickle("gendata/Cond/3features/UMNN/GenData_UMNN_{}_{}_{}_{}_{}_pi0_{}.pkl".format(num_features,
+    df_Gens = df_B + df_Gens
+    df_Gens.to_pickle("gendata/Cond/3features/UMNN/GenData_UMNN_{}_{}_{}_{}_{}_dvcs_{}.pkl".format(num_features,
             num_layers,num_hidden_features,training_sample_size,training_loss,loop_num))
 
 print("done")

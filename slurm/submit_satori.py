@@ -12,6 +12,7 @@ def file_len(f):
         pass
     return i + 1
 
+#for i in range(0, 5):
 for i in range(0, 1):
     command= """#!/bin/bash
 
@@ -30,15 +31,21 @@ for i in range(0, 1):
 #SBATCH --mail-user={1}@mit.edu
 #SBATCH --mail-type=ALL
 
-module load wmlce
-python train_nflow.py
+module load anaconda
+eval "$(conda shell.bash hook)"
+conda activate opence
+#python train_nflow.py
+$python train_nflow2.py
+#python train_nflow3.py
+#python gen_protons.py
+python gen_NF_samples.py
 """.format(str(i), username)
     queue=Popen(args=["squeue","-u",username],stdin=None,stdout=PIPE)
     linecount = file_len(queue.stdout)-1
     print("There are ", linecount, "jobs on the queue.")
         
     # If we have too many things on the queue, then wait a minute
-    while (linecount > 499):
+    while (linecount > 9):
         print("There are still", linecount, "jobs on the queue. Waiting...")
         sys.stdout.flush()
         time.sleep(60)

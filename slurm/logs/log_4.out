@@ -1,0 +1,4019 @@
+cuda
+done with reading data
+tensor([[ 0.0436,  0.1095,  0.6494],
+        [-0.0129, -0.0136,  0.0794],
+        [-0.0673, -0.0153,  0.4518],
+        ...,
+        [ 0.0447, -0.0591,  0.7073],
+        [-0.0385,  0.0482, -0.4927],
+        [-0.0026, -0.0298,  0.1116]])
+tensor([[ 0.3437,  1.1388,  6.9048],
+        [-0.5766, -0.6628,  5.2760],
+        [-0.8577, -0.1794,  6.2815],
+        ...,
+        [ 0.3526, -0.5365,  5.9973],
+        [ 0.3753, -0.5868,  5.9711],
+        [ 0.6962, -1.0956,  7.4024]])
+number of params:  221602
+Start Time = 21:33:52
+On step 9 - loss 1.06, Current Time = 21:33:53
+Elapsed time is 0:00:01.129023
+Rate is 0:00:00.125447 seconds per epoch
+Total estimated run time is 0:20:54.595447
+On step 19 - loss -2.14, Current Time = 21:33:54
+Elapsed time is 0:00:01.862119
+Rate is 0:00:00.098006 seconds per epoch
+Total estimated run time is 0:16:20.158011
+On step 29 - loss -3.45, Current Time = 21:33:55
+Elapsed time is 0:00:02.584334
+Rate is 0:00:00.089115 seconds per epoch
+Total estimated run time is 0:14:51.239114
+On step 39 - loss -3.96, Current Time = 21:33:55
+Elapsed time is 0:00:03.308885
+Rate is 0:00:00.084843 seconds per epoch
+Total estimated run time is 0:14:08.514851
+On step 49 - loss -3.94, Current Time = 21:33:56
+Elapsed time is 0:00:04.032081
+Rate is 0:00:00.082287 seconds per epoch
+Total estimated run time is 0:13:42.952305
+On step 59 - loss -4.53, Current Time = 21:33:57
+Elapsed time is 0:00:04.754801
+Rate is 0:00:00.080590 seconds per epoch
+Total estimated run time is 0:13:25.980581
+On step 69 - loss -4.82, Current Time = 21:33:57
+Elapsed time is 0:00:05.497826
+Rate is 0:00:00.079679 seconds per epoch
+Total estimated run time is 0:13:16.869654
+On step 79 - loss -4.74, Current Time = 21:33:58
+Elapsed time is 0:00:06.219959
+Rate is 0:00:00.078734 seconds per epoch
+Total estimated run time is 0:13:07.418707
+On step 89 - loss -5.42, Current Time = 21:33:59
+Elapsed time is 0:00:06.942387
+Rate is 0:00:00.078004 seconds per epoch
+Total estimated run time is 0:13:00.118035
+On step 99 - loss -5.05, Current Time = 21:34:00
+Elapsed time is 0:00:07.671642
+Rate is 0:00:00.077491 seconds per epoch
+Total estimated run time is 0:12:54.987524
+On step 109 - loss -5.99, Current Time = 21:34:00
+Elapsed time is 0:00:08.409354
+Rate is 0:00:00.077150 seconds per epoch
+Total estimated run time is 0:12:51.577154
+On step 119 - loss -5.44, Current Time = 21:34:01
+Elapsed time is 0:00:09.130992
+Rate is 0:00:00.076731 seconds per epoch
+Total estimated run time is 0:12:47.386734
+On step 129 - loss -5.00, Current Time = 21:34:02
+Elapsed time is 0:00:09.868148
+Rate is 0:00:00.076497 seconds per epoch
+Total estimated run time is 0:12:45.046532
+On step 139 - loss -5.51, Current Time = 21:34:03
+Elapsed time is 0:00:10.638654
+Rate is 0:00:00.076537 seconds per epoch
+Total estimated run time is 0:12:45.446548
+On step 149 - loss -5.84, Current Time = 21:34:03
+Elapsed time is 0:00:11.408565
+Rate is 0:00:00.076568 seconds per epoch
+Total estimated run time is 0:12:45.756501
+On step 159 - loss -5.13, Current Time = 21:34:04
+Elapsed time is 0:00:12.178702
+Rate is 0:00:00.076596 seconds per epoch
+Total estimated run time is 0:12:46.036534
+On step 169 - loss -6.03, Current Time = 21:34:05
+Elapsed time is 0:00:12.954509
+Rate is 0:00:00.076654 seconds per epoch
+Total estimated run time is 0:12:46.616637
+On step 179 - loss -6.20, Current Time = 21:34:06
+Elapsed time is 0:00:13.723646
+Rate is 0:00:00.076668 seconds per epoch
+Total estimated run time is 0:12:46.756742
+On step 189 - loss -6.09, Current Time = 21:34:06
+Elapsed time is 0:00:14.468946
+Rate is 0:00:00.076555 seconds per epoch
+Total estimated run time is 0:12:45.626606
+On step 199 - loss -6.05, Current Time = 21:34:07
+Elapsed time is 0:00:15.190955
+Rate is 0:00:00.076336 seconds per epoch
+Total estimated run time is 0:12:43.436427
+On step 209 - loss -6.07, Current Time = 21:34:08
+Elapsed time is 0:00:15.927800
+Rate is 0:00:00.076210 seconds per epoch
+Total estimated run time is 0:12:42.176120
+On step 219 - loss -5.97, Current Time = 21:34:09
+Elapsed time is 0:00:16.654713
+Rate is 0:00:00.076049 seconds per epoch
+Total estimated run time is 0:12:40.566031
+On step 229 - loss -6.43, Current Time = 21:34:09
+Elapsed time is 0:00:17.424694
+Rate is 0:00:00.076090 seconds per epoch
+Total estimated run time is 0:12:40.976174
+On step 239 - loss -6.66, Current Time = 21:34:10
+Elapsed time is 0:00:18.194453
+Rate is 0:00:00.076127 seconds per epoch
+Total estimated run time is 0:12:41.346227
+On step 249 - loss -6.01, Current Time = 21:34:11
+Elapsed time is 0:00:18.916473
+Rate is 0:00:00.075970 seconds per epoch
+Total estimated run time is 0:12:39.775913
+On step 259 - loss -5.88, Current Time = 21:34:12
+Elapsed time is 0:00:19.638952
+Rate is 0:00:00.075826 seconds per epoch
+Total estimated run time is 0:12:38.335844
+On step 269 - loss -6.41, Current Time = 21:34:12
+Elapsed time is 0:00:20.360599
+Rate is 0:00:00.075690 seconds per epoch
+Total estimated run time is 0:12:36.975679
+On step 279 - loss -6.63, Current Time = 21:34:13
+Elapsed time is 0:00:21.088979
+Rate is 0:00:00.075588 seconds per epoch
+Total estimated run time is 0:12:35.955515
+On step 289 - loss -6.73, Current Time = 21:34:14
+Elapsed time is 0:00:21.810542
+Rate is 0:00:00.075469 seconds per epoch
+Total estimated run time is 0:12:34.765470
+On step 299 - loss -6.62, Current Time = 21:34:14
+Elapsed time is 0:00:22.531940
+Rate is 0:00:00.075358 seconds per epoch
+Total estimated run time is 0:12:33.655256
+On step 309 - loss -6.80, Current Time = 21:34:15
+Elapsed time is 0:00:23.268056
+Rate is 0:00:00.075301 seconds per epoch
+Total estimated run time is 0:12:33.085348
+On step 319 - loss -6.75, Current Time = 21:34:16
+Elapsed time is 0:00:23.989790
+Rate is 0:00:00.075203 seconds per epoch
+Total estimated run time is 0:12:32.105236
+On step 329 - loss -6.89, Current Time = 21:34:17
+Elapsed time is 0:00:24.711172
+Rate is 0:00:00.075110 seconds per epoch
+Total estimated run time is 0:12:31.175092
+On step 339 - loss -6.69, Current Time = 21:34:17
+Elapsed time is 0:00:25.433194
+Rate is 0:00:00.075024 seconds per epoch
+Total estimated run time is 0:12:30.315082
+On step 349 - loss -6.68, Current Time = 21:34:18
+Elapsed time is 0:00:26.155496
+Rate is 0:00:00.074944 seconds per epoch
+Total estimated run time is 0:12:29.514984
+On step 359 - loss -6.74, Current Time = 21:34:19
+Elapsed time is 0:00:26.878083
+Rate is 0:00:00.074869 seconds per epoch
+Total estimated run time is 0:12:28.764981
+On step 369 - loss -6.65, Current Time = 21:34:20
+Elapsed time is 0:00:27.600408
+Rate is 0:00:00.074798 seconds per epoch
+Total estimated run time is 0:12:28.054744
+On step 379 - loss -6.73, Current Time = 21:34:20
+Elapsed time is 0:00:28.350500
+Rate is 0:00:00.074803 seconds per epoch
+Total estimated run time is 0:12:28.104966
+On step 389 - loss -6.70, Current Time = 21:34:21
+Elapsed time is 0:00:29.072675
+Rate is 0:00:00.074737 seconds per epoch
+Total estimated run time is 0:12:27.444719
+On step 399 - loss -6.68, Current Time = 21:34:22
+Elapsed time is 0:00:29.794539
+Rate is 0:00:00.074673 seconds per epoch
+Total estimated run time is 0:12:26.804685
+On step 409 - loss -6.77, Current Time = 21:34:22
+Elapsed time is 0:00:30.531378
+Rate is 0:00:00.074649 seconds per epoch
+Total estimated run time is 0:12:26.564586
+On step 419 - loss -6.67, Current Time = 21:34:23
+Elapsed time is 0:00:31.253299
+Rate is 0:00:00.074590 seconds per epoch
+Total estimated run time is 0:12:25.974679
+On step 429 - loss -6.89, Current Time = 21:34:24
+Elapsed time is 0:00:31.975593
+Rate is 0:00:00.074535 seconds per epoch
+Total estimated run time is 0:12:25.424613
+On step 439 - loss -6.65, Current Time = 21:34:25
+Elapsed time is 0:00:32.698203
+Rate is 0:00:00.074483 seconds per epoch
+Total estimated run time is 0:12:24.904649
+On step 449 - loss -6.70, Current Time = 21:34:25
+Elapsed time is 0:00:33.420640
+Rate is 0:00:00.074433 seconds per epoch
+Total estimated run time is 0:12:24.404656
+On step 459 - loss -6.86, Current Time = 21:34:26
+Elapsed time is 0:00:34.142583
+Rate is 0:00:00.074385 seconds per epoch
+Total estimated run time is 0:12:23.924253
+On step 469 - loss -6.58, Current Time = 21:34:27
+Elapsed time is 0:00:34.864389
+Rate is 0:00:00.074338 seconds per epoch
+Total estimated run time is 0:12:23.454205
+On step 479 - loss -6.54, Current Time = 21:34:28
+Elapsed time is 0:00:35.586262
+Rate is 0:00:00.074293 seconds per epoch
+Total estimated run time is 0:12:23.004208
+On step 489 - loss -6.78, Current Time = 21:34:28
+Elapsed time is 0:00:36.308082
+Rate is 0:00:00.074250 seconds per epoch
+Total estimated run time is 0:12:22.574082
+On step 499 - loss -6.90, Current Time = 21:34:29
+Elapsed time is 0:00:37.030164
+Rate is 0:00:00.074209 seconds per epoch
+Total estimated run time is 0:12:22.164082
+On step 509 - loss -6.91, Current Time = 21:34:30
+Elapsed time is 0:00:37.767004
+Rate is 0:00:00.074198 seconds per epoch
+Total estimated run time is 0:12:22.054420
+On step 519 - loss -6.76, Current Time = 21:34:30
+Elapsed time is 0:00:38.490032
+Rate is 0:00:00.074162 seconds per epoch
+Total estimated run time is 0:12:21.694116
+On step 529 - loss -6.99, Current Time = 21:34:31
+Elapsed time is 0:00:39.212007
+Rate is 0:00:00.074125 seconds per epoch
+Total estimated run time is 0:12:21.324007
+On step 539 - loss -6.75, Current Time = 21:34:32
+Elapsed time is 0:00:39.934013
+Rate is 0:00:00.074089 seconds per epoch
+Total estimated run time is 0:12:20.964131
+On step 549 - loss -6.74, Current Time = 21:34:33
+Elapsed time is 0:00:40.655850
+Rate is 0:00:00.074054 seconds per epoch
+Total estimated run time is 0:12:20.614258
+On step 559 - loss -6.86, Current Time = 21:34:33
+Elapsed time is 0:00:41.384459
+Rate is 0:00:00.074033 seconds per epoch
+Total estimated run time is 0:12:20.404045
+On step 569 - loss -6.94, Current Time = 21:34:34
+Elapsed time is 0:00:42.106544
+Rate is 0:00:00.074001 seconds per epoch
+Total estimated run time is 0:12:20.083976
+On step 579 - loss -6.41, Current Time = 21:34:35
+Elapsed time is 0:00:42.828400
+Rate is 0:00:00.073970 seconds per epoch
+Total estimated run time is 0:12:19.773740
+On step 589 - loss -6.71, Current Time = 21:34:36
+Elapsed time is 0:00:43.549776
+Rate is 0:00:00.073938 seconds per epoch
+Total estimated run time is 0:12:19.454232
+On step 599 - loss -6.55, Current Time = 21:34:36
+Elapsed time is 0:00:44.271294
+Rate is 0:00:00.073909 seconds per epoch
+Total estimated run time is 0:12:19.163712
+On step 609 - loss -6.66, Current Time = 21:34:37
+Elapsed time is 0:00:45.007550
+Rate is 0:00:00.073904 seconds per epoch
+Total estimated run time is 0:12:19.113918
+On step 619 - loss -6.91, Current Time = 21:34:38
+Elapsed time is 0:00:45.730078
+Rate is 0:00:00.073877 seconds per epoch
+Total estimated run time is 0:12:18.844092
+On step 629 - loss -6.98, Current Time = 21:34:38
+Elapsed time is 0:00:46.451776
+Rate is 0:00:00.073850 seconds per epoch
+Total estimated run time is 0:12:18.573976
+On step 639 - loss -6.67, Current Time = 21:34:39
+Elapsed time is 0:00:47.173164
+Rate is 0:00:00.073823 seconds per epoch
+Total estimated run time is 0:12:18.304090
+On step 649 - loss -6.61, Current Time = 21:34:40
+Elapsed time is 0:00:47.894380
+Rate is 0:00:00.073797 seconds per epoch
+Total estimated run time is 0:12:18.043924
+On step 659 - loss -7.21, Current Time = 21:34:41
+Elapsed time is 0:00:48.621130
+Rate is 0:00:00.073780 seconds per epoch
+Total estimated run time is 0:12:17.873890
+On step 669 - loss -6.45, Current Time = 21:34:41
+Elapsed time is 0:00:49.342555
+Rate is 0:00:00.073756 seconds per epoch
+Total estimated run time is 0:12:17.633547
+On step 679 - loss -6.72, Current Time = 21:34:42
+Elapsed time is 0:00:50.064225
+Rate is 0:00:00.073732 seconds per epoch
+Total estimated run time is 0:12:17.393929
+On step 689 - loss -6.93, Current Time = 21:34:43
+Elapsed time is 0:00:50.816953
+Rate is 0:00:00.073755 seconds per epoch
+Total estimated run time is 0:12:17.623513
+On step 699 - loss -6.64, Current Time = 21:34:44
+Elapsed time is 0:00:51.605330
+Rate is 0:00:00.073827 seconds per epoch
+Total estimated run time is 0:12:18.344084
+On step 709 - loss -7.28, Current Time = 21:34:44
+Elapsed time is 0:00:52.412713
+Rate is 0:00:00.073925 seconds per epoch
+Total estimated run time is 0:12:19.323813
+On step 719 - loss -7.08, Current Time = 21:34:45
+Elapsed time is 0:00:53.201042
+Rate is 0:00:00.073993 seconds per epoch
+Total estimated run time is 0:12:20.004068
+On step 729 - loss -6.97, Current Time = 21:34:46
+Elapsed time is 0:00:53.939646
+Rate is 0:00:00.073991 seconds per epoch
+Total estimated run time is 0:12:19.984198
+On step 739 - loss -6.75, Current Time = 21:34:47
+Elapsed time is 0:00:54.661366
+Rate is 0:00:00.073967 seconds per epoch
+Total estimated run time is 0:12:19.743720
+On step 749 - loss -7.02, Current Time = 21:34:47
+Elapsed time is 0:00:55.383055
+Rate is 0:00:00.073943 seconds per epoch
+Total estimated run time is 0:12:19.503691
+On step 759 - loss -6.94, Current Time = 21:34:48
+Elapsed time is 0:00:56.163563
+Rate is 0:00:00.073997 seconds per epoch
+Total estimated run time is 0:12:20.043837
+On step 769 - loss -7.00, Current Time = 21:34:49
+Elapsed time is 0:00:56.951746
+Rate is 0:00:00.074059 seconds per epoch
+Total estimated run time is 0:12:20.664434
+On step 779 - loss -6.98, Current Time = 21:34:50
+Elapsed time is 0:00:57.697054
+Rate is 0:00:00.074066 seconds per epoch
+Total estimated run time is 0:12:20.733706
+On step 789 - loss -6.79, Current Time = 21:34:50
+Elapsed time is 0:00:58.419802
+Rate is 0:00:00.074043 seconds per epoch
+Total estimated run time is 0:12:20.503918
+On step 799 - loss -6.53, Current Time = 21:34:51
+Elapsed time is 0:00:59.141280
+Rate is 0:00:00.074019 seconds per epoch
+Total estimated run time is 0:12:20.264118
+On step 809 - loss -6.78, Current Time = 21:34:52
+Elapsed time is 0:00:59.877939
+Rate is 0:00:00.074015 seconds per epoch
+Total estimated run time is 0:12:20.223819
+On step 819 - loss -6.91, Current Time = 21:34:53
+Elapsed time is 0:01:00.599631
+Rate is 0:00:00.073992 seconds per epoch
+Total estimated run time is 0:12:19.994175
+On step 829 - loss -6.79, Current Time = 21:34:53
+Elapsed time is 0:01:01.321582
+Rate is 0:00:00.073971 seconds per epoch
+Total estimated run time is 0:12:19.783594
+On step 839 - loss -6.96, Current Time = 21:34:54
+Elapsed time is 0:01:02.043497
+Rate is 0:00:00.073949 seconds per epoch
+Total estimated run time is 0:12:19.564235
+On step 849 - loss -6.94, Current Time = 21:34:55
+Elapsed time is 0:01:02.765452
+Rate is 0:00:00.073929 seconds per epoch
+Total estimated run time is 0:12:19.363660
+On step 859 - loss -6.69, Current Time = 21:34:55
+Elapsed time is 0:01:03.490014
+Rate is 0:00:00.073912 seconds per epoch
+Total estimated run time is 0:12:19.193518
+On step 869 - loss -7.03, Current Time = 21:34:56
+Elapsed time is 0:01:04.216741
+Rate is 0:00:00.073897 seconds per epoch
+Total estimated run time is 0:12:19.044145
+On step 879 - loss nan, Current Time = 21:34:57
+Elapsed time is 0:01:04.938811
+Rate is 0:00:00.073878 seconds per epoch
+Total estimated run time is 0:12:18.853927
+On step 889 - loss nan, Current Time = 21:34:58
+Elapsed time is 0:01:05.676230
+Rate is 0:00:00.073877 seconds per epoch
+Total estimated run time is 0:12:18.843454
+On step 899 - loss nan, Current Time = 21:34:58
+Elapsed time is 0:01:06.464921
+Rate is 0:00:00.073932 seconds per epoch
+Total estimated run time is 0:12:19.393985
+On step 909 - loss nan, Current Time = 21:34:59
+Elapsed time is 0:01:07.270712
+Rate is 0:00:00.074005 seconds per epoch
+Total estimated run time is 0:12:20.124172
+On step 919 - loss nan, Current Time = 21:35:00
+Elapsed time is 0:01:08.058688
+Rate is 0:00:00.074057 seconds per epoch
+Total estimated run time is 0:12:20.644362
+On step 929 - loss nan, Current Time = 21:35:01
+Elapsed time is 0:01:08.846789
+Rate is 0:00:00.074108 seconds per epoch
+Total estimated run time is 0:12:21.154565
+On step 939 - loss nan, Current Time = 21:35:02
+Elapsed time is 0:01:09.600464
+Rate is 0:00:00.074122 seconds per epoch
+Total estimated run time is 0:12:21.294028
+On step 949 - loss nan, Current Time = 21:35:02
+Elapsed time is 0:01:10.322045
+Rate is 0:00:00.074101 seconds per epoch
+Total estimated run time is 0:12:21.084297
+On step 959 - loss nan, Current Time = 21:35:03
+Elapsed time is 0:01:11.044102
+Rate is 0:00:00.074081 seconds per epoch
+Total estimated run time is 0:12:20.884504
+On step 969 - loss nan, Current Time = 21:35:04
+Elapsed time is 0:01:11.811539
+Rate is 0:00:00.074109 seconds per epoch
+Total estimated run time is 0:12:21.164027
+On step 979 - loss nan, Current Time = 21:35:05
+Elapsed time is 0:01:12.581094
+Rate is 0:00:00.074138 seconds per epoch
+Total estimated run time is 0:12:21.454130
+On step 989 - loss nan, Current Time = 21:35:05
+Elapsed time is 0:01:13.350449
+Rate is 0:00:00.074166 seconds per epoch
+Total estimated run time is 0:12:21.734441
+On step 999 - loss nan, Current Time = 21:35:06
+Elapsed time is 0:01:14.119633
+Rate is 0:00:00.074194 seconds per epoch
+Total estimated run time is 0:12:22.014021
+On step 1009 - loss nan, Current Time = 21:35:07
+Elapsed time is 0:01:14.904433
+Rate is 0:00:00.074236 seconds per epoch
+Total estimated run time is 0:12:22.434545
+On step 1019 - loss nan, Current Time = 21:35:08
+Elapsed time is 0:01:15.686775
+Rate is 0:00:00.074276 seconds per epoch
+Total estimated run time is 0:12:22.833807
+On step 1029 - loss nan, Current Time = 21:35:08
+Elapsed time is 0:01:16.523019
+Rate is 0:00:00.074366 seconds per epoch
+Total estimated run time is 0:12:23.734771
+On step 1039 - loss nan, Current Time = 21:35:09
+Elapsed time is 0:01:17.344314
+Rate is 0:00:00.074441 seconds per epoch
+Total estimated run time is 0:12:24.484556
+On step 1049 - loss nan, Current Time = 21:35:10
+Elapsed time is 0:01:18.066005
+Rate is 0:00:00.074419 seconds per epoch
+Total estimated run time is 0:12:24.264893
+On step 1059 - loss nan, Current Time = 21:35:11
+Elapsed time is 0:01:18.788306
+Rate is 0:00:00.074399 seconds per epoch
+Total estimated run time is 0:12:24.064164
+On step 1069 - loss nan, Current Time = 21:35:11
+Elapsed time is 0:01:19.510261
+Rate is 0:00:00.074378 seconds per epoch
+Total estimated run time is 0:12:23.854557
+On step 1079 - loss nan, Current Time = 21:35:12
+Elapsed time is 0:01:20.232151
+Rate is 0:00:00.074358 seconds per epoch
+Total estimated run time is 0:12:23.654227
+On step 1089 - loss nan, Current Time = 21:35:13
+Elapsed time is 0:01:20.953758
+Rate is 0:00:00.074338 seconds per epoch
+Total estimated run time is 0:12:23.454014
+On step 1099 - loss nan, Current Time = 21:35:14
+Elapsed time is 0:01:21.675202
+Rate is 0:00:00.074318 seconds per epoch
+Total estimated run time is 0:12:23.254038
+On step 1109 - loss nan, Current Time = 21:35:14
+Elapsed time is 0:01:22.412454
+Rate is 0:00:00.074312 seconds per epoch
+Total estimated run time is 0:12:23.194758
+On step 1119 - loss nan, Current Time = 21:35:15
+Elapsed time is 0:01:23.133882
+Rate is 0:00:00.074293 seconds per epoch
+Total estimated run time is 0:12:23.004308
+On step 1129 - loss nan, Current Time = 21:35:16
+Elapsed time is 0:01:23.855401
+Rate is 0:00:00.074274 seconds per epoch
+Total estimated run time is 0:12:22.814329
+On step 1139 - loss nan, Current Time = 21:35:17
+Elapsed time is 0:01:24.576871
+Rate is 0:00:00.074255 seconds per epoch
+Total estimated run time is 0:12:22.624681
+On step 1149 - loss nan, Current Time = 21:35:17
+Elapsed time is 0:01:25.298030
+Rate is 0:00:00.074237 seconds per epoch
+Total estimated run time is 0:12:22.443954
+On step 1159 - loss nan, Current Time = 21:35:18
+Elapsed time is 0:01:26.020342
+Rate is 0:00:00.074219 seconds per epoch
+Total estimated run time is 0:12:22.264740
+On step 1169 - loss nan, Current Time = 21:35:19
+Elapsed time is 0:01:26.741799
+Rate is 0:00:00.074202 seconds per epoch
+Total estimated run time is 0:12:22.093863
+On step 1179 - loss nan, Current Time = 21:35:19
+Elapsed time is 0:01:27.463337
+Rate is 0:00:00.074184 seconds per epoch
+Total estimated run time is 0:12:21.914585
+On step 1189 - loss nan, Current Time = 21:35:20
+Elapsed time is 0:01:28.185067
+Rate is 0:00:00.074167 seconds per epoch
+Total estimated run time is 0:12:21.744671
+On step 1199 - loss nan, Current Time = 21:35:21
+Elapsed time is 0:01:28.906701
+Rate is 0:00:00.074151 seconds per epoch
+Total estimated run time is 0:12:21.583803
+On step 1209 - loss nan, Current Time = 21:35:22
+Elapsed time is 0:01:29.644243
+Rate is 0:00:00.074147 seconds per epoch
+Total estimated run time is 0:12:21.544667
+On step 1219 - loss nan, Current Time = 21:35:22
+Elapsed time is 0:01:30.365394
+Rate is 0:00:00.074131 seconds per epoch
+Total estimated run time is 0:12:21.383836
+On step 1229 - loss nan, Current Time = 21:35:23
+Elapsed time is 0:01:31.086425
+Rate is 0:00:00.074114 seconds per epoch
+Total estimated run time is 0:12:21.214433
+On step 1239 - loss nan, Current Time = 21:35:24
+Elapsed time is 0:01:31.807678
+Rate is 0:00:00.074098 seconds per epoch
+Total estimated run time is 0:12:21.054354
+On step 1249 - loss nan, Current Time = 21:35:24
+Elapsed time is 0:01:32.528920
+Rate is 0:00:00.074082 seconds per epoch
+Total estimated run time is 0:12:20.894584
+On step 1259 - loss nan, Current Time = 21:35:25
+Elapsed time is 0:01:33.250128
+Rate is 0:00:00.074067 seconds per epoch
+Total estimated run time is 0:12:20.743842
+On step 1269 - loss nan, Current Time = 21:35:26
+Elapsed time is 0:01:33.971336
+Rate is 0:00:00.074051 seconds per epoch
+Total estimated run time is 0:12:20.584668
+On step 1279 - loss nan, Current Time = 21:35:27
+Elapsed time is 0:01:34.692302
+Rate is 0:00:00.074036 seconds per epoch
+Total estimated run time is 0:12:20.434294
+On step 1289 - loss nan, Current Time = 21:35:27
+Elapsed time is 0:01:35.413491
+Rate is 0:00:00.074021 seconds per epoch
+Total estimated run time is 0:12:20.284443
+On step 1299 - loss nan, Current Time = 21:35:28
+Elapsed time is 0:01:36.134861
+Rate is 0:00:00.074007 seconds per epoch
+Total estimated run time is 0:12:20.143775
+On step 1309 - loss nan, Current Time = 21:35:29
+Elapsed time is 0:01:36.872431
+Rate is 0:00:00.074005 seconds per epoch
+Total estimated run time is 0:12:20.123891
+On step 1319 - loss nan, Current Time = 21:35:30
+Elapsed time is 0:01:37.594664
+Rate is 0:00:00.073991 seconds per epoch
+Total estimated run time is 0:12:19.984526
+On step 1329 - loss nan, Current Time = 21:35:30
+Elapsed time is 0:01:38.316816
+Rate is 0:00:00.073978 seconds per epoch
+Total estimated run time is 0:12:19.854032
+On step 1339 - loss nan, Current Time = 21:35:31
+Elapsed time is 0:01:39.045960
+Rate is 0:00:00.073970 seconds per epoch
+Total estimated run time is 0:12:19.774100
+On step 1349 - loss nan, Current Time = 21:35:32
+Elapsed time is 0:01:39.768367
+Rate is 0:00:00.073957 seconds per epoch
+Total estimated run time is 0:12:19.644331
+On step 1359 - loss nan, Current Time = 21:35:32
+Elapsed time is 0:01:40.490216
+Rate is 0:00:00.073944 seconds per epoch
+Total estimated run time is 0:12:19.514264
+On step 1369 - loss nan, Current Time = 21:35:33
+Elapsed time is 0:01:41.211874
+Rate is 0:00:00.073931 seconds per epoch
+Total estimated run time is 0:12:19.384266
+On step 1379 - loss nan, Current Time = 21:35:34
+Elapsed time is 0:01:41.933493
+Rate is 0:00:00.073918 seconds per epoch
+Total estimated run time is 0:12:19.254489
+On step 1389 - loss nan, Current Time = 21:35:35
+Elapsed time is 0:01:42.655021
+Rate is 0:00:00.073906 seconds per epoch
+Total estimated run time is 0:12:19.133493
+On step 1399 - loss nan, Current Time = 21:35:35
+Elapsed time is 0:01:43.376928
+Rate is 0:00:00.073893 seconds per epoch
+Total estimated run time is 0:12:19.004514
+On step 1409 - loss nan, Current Time = 21:35:36
+Elapsed time is 0:01:44.131827
+Rate is 0:00:00.073905 seconds per epoch
+Total estimated run time is 0:12:19.123587
+On step 1419 - loss nan, Current Time = 21:35:37
+Elapsed time is 0:01:44.901394
+Rate is 0:00:00.073926 seconds per epoch
+Total estimated run time is 0:12:19.334326
+On step 1429 - loss nan, Current Time = 21:35:38
+Elapsed time is 0:01:45.648048
+Rate is 0:00:00.073931 seconds per epoch
+Total estimated run time is 0:12:19.384580
+On step 1439 - loss nan, Current Time = 21:35:38
+Elapsed time is 0:01:46.369888
+Rate is 0:00:00.073919 seconds per epoch
+Total estimated run time is 0:12:19.264366
+On step 1449 - loss nan, Current Time = 21:35:39
+Elapsed time is 0:01:47.091580
+Rate is 0:00:00.073907 seconds per epoch
+Total estimated run time is 0:12:19.144244
+On step 1459 - loss nan, Current Time = 21:35:40
+Elapsed time is 0:01:47.812960
+Rate is 0:00:00.073895 seconds per epoch
+Total estimated run time is 0:12:19.024050
+On step 1469 - loss nan, Current Time = 21:35:40
+Elapsed time is 0:01:48.534352
+Rate is 0:00:00.073883 seconds per epoch
+Total estimated run time is 0:12:18.904108
+On step 1479 - loss nan, Current Time = 21:35:41
+Elapsed time is 0:01:49.255836
+Rate is 0:00:00.073871 seconds per epoch
+Total estimated run time is 0:12:18.784498
+On step 1489 - loss nan, Current Time = 21:35:42
+Elapsed time is 0:01:49.977223
+Rate is 0:00:00.073860 seconds per epoch
+Total estimated run time is 0:12:18.673543
+On step 1499 - loss nan, Current Time = 21:35:43
+Elapsed time is 0:01:50.699105
+Rate is 0:00:00.073849 seconds per epoch
+Total estimated run time is 0:12:18.563303
+On step 1509 - loss nan, Current Time = 21:35:43
+Elapsed time is 0:01:51.436470
+Rate is 0:00:00.073848 seconds per epoch
+Total estimated run time is 0:12:18.553686
+On step 1519 - loss nan, Current Time = 21:35:44
+Elapsed time is 0:01:52.158066
+Rate is 0:00:00.073837 seconds per epoch
+Total estimated run time is 0:12:18.443500
+On step 1529 - loss nan, Current Time = 21:35:45
+Elapsed time is 0:01:52.879835
+Rate is 0:00:00.073826 seconds per epoch
+Total estimated run time is 0:12:18.333707
+On step 1539 - loss nan, Current Time = 21:35:46
+Elapsed time is 0:01:53.601690
+Rate is 0:00:00.073815 seconds per epoch
+Total estimated run time is 0:12:18.224220
+On step 1549 - loss nan, Current Time = 21:35:46
+Elapsed time is 0:01:54.323004
+Rate is 0:00:00.073804 seconds per epoch
+Total estimated run time is 0:12:18.114412
+On step 1559 - loss nan, Current Time = 21:35:47
+Elapsed time is 0:01:55.044575
+Rate is 0:00:00.073794 seconds per epoch
+Total estimated run time is 0:12:18.013523
+On step 1569 - loss nan, Current Time = 21:35:48
+Elapsed time is 0:01:55.766143
+Rate is 0:00:00.073783 seconds per epoch
+Total estimated run time is 0:12:17.904399
+On step 1579 - loss nan, Current Time = 21:35:48
+Elapsed time is 0:01:56.487778
+Rate is 0:00:00.073773 seconds per epoch
+Total estimated run time is 0:12:17.803984
+On step 1589 - loss nan, Current Time = 21:35:49
+Elapsed time is 0:01:57.209028
+Rate is 0:00:00.073763 seconds per epoch
+Total estimated run time is 0:12:17.703384
+On step 1599 - loss nan, Current Time = 21:35:50
+Elapsed time is 0:01:57.930114
+Rate is 0:00:00.073752 seconds per epoch
+Total estimated run time is 0:12:17.594418
+On step 1609 - loss nan, Current Time = 21:35:51
+Elapsed time is 0:01:58.667209
+Rate is 0:00:00.073752 seconds per epoch
+Total estimated run time is 0:12:17.593993
+On step 1619 - loss nan, Current Time = 21:35:51
+Elapsed time is 0:01:59.388771
+Rate is 0:00:00.073742 seconds per epoch
+Total estimated run time is 0:12:17.494215
+On step 1629 - loss nan, Current Time = 21:35:52
+Elapsed time is 0:02:00.110178
+Rate is 0:00:00.073732 seconds per epoch
+Total estimated run time is 0:12:17.394482
+On step 1639 - loss nan, Current Time = 21:35:53
+Elapsed time is 0:02:00.831900
+Rate is 0:00:00.073723 seconds per epoch
+Total estimated run time is 0:12:17.303626
+On step 1649 - loss nan, Current Time = 21:35:54
+Elapsed time is 0:02:01.553258
+Rate is 0:00:00.073713 seconds per epoch
+Total estimated run time is 0:12:17.204234
+On step 1659 - loss nan, Current Time = 21:35:54
+Elapsed time is 0:02:02.274806
+Rate is 0:00:00.073704 seconds per epoch
+Total estimated run time is 0:12:17.113574
+On step 1669 - loss nan, Current Time = 21:35:55
+Elapsed time is 0:02:02.996090
+Rate is 0:00:00.073694 seconds per epoch
+Total estimated run time is 0:12:17.014498
+On step 1679 - loss nan, Current Time = 21:35:56
+Elapsed time is 0:02:03.717720
+Rate is 0:00:00.073685 seconds per epoch
+Total estimated run time is 0:12:16.924290
+On step 1689 - loss nan, Current Time = 21:35:56
+Elapsed time is 0:02:04.439387
+Rate is 0:00:00.073676 seconds per epoch
+Total estimated run time is 0:12:16.834299
+On step 1699 - loss nan, Current Time = 21:35:57
+Elapsed time is 0:02:05.161062
+Rate is 0:00:00.073667 seconds per epoch
+Total estimated run time is 0:12:16.744496
+On step 1709 - loss nan, Current Time = 21:35:58
+Elapsed time is 0:02:05.898117
+Rate is 0:00:00.073668 seconds per epoch
+Total estimated run time is 0:12:16.753173
+On step 1719 - loss nan, Current Time = 21:35:59
+Elapsed time is 0:02:06.619254
+Rate is 0:00:00.073659 seconds per epoch
+Total estimated run time is 0:12:16.663092
+On step 1729 - loss nan, Current Time = 21:35:59
+Elapsed time is 0:02:07.340348
+Rate is 0:00:00.073650 seconds per epoch
+Total estimated run time is 0:12:16.573148
+On step 1739 - loss nan, Current Time = 21:36:00
+Elapsed time is 0:02:08.061529
+Rate is 0:00:00.073641 seconds per epoch
+Total estimated run time is 0:12:16.483471
+On step 1749 - loss nan, Current Time = 21:36:01
+Elapsed time is 0:02:08.794521
+Rate is 0:00:00.073639 seconds per epoch
+Total estimated run time is 0:12:16.463549
+On step 1759 - loss nan, Current Time = 21:36:01
+Elapsed time is 0:02:09.516003
+Rate is 0:00:00.073630 seconds per epoch
+Total estimated run time is 0:12:16.374463
+On step 1769 - loss nan, Current Time = 21:36:02
+Elapsed time is 0:02:10.237434
+Rate is 0:00:00.073622 seconds per epoch
+Total estimated run time is 0:12:16.293738
+On step 1779 - loss nan, Current Time = 21:36:03
+Elapsed time is 0:02:10.958963
+Rate is 0:00:00.073614 seconds per epoch
+Total estimated run time is 0:12:16.213271
+On step 1789 - loss nan, Current Time = 21:36:04
+Elapsed time is 0:02:11.679992
+Rate is 0:00:00.073605 seconds per epoch
+Total estimated run time is 0:12:16.124252
+On step 1799 - loss nan, Current Time = 21:36:04
+Elapsed time is 0:02:12.401178
+Rate is 0:00:00.073597 seconds per epoch
+Total estimated run time is 0:12:16.043772
+On step 1809 - loss nan, Current Time = 21:36:05
+Elapsed time is 0:02:13.138805
+Rate is 0:00:00.073598 seconds per epoch
+Total estimated run time is 0:12:16.053621
+On step 1819 - loss nan, Current Time = 21:36:06
+Elapsed time is 0:02:13.860288
+Rate is 0:00:00.073590 seconds per epoch
+Total estimated run time is 0:12:15.973668
+On step 1829 - loss nan, Current Time = 21:36:07
+Elapsed time is 0:02:14.581839
+Rate is 0:00:00.073582 seconds per epoch
+Total estimated run time is 0:12:15.893943
+On step 1839 - loss nan, Current Time = 21:36:07
+Elapsed time is 0:02:15.303892
+Rate is 0:00:00.073575 seconds per epoch
+Total estimated run time is 0:12:15.823042
+On step 1849 - loss nan, Current Time = 21:36:08
+Elapsed time is 0:02:16.026045
+Rate is 0:00:00.073567 seconds per epoch
+Total estimated run time is 0:12:15.744229
+On step 1859 - loss nan, Current Time = 21:36:09
+Elapsed time is 0:02:16.747541
+Rate is 0:00:00.073560 seconds per epoch
+Total estimated run time is 0:12:15.673061
+On step 1869 - loss nan, Current Time = 21:36:09
+Elapsed time is 0:02:17.469328
+Rate is 0:00:00.073552 seconds per epoch
+Total estimated run time is 0:12:15.594192
+On step 1879 - loss nan, Current Time = 21:36:10
+Elapsed time is 0:02:18.191285
+Rate is 0:00:00.073545 seconds per epoch
+Total estimated run time is 0:12:15.523775
+On step 1889 - loss nan, Current Time = 21:36:11
+Elapsed time is 0:02:18.913535
+Rate is 0:00:00.073538 seconds per epoch
+Total estimated run time is 0:12:15.453791
+On step 1899 - loss nan, Current Time = 21:36:12
+Elapsed time is 0:02:19.635629
+Rate is 0:00:00.073531 seconds per epoch
+Total estimated run time is 0:12:15.383791
+On step 1909 - loss nan, Current Time = 21:36:12
+Elapsed time is 0:02:20.373361
+Rate is 0:00:00.073532 seconds per epoch
+Total estimated run time is 0:12:15.394305
+On step 1919 - loss nan, Current Time = 21:36:13
+Elapsed time is 0:02:21.094443
+Rate is 0:00:00.073525 seconds per epoch
+Total estimated run time is 0:12:15.323493
+On step 1929 - loss nan, Current Time = 21:36:14
+Elapsed time is 0:02:21.815483
+Rate is 0:00:00.073518 seconds per epoch
+Total estimated run time is 0:12:15.252779
+On step 1939 - loss nan, Current Time = 21:36:14
+Elapsed time is 0:02:22.536183
+Rate is 0:00:00.073510 seconds per epoch
+Total estimated run time is 0:12:15.173803
+On step 1949 - loss nan, Current Time = 21:36:15
+Elapsed time is 0:02:23.256921
+Rate is 0:00:00.073503 seconds per epoch
+Total estimated run time is 0:12:15.103077
+On step 1959 - loss nan, Current Time = 21:36:16
+Elapsed time is 0:02:23.978191
+Rate is 0:00:00.073496 seconds per epoch
+Total estimated run time is 0:12:15.033023
+On step 1969 - loss nan, Current Time = 21:36:17
+Elapsed time is 0:02:24.699181
+Rate is 0:00:00.073489 seconds per epoch
+Total estimated run time is 0:12:14.962829
+On step 1979 - loss nan, Current Time = 21:36:17
+Elapsed time is 0:02:25.420771
+Rate is 0:00:00.073482 seconds per epoch
+Total estimated run time is 0:12:14.893375
+On step 1989 - loss nan, Current Time = 21:36:18
+Elapsed time is 0:02:26.167060
+Rate is 0:00:00.073488 seconds per epoch
+Total estimated run time is 0:12:14.952916
+On step 1999 - loss nan, Current Time = 21:36:19
+Elapsed time is 0:02:26.954847
+Rate is 0:00:00.073514 seconds per epoch
+Total estimated run time is 0:12:15.213875
+On step 2009 - loss nan, Current Time = 21:36:20
+Elapsed time is 0:02:27.760416
+Rate is 0:00:00.073549 seconds per epoch
+Total estimated run time is 0:12:15.564024
+On step 2019 - loss nan, Current Time = 21:36:20
+Elapsed time is 0:02:28.538440
+Rate is 0:00:00.073570 seconds per epoch
+Total estimated run time is 0:12:15.774180
+On step 2029 - loss nan, Current Time = 21:36:21
+Elapsed time is 0:02:29.260046
+Rate is 0:00:00.073563 seconds per epoch
+Total estimated run time is 0:12:15.704282
+On step 2039 - loss nan, Current Time = 21:36:22
+Elapsed time is 0:02:29.981538
+Rate is 0:00:00.073556 seconds per epoch
+Total estimated run time is 0:12:15.634410
+On step 2049 - loss nan, Current Time = 21:36:23
+Elapsed time is 0:02:30.703060
+Rate is 0:00:00.073550 seconds per epoch
+Total estimated run time is 0:12:15.572660
+On step 2059 - loss nan, Current Time = 21:36:23
+Elapsed time is 0:02:31.424734
+Rate is 0:00:00.073543 seconds per epoch
+Total estimated run time is 0:12:15.503240
+On step 2069 - loss nan, Current Time = 21:36:24
+Elapsed time is 0:02:32.146485
+Rate is 0:00:00.073536 seconds per epoch
+Total estimated run time is 0:12:15.434037
+On step 2079 - loss nan, Current Time = 21:36:25
+Elapsed time is 0:02:32.867785
+Rate is 0:00:00.073529 seconds per epoch
+Total estimated run time is 0:12:15.364523
+On step 2089 - loss nan, Current Time = 21:36:26
+Elapsed time is 0:02:33.588853
+Rate is 0:00:00.073523 seconds per epoch
+Total estimated run time is 0:12:15.302829
+On step 2099 - loss nan, Current Time = 21:36:26
+Elapsed time is 0:02:34.309740
+Rate is 0:00:00.073516 seconds per epoch
+Total estimated run time is 0:12:15.233172
+On step 2109 - loss nan, Current Time = 21:36:27
+Elapsed time is 0:02:35.046608
+Rate is 0:00:00.073517 seconds per epoch
+Total estimated run time is 0:12:15.242772
+On step 2119 - loss nan, Current Time = 21:36:28
+Elapsed time is 0:02:35.768155
+Rate is 0:00:00.073510 seconds per epoch
+Total estimated run time is 0:12:15.173975
+On step 2129 - loss nan, Current Time = 21:36:28
+Elapsed time is 0:02:36.490052
+Rate is 0:00:00.073504 seconds per epoch
+Total estimated run time is 0:12:15.113540
+On step 2139 - loss nan, Current Time = 21:36:29
+Elapsed time is 0:02:37.211474
+Rate is 0:00:00.073498 seconds per epoch
+Total estimated run time is 0:12:15.052750
+On step 2149 - loss nan, Current Time = 21:36:30
+Elapsed time is 0:02:37.933223
+Rate is 0:00:00.073491 seconds per epoch
+Total estimated run time is 0:12:14.984555
+On step 2159 - loss nan, Current Time = 21:36:31
+Elapsed time is 0:02:38.654915
+Rate is 0:00:00.073485 seconds per epoch
+Total estimated run time is 0:12:14.924285
+On step 2169 - loss nan, Current Time = 21:36:31
+Elapsed time is 0:02:39.377953
+Rate is 0:00:00.073480 seconds per epoch
+Total estimated run time is 0:12:14.873313
+On step 2179 - loss nan, Current Time = 21:36:32
+Elapsed time is 0:02:40.102896
+Rate is 0:00:00.073475 seconds per epoch
+Total estimated run time is 0:12:14.824346
+On step 2189 - loss nan, Current Time = 21:36:33
+Elapsed time is 0:02:40.827967
+Rate is 0:00:00.073471 seconds per epoch
+Total estimated run time is 0:12:14.783419
+On step 2199 - loss nan, Current Time = 21:36:34
+Elapsed time is 0:02:41.551839
+Rate is 0:00:00.073466 seconds per epoch
+Total estimated run time is 0:12:14.733571
+On step 2209 - loss nan, Current Time = 21:36:34
+Elapsed time is 0:02:42.288636
+Rate is 0:00:00.073467 seconds per epoch
+Total estimated run time is 0:12:14.743500
+On step 2219 - loss nan, Current Time = 21:36:35
+Elapsed time is 0:02:43.016693
+Rate is 0:00:00.073464 seconds per epoch
+Total estimated run time is 0:12:14.713541
+On step 2229 - loss nan, Current Time = 21:36:36
+Elapsed time is 0:02:43.738307
+Rate is 0:00:00.073458 seconds per epoch
+Total estimated run time is 0:12:14.653883
+On step 2239 - loss nan, Current Time = 21:36:36
+Elapsed time is 0:02:44.459360
+Rate is 0:00:00.073452 seconds per epoch
+Total estimated run time is 0:12:14.593784
+On step 2249 - loss nan, Current Time = 21:36:37
+Elapsed time is 0:02:45.180516
+Rate is 0:00:00.073446 seconds per epoch
+Total estimated run time is 0:12:14.533908
+On step 2259 - loss nan, Current Time = 21:36:38
+Elapsed time is 0:02:45.902588
+Rate is 0:00:00.073441 seconds per epoch
+Total estimated run time is 0:12:14.482810
+On step 2269 - loss nan, Current Time = 21:36:39
+Elapsed time is 0:02:46.624167
+Rate is 0:00:00.073435 seconds per epoch
+Total estimated run time is 0:12:14.423587
+On step 2279 - loss nan, Current Time = 21:36:39
+Elapsed time is 0:02:47.345698
+Rate is 0:00:00.073429 seconds per epoch
+Total estimated run time is 0:12:14.364436
+On step 2289 - loss nan, Current Time = 21:36:40
+Elapsed time is 0:02:48.067135
+Rate is 0:00:00.073424 seconds per epoch
+Total estimated run time is 0:12:14.313023
+On step 2299 - loss nan, Current Time = 21:36:41
+Elapsed time is 0:02:48.788591
+Rate is 0:00:00.073418 seconds per epoch
+Total estimated run time is 0:12:14.254027
+On step 2309 - loss nan, Current Time = 21:36:41
+Elapsed time is 0:02:49.525227
+Rate is 0:00:00.073419 seconds per epoch
+Total estimated run time is 0:12:14.264175
+On step 2319 - loss nan, Current Time = 21:36:42
+Elapsed time is 0:02:50.246205
+Rate is 0:00:00.073414 seconds per epoch
+Total estimated run time is 0:12:14.212553
+On step 2329 - loss nan, Current Time = 21:36:43
+Elapsed time is 0:02:50.967527
+Rate is 0:00:00.073408 seconds per epoch
+Total estimated run time is 0:12:14.153703
+On step 2339 - loss nan, Current Time = 21:36:44
+Elapsed time is 0:02:51.688554
+Rate is 0:00:00.073403 seconds per epoch
+Total estimated run time is 0:12:14.102340
+On step 2349 - loss nan, Current Time = 21:36:44
+Elapsed time is 0:02:52.409657
+Rate is 0:00:00.073397 seconds per epoch
+Total estimated run time is 0:12:14.043501
+On step 2359 - loss nan, Current Time = 21:36:45
+Elapsed time is 0:02:53.130538
+Rate is 0:00:00.073391 seconds per epoch
+Total estimated run time is 0:12:13.984560
+On step 2369 - loss nan, Current Time = 21:36:46
+Elapsed time is 0:02:53.851692
+Rate is 0:00:00.073386 seconds per epoch
+Total estimated run time is 0:12:13.933644
+On step 2379 - loss nan, Current Time = 21:36:47
+Elapsed time is 0:02:54.573035
+Rate is 0:00:00.073381 seconds per epoch
+Total estimated run time is 0:12:13.883017
+On step 2389 - loss nan, Current Time = 21:36:47
+Elapsed time is 0:02:55.294604
+Rate is 0:00:00.073376 seconds per epoch
+Total estimated run time is 0:12:13.832716
+On step 2399 - loss nan, Current Time = 21:36:48
+Elapsed time is 0:02:56.016637
+Rate is 0:00:00.073371 seconds per epoch
+Total estimated run time is 0:12:13.782979
+On step 2409 - loss nan, Current Time = 21:36:49
+Elapsed time is 0:02:56.753601
+Rate is 0:00:00.073372 seconds per epoch
+Total estimated run time is 0:12:13.793825
+On step 2419 - loss nan, Current Time = 21:36:49
+Elapsed time is 0:02:57.505827
+Rate is 0:00:00.073380 seconds per epoch
+Total estimated run time is 0:12:13.872987
+On step 2429 - loss nan, Current Time = 21:36:50
+Elapsed time is 0:02:58.274731
+Rate is 0:00:00.073394 seconds per epoch
+Total estimated run time is 0:12:14.014099
+On step 2439 - loss nan, Current Time = 21:36:51
+Elapsed time is 0:02:59.043903
+Rate is 0:00:00.073409 seconds per epoch
+Total estimated run time is 0:12:14.162761
+On step 2449 - loss nan, Current Time = 21:36:52
+Elapsed time is 0:02:59.813122
+Rate is 0:00:00.073423 seconds per epoch
+Total estimated run time is 0:12:14.303618
+On step 2459 - loss nan, Current Time = 21:36:53
+Elapsed time is 0:03:00.582071
+Rate is 0:00:00.073437 seconds per epoch
+Total estimated run time is 0:12:14.443925
+On step 2469 - loss nan, Current Time = 21:36:53
+Elapsed time is 0:03:01.346438
+Rate is 0:00:00.073449 seconds per epoch
+Total estimated run time is 0:12:14.564306
+On step 2479 - loss nan, Current Time = 21:36:54
+Elapsed time is 0:03:02.067496
+Rate is 0:00:00.073444 seconds per epoch
+Total estimated run time is 0:12:14.513264
+On step 2489 - loss nan, Current Time = 21:36:55
+Elapsed time is 0:03:02.788764
+Rate is 0:00:00.073439 seconds per epoch
+Total estimated run time is 0:12:14.462532
+On step 2499 - loss nan, Current Time = 21:36:55
+Elapsed time is 0:03:03.509923
+Rate is 0:00:00.073433 seconds per epoch
+Total estimated run time is 0:12:14.404289
+On step 2509 - loss nan, Current Time = 21:36:56
+Elapsed time is 0:03:04.246052
+Rate is 0:00:00.073434 seconds per epoch
+Total estimated run time is 0:12:14.413580
+On step 2519 - loss nan, Current Time = 21:36:57
+Elapsed time is 0:03:04.966999
+Rate is 0:00:00.073429 seconds per epoch
+Total estimated run time is 0:12:14.362777
+On step 2529 - loss nan, Current Time = 21:36:58
+Elapsed time is 0:03:05.688018
+Rate is 0:00:00.073423 seconds per epoch
+Total estimated run time is 0:12:14.304674
+On step 2539 - loss nan, Current Time = 21:36:58
+Elapsed time is 0:03:06.409284
+Rate is 0:00:00.073418 seconds per epoch
+Total estimated run time is 0:12:14.254400
+On step 2549 - loss nan, Current Time = 21:36:59
+Elapsed time is 0:03:07.130266
+Rate is 0:00:00.073413 seconds per epoch
+Total estimated run time is 0:12:14.203942
+On step 2559 - loss nan, Current Time = 21:37:00
+Elapsed time is 0:03:07.851624
+Rate is 0:00:00.073408 seconds per epoch
+Total estimated run time is 0:12:14.153960
+On step 2569 - loss nan, Current Time = 21:37:01
+Elapsed time is 0:03:08.572926
+Rate is 0:00:00.073403 seconds per epoch
+Total estimated run time is 0:12:14.104022
+On step 2579 - loss nan, Current Time = 21:37:01
+Elapsed time is 0:03:09.294180
+Rate is 0:00:00.073398 seconds per epoch
+Total estimated run time is 0:12:14.054136
+On step 2589 - loss nan, Current Time = 21:37:02
+Elapsed time is 0:03:10.014953
+Rate is 0:00:00.073393 seconds per epoch
+Total estimated run time is 0:12:14.003869
+On step 2599 - loss nan, Current Time = 21:37:03
+Elapsed time is 0:03:10.736156
+Rate is 0:00:00.073388 seconds per epoch
+Total estimated run time is 0:12:13.954132
+On step 2609 - loss nan, Current Time = 21:37:03
+Elapsed time is 0:03:11.473245
+Rate is 0:00:00.073390 seconds per epoch
+Total estimated run time is 0:12:13.972125
+On step 2619 - loss nan, Current Time = 21:37:04
+Elapsed time is 0:03:12.194392
+Rate is 0:00:00.073385 seconds per epoch
+Total estimated run time is 0:12:13.922462
+On step 2629 - loss nan, Current Time = 21:37:05
+Elapsed time is 0:03:12.915827
+Rate is 0:00:00.073380 seconds per epoch
+Total estimated run time is 0:12:13.873187
+On step 2639 - loss nan, Current Time = 21:37:06
+Elapsed time is 0:03:13.637139
+Rate is 0:00:00.073375 seconds per epoch
+Total estimated run time is 0:12:13.823889
+On step 2649 - loss nan, Current Time = 21:37:06
+Elapsed time is 0:03:14.358461
+Rate is 0:00:00.073371 seconds per epoch
+Total estimated run time is 0:12:13.782053
+On step 2659 - loss nan, Current Time = 21:37:07
+Elapsed time is 0:03:15.079587
+Rate is 0:00:00.073366 seconds per epoch
+Total estimated run time is 0:12:13.732759
+On step 2669 - loss nan, Current Time = 21:37:08
+Elapsed time is 0:03:15.801883
+Rate is 0:00:00.073362 seconds per epoch
+Total estimated run time is 0:12:13.692067
+On step 2679 - loss nan, Current Time = 21:37:08
+Elapsed time is 0:03:16.523052
+Rate is 0:00:00.073357 seconds per epoch
+Total estimated run time is 0:12:13.643006
+On step 2689 - loss nan, Current Time = 21:37:09
+Elapsed time is 0:03:17.244155
+Rate is 0:00:00.073352 seconds per epoch
+Total estimated run time is 0:12:13.593979
+On step 2699 - loss nan, Current Time = 21:37:10
+Elapsed time is 0:03:17.965461
+Rate is 0:00:00.073348 seconds per epoch
+Total estimated run time is 0:12:13.552557
+On step 2709 - loss nan, Current Time = 21:37:11
+Elapsed time is 0:03:18.702249
+Rate is 0:00:00.073349 seconds per epoch
+Total estimated run time is 0:12:13.563157
+On step 2719 - loss nan, Current Time = 21:37:11
+Elapsed time is 0:03:19.423460
+Rate is 0:00:00.073344 seconds per epoch
+Total estimated run time is 0:12:13.514468
+On step 2729 - loss nan, Current Time = 21:37:12
+Elapsed time is 0:03:20.144518
+Rate is 0:00:00.073340 seconds per epoch
+Total estimated run time is 0:12:13.472998
+On step 2739 - loss nan, Current Time = 21:37:13
+Elapsed time is 0:03:20.865734
+Rate is 0:00:00.073335 seconds per epoch
+Total estimated run time is 0:12:13.424504
+On step 2749 - loss nan, Current Time = 21:37:14
+Elapsed time is 0:03:21.587030
+Rate is 0:00:00.073331 seconds per epoch
+Total estimated run time is 0:12:13.383442
+On step 2759 - loss nan, Current Time = 21:37:14
+Elapsed time is 0:03:22.308082
+Rate is 0:00:00.073327 seconds per epoch
+Total estimated run time is 0:12:13.342216
+On step 2769 - loss nan, Current Time = 21:37:15
+Elapsed time is 0:03:23.029789
+Rate is 0:00:00.073322 seconds per epoch
+Total estimated run time is 0:12:13.294493
+On step 2779 - loss nan, Current Time = 21:37:16
+Elapsed time is 0:03:23.751535
+Rate is 0:00:00.073318 seconds per epoch
+Total estimated run time is 0:12:13.254131
+On step 2789 - loss nan, Current Time = 21:37:16
+Elapsed time is 0:03:24.472631
+Rate is 0:00:00.073314 seconds per epoch
+Total estimated run time is 0:12:13.213199
+On step 2799 - loss nan, Current Time = 21:37:17
+Elapsed time is 0:03:25.193674
+Rate is 0:00:00.073310 seconds per epoch
+Total estimated run time is 0:12:13.172294
+On step 2809 - loss nan, Current Time = 21:37:18
+Elapsed time is 0:03:25.930101
+Rate is 0:00:00.073311 seconds per epoch
+Total estimated run time is 0:12:13.182813
+On step 2819 - loss nan, Current Time = 21:37:19
+Elapsed time is 0:03:26.651742
+Rate is 0:00:00.073307 seconds per epoch
+Total estimated run time is 0:12:13.142616
+On step 2829 - loss nan, Current Time = 21:37:19
+Elapsed time is 0:03:27.373428
+Rate is 0:00:00.073303 seconds per epoch
+Total estimated run time is 0:12:13.102544
+On step 2839 - loss nan, Current Time = 21:37:20
+Elapsed time is 0:03:28.095279
+Rate is 0:00:00.073299 seconds per epoch
+Total estimated run time is 0:12:13.062717
+On step 2849 - loss nan, Current Time = 21:37:21
+Elapsed time is 0:03:28.817141
+Rate is 0:00:00.073295 seconds per epoch
+Total estimated run time is 0:12:13.022981
+On step 2859 - loss nan, Current Time = 21:37:21
+Elapsed time is 0:03:29.538734
+Rate is 0:00:00.073291 seconds per epoch
+Total estimated run time is 0:12:12.983056
+On step 2869 - loss nan, Current Time = 21:37:22
+Elapsed time is 0:03:30.260459
+Rate is 0:00:00.073287 seconds per epoch
+Total estimated run time is 0:12:12.943343
+On step 2879 - loss nan, Current Time = 21:37:23
+Elapsed time is 0:03:30.982278
+Rate is 0:00:00.073283 seconds per epoch
+Total estimated run time is 0:12:12.903804
+On step 2889 - loss nan, Current Time = 21:37:24
+Elapsed time is 0:03:31.704231
+Rate is 0:00:00.073279 seconds per epoch
+Total estimated run time is 0:12:12.864479
+On step 2899 - loss nan, Current Time = 21:37:24
+Elapsed time is 0:03:32.426240
+Rate is 0:00:00.073276 seconds per epoch
+Total estimated run time is 0:12:12.832392
+On step 2909 - loss nan, Current Time = 21:37:25
+Elapsed time is 0:03:33.162878
+Rate is 0:00:00.073277 seconds per epoch
+Total estimated run time is 0:12:12.843362
+On step 2919 - loss nan, Current Time = 21:37:26
+Elapsed time is 0:03:33.884160
+Rate is 0:00:00.073273 seconds per epoch
+Total estimated run time is 0:12:12.803546
+On step 2929 - loss nan, Current Time = 21:37:27
+Elapsed time is 0:03:34.605772
+Rate is 0:00:00.073269 seconds per epoch
+Total estimated run time is 0:12:12.764140
+On step 2939 - loss nan, Current Time = 21:37:27
+Elapsed time is 0:03:35.326871
+Rate is 0:00:00.073265 seconds per epoch
+Total estimated run time is 0:12:12.724301
+On step 2949 - loss nan, Current Time = 21:37:28
+Elapsed time is 0:03:36.047969
+Rate is 0:00:00.073261 seconds per epoch
+Total estimated run time is 0:12:12.684541
+On step 2959 - loss nan, Current Time = 21:37:29
+Elapsed time is 0:03:36.820140
+Rate is 0:00:00.073275 seconds per epoch
+Total estimated run time is 0:12:12.822690
+On step 2969 - loss nan, Current Time = 21:37:30
+Elapsed time is 0:03:37.607452
+Rate is 0:00:00.073293 seconds per epoch
+Total estimated run time is 0:12:13.003828
+On step 2979 - loss nan, Current Time = 21:37:30
+Elapsed time is 0:03:38.394972
+Rate is 0:00:00.073312 seconds per epoch
+Total estimated run time is 0:12:13.191836
+On step 2989 - loss nan, Current Time = 21:37:31
+Elapsed time is 0:03:39.119522
+Rate is 0:00:00.073309 seconds per epoch
+Total estimated run time is 0:12:13.162230
+On step 2999 - loss nan, Current Time = 21:37:32
+Elapsed time is 0:03:39.840867
+Rate is 0:00:00.073305 seconds per epoch
+Total estimated run time is 0:12:13.122477
+On step 3009 - loss nan, Current Time = 21:37:33
+Elapsed time is 0:03:40.577257
+Rate is 0:00:00.073306 seconds per epoch
+Total estimated run time is 0:12:13.132809
+On step 3019 - loss nan, Current Time = 21:37:33
+Elapsed time is 0:03:41.299856
+Rate is 0:00:00.073302 seconds per epoch
+Total estimated run time is 0:12:13.094420
+On step 3029 - loss nan, Current Time = 21:37:34
+Elapsed time is 0:03:42.020957
+Rate is 0:00:00.073298 seconds per epoch
+Total estimated run time is 0:12:13.054613
+On step 3039 - loss nan, Current Time = 21:37:35
+Elapsed time is 0:03:42.742099
+Rate is 0:00:00.073295 seconds per epoch
+Total estimated run time is 0:12:13.021889
+On step 3049 - loss nan, Current Time = 21:37:35
+Elapsed time is 0:03:43.463462
+Rate is 0:00:00.073291 seconds per epoch
+Total estimated run time is 0:12:12.982494
+On step 3059 - loss nan, Current Time = 21:37:36
+Elapsed time is 0:03:44.184910
+Rate is 0:00:00.073287 seconds per epoch
+Total estimated run time is 0:12:12.943264
+On step 3069 - loss nan, Current Time = 21:37:37
+Elapsed time is 0:03:44.906360
+Rate is 0:00:00.073283 seconds per epoch
+Total estimated run time is 0:12:12.904116
+On step 3079 - loss nan, Current Time = 21:37:38
+Elapsed time is 0:03:45.628763
+Rate is 0:00:00.073280 seconds per epoch
+Total estimated run time is 0:12:12.872923
+On step 3089 - loss nan, Current Time = 21:37:38
+Elapsed time is 0:03:46.350084
+Rate is 0:00:00.073276 seconds per epoch
+Total estimated run time is 0:12:12.833796
+On step 3099 - loss nan, Current Time = 21:37:39
+Elapsed time is 0:03:47.071260
+Rate is 0:00:00.073272 seconds per epoch
+Total estimated run time is 0:12:12.794604
+On step 3109 - loss nan, Current Time = 21:37:40
+Elapsed time is 0:03:47.807414
+Rate is 0:00:00.073274 seconds per epoch
+Total estimated run time is 0:12:12.811822
+On step 3119 - loss nan, Current Time = 21:37:40
+Elapsed time is 0:03:48.528290
+Rate is 0:00:00.073270 seconds per epoch
+Total estimated run time is 0:12:12.772430
+On step 3129 - loss nan, Current Time = 21:37:41
+Elapsed time is 0:03:49.249384
+Rate is 0:00:00.073266 seconds per epoch
+Total estimated run time is 0:12:12.733336
+On step 3139 - loss nan, Current Time = 21:37:42
+Elapsed time is 0:03:49.970397
+Rate is 0:00:00.073262 seconds per epoch
+Total estimated run time is 0:12:12.694241
+On step 3149 - loss nan, Current Time = 21:37:43
+Elapsed time is 0:03:50.691538
+Rate is 0:00:00.073259 seconds per epoch
+Total estimated run time is 0:12:12.662206
+On step 3159 - loss nan, Current Time = 21:37:43
+Elapsed time is 0:03:51.425469
+Rate is 0:00:00.073259 seconds per epoch
+Total estimated run time is 0:12:12.663547
+On step 3169 - loss nan, Current Time = 21:37:44
+Elapsed time is 0:03:52.212693
+Rate is 0:00:00.073276 seconds per epoch
+Total estimated run time is 0:12:12.834325
+On step 3179 - loss nan, Current Time = 21:37:45
+Elapsed time is 0:03:52.999936
+Rate is 0:00:00.073293 seconds per epoch
+Total estimated run time is 0:12:13.004782
+On step 3189 - loss nan, Current Time = 21:37:46
+Elapsed time is 0:03:53.754859
+Rate is 0:00:00.073300 seconds per epoch
+Total estimated run time is 0:12:13.074459
+On step 3199 - loss nan, Current Time = 21:37:46
+Elapsed time is 0:03:54.475919
+Rate is 0:00:00.073297 seconds per epoch
+Total estimated run time is 0:12:13.042113
+On step 3209 - loss nan, Current Time = 21:37:47
+Elapsed time is 0:03:55.212436
+Rate is 0:00:00.073298 seconds per epoch
+Total estimated run time is 0:12:13.052452
+On step 3219 - loss nan, Current Time = 21:37:48
+Elapsed time is 0:03:55.934590
+Rate is 0:00:00.073294 seconds per epoch
+Total estimated run time is 0:12:13.014498
+On step 3229 - loss nan, Current Time = 21:37:49
+Elapsed time is 0:03:56.690100
+Rate is 0:00:00.073301 seconds per epoch
+Total estimated run time is 0:12:13.084472
+On step 3239 - loss nan, Current Time = 21:37:49
+Elapsed time is 0:03:57.478474
+Rate is 0:00:00.073318 seconds per epoch
+Total estimated run time is 0:12:13.254790
+On step 3249 - loss nan, Current Time = 21:37:50
+Elapsed time is 0:03:58.266480
+Rate is 0:00:00.073335 seconds per epoch
+Total estimated run time is 0:12:13.424400
+On step 3259 - loss nan, Current Time = 21:37:51
+Elapsed time is 0:03:59.054525
+Rate is 0:00:00.073352 seconds per epoch
+Total estimated run time is 0:12:13.593709
+On step 3269 - loss nan, Current Time = 21:37:52
+Elapsed time is 0:03:59.842853
+Rate is 0:00:00.073369 seconds per epoch
+Total estimated run time is 0:12:13.762961
+On step 3279 - loss nan, Current Time = 21:37:53
+Elapsed time is 0:04:00.631105
+Rate is 0:00:00.073386 seconds per epoch
+Total estimated run time is 0:12:13.931797
+On step 3289 - loss nan, Current Time = 21:37:53
+Elapsed time is 0:04:01.402893
+Rate is 0:00:00.073397 seconds per epoch
+Total estimated run time is 0:12:14.043557
+On step 3299 - loss nan, Current Time = 21:37:54
+Elapsed time is 0:04:02.124176
+Rate is 0:00:00.073393 seconds per epoch
+Total estimated run time is 0:12:14.004062
+On step 3309 - loss nan, Current Time = 21:37:55
+Elapsed time is 0:04:02.861031
+Rate is 0:00:00.073394 seconds per epoch
+Total estimated run time is 0:12:14.013679
+On step 3319 - loss nan, Current Time = 21:37:56
+Elapsed time is 0:04:03.582796
+Rate is 0:00:00.073390 seconds per epoch
+Total estimated run time is 0:12:13.974776
+On step 3329 - loss nan, Current Time = 21:37:56
+Elapsed time is 0:04:04.304315
+Rate is 0:00:00.073387 seconds per epoch
+Total estimated run time is 0:12:13.942379
+On step 3339 - loss nan, Current Time = 21:37:57
+Elapsed time is 0:04:05.025659
+Rate is 0:00:00.073383 seconds per epoch
+Total estimated run time is 0:12:13.903205
+On step 3349 - loss nan, Current Time = 21:37:58
+Elapsed time is 0:04:05.747295
+Rate is 0:00:00.073379 seconds per epoch
+Total estimated run time is 0:12:13.864403
+On step 3359 - loss nan, Current Time = 21:37:58
+Elapsed time is 0:04:06.469232
+Rate is 0:00:00.073376 seconds per epoch
+Total estimated run time is 0:12:13.832624
+On step 3369 - loss nan, Current Time = 21:37:59
+Elapsed time is 0:04:07.190751
+Rate is 0:00:00.073372 seconds per epoch
+Total estimated run time is 0:12:13.793855
+On step 3379 - loss nan, Current Time = 21:38:00
+Elapsed time is 0:04:07.912209
+Rate is 0:00:00.073369 seconds per epoch
+Total estimated run time is 0:12:13.761727
+On step 3389 - loss nan, Current Time = 21:38:01
+Elapsed time is 0:04:08.633866
+Rate is 0:00:00.073365 seconds per epoch
+Total estimated run time is 0:12:13.723246
+On step 3399 - loss nan, Current Time = 21:38:01
+Elapsed time is 0:04:09.355435
+Rate is 0:00:00.073361 seconds per epoch
+Total estimated run time is 0:12:13.684757
+On step 3409 - loss nan, Current Time = 21:38:02
+Elapsed time is 0:04:10.091984
+Rate is 0:00:00.073362 seconds per epoch
+Total estimated run time is 0:12:13.694288
+On step 3419 - loss nan, Current Time = 21:38:03
+Elapsed time is 0:04:10.813173
+Rate is 0:00:00.073359 seconds per epoch
+Total estimated run time is 0:12:13.662111
+On step 3429 - loss nan, Current Time = 21:38:03
+Elapsed time is 0:04:11.534431
+Rate is 0:00:00.073355 seconds per epoch
+Total estimated run time is 0:12:13.623491
+On step 3439 - loss nan, Current Time = 21:38:04
+Elapsed time is 0:04:12.255956
+Rate is 0:00:00.073352 seconds per epoch
+Total estimated run time is 0:12:13.591780
+On step 3449 - loss nan, Current Time = 21:38:05
+Elapsed time is 0:04:12.977214
+Rate is 0:00:00.073348 seconds per epoch
+Total estimated run time is 0:12:13.553310
+On step 3459 - loss nan, Current Time = 21:38:06
+Elapsed time is 0:04:13.698458
+Rate is 0:00:00.073344 seconds per epoch
+Total estimated run time is 0:12:13.514906
+On step 3469 - loss nan, Current Time = 21:38:06
+Elapsed time is 0:04:14.419708
+Rate is 0:00:00.073341 seconds per epoch
+Total estimated run time is 0:12:13.483120
+On step 3479 - loss nan, Current Time = 21:38:07
+Elapsed time is 0:04:15.140837
+Rate is 0:00:00.073337 seconds per epoch
+Total estimated run time is 0:12:13.444751
+On step 3489 - loss nan, Current Time = 21:38:08
+Elapsed time is 0:04:15.862928
+Rate is 0:00:00.073334 seconds per epoch
+Total estimated run time is 0:12:13.413936
+On step 3499 - loss nan, Current Time = 21:38:09
+Elapsed time is 0:04:16.584092
+Rate is 0:00:00.073331 seconds per epoch
+Total estimated run time is 0:12:13.382254
+On step 3509 - loss nan, Current Time = 21:38:09
+Elapsed time is 0:04:17.320886
+Rate is 0:00:00.073332 seconds per epoch
+Total estimated run time is 0:12:13.392230
+On step 3519 - loss nan, Current Time = 21:38:10
+Elapsed time is 0:04:18.042173
+Rate is 0:00:00.073328 seconds per epoch
+Total estimated run time is 0:12:13.354269
+On step 3529 - loss nan, Current Time = 21:38:11
+Elapsed time is 0:04:18.763310
+Rate is 0:00:00.073325 seconds per epoch
+Total estimated run time is 0:12:13.322710
+On step 3539 - loss nan, Current Time = 21:38:11
+Elapsed time is 0:04:19.484779
+Rate is 0:00:00.073321 seconds per epoch
+Total estimated run time is 0:12:13.285081
+On step 3549 - loss nan, Current Time = 21:38:12
+Elapsed time is 0:04:20.206484
+Rate is 0:00:00.073318 seconds per epoch
+Total estimated run time is 0:12:13.254220
+On step 3559 - loss nan, Current Time = 21:38:13
+Elapsed time is 0:04:20.927829
+Rate is 0:00:00.073315 seconds per epoch
+Total estimated run time is 0:12:13.223059
+On step 3569 - loss nan, Current Time = 21:38:14
+Elapsed time is 0:04:21.649585
+Rate is 0:00:00.073312 seconds per epoch
+Total estimated run time is 0:12:13.192369
+On step 3579 - loss nan, Current Time = 21:38:14
+Elapsed time is 0:04:22.371082
+Rate is 0:00:00.073308 seconds per epoch
+Total estimated run time is 0:12:13.155058
+On step 3589 - loss nan, Current Time = 21:38:15
+Elapsed time is 0:04:23.092045
+Rate is 0:00:00.073305 seconds per epoch
+Total estimated run time is 0:12:13.123705
+On step 3599 - loss nan, Current Time = 21:38:16
+Elapsed time is 0:04:23.813851
+Rate is 0:00:00.073302 seconds per epoch
+Total estimated run time is 0:12:13.093255
+On step 3609 - loss nan, Current Time = 21:38:17
+Elapsed time is 0:04:24.550471
+Rate is 0:00:00.073303 seconds per epoch
+Total estimated run time is 0:12:13.103247
+On step 3619 - loss nan, Current Time = 21:38:17
+Elapsed time is 0:04:25.272033
+Rate is 0:00:00.073300 seconds per epoch
+Total estimated run time is 0:12:13.072633
+On step 3629 - loss nan, Current Time = 21:38:18
+Elapsed time is 0:04:26.002115
+Rate is 0:00:00.073299 seconds per epoch
+Total estimated run time is 0:12:13.063343
+On step 3639 - loss nan, Current Time = 21:38:19
+Elapsed time is 0:04:26.728463
+Rate is 0:00:00.073297 seconds per epoch
+Total estimated run time is 0:12:13.043977
+On step 3649 - loss nan, Current Time = 21:38:19
+Elapsed time is 0:04:27.449759
+Rate is 0:00:00.073294 seconds per epoch
+Total estimated run time is 0:12:13.013247
+On step 3659 - loss nan, Current Time = 21:38:20
+Elapsed time is 0:04:28.170790
+Rate is 0:00:00.073291 seconds per epoch
+Total estimated run time is 0:12:12.982312
+On step 3669 - loss nan, Current Time = 21:38:21
+Elapsed time is 0:04:28.891730
+Rate is 0:00:00.073287 seconds per epoch
+Total estimated run time is 0:12:12.945014
+On step 3679 - loss nan, Current Time = 21:38:22
+Elapsed time is 0:04:29.612708
+Rate is 0:00:00.073284 seconds per epoch
+Total estimated run time is 0:12:12.914156
+On step 3689 - loss nan, Current Time = 21:38:22
+Elapsed time is 0:04:30.333919
+Rate is 0:00:00.073281 seconds per epoch
+Total estimated run time is 0:12:12.883591
+On step 3699 - loss nan, Current Time = 21:38:23
+Elapsed time is 0:04:31.055039
+Rate is 0:00:00.073278 seconds per epoch
+Total estimated run time is 0:12:12.852995
+On step 3709 - loss nan, Current Time = 21:38:24
+Elapsed time is 0:04:31.832264
+Rate is 0:00:00.073290 seconds per epoch
+Total estimated run time is 0:12:12.972944
+On step 3719 - loss nan, Current Time = 21:38:25
+Elapsed time is 0:04:32.619868
+Rate is 0:00:00.073305 seconds per epoch
+Total estimated run time is 0:12:13.121878
+On step 3729 - loss nan, Current Time = 21:38:25
+Elapsed time is 0:04:33.405821
+Rate is 0:00:00.073319 seconds per epoch
+Total estimated run time is 0:12:13.262589
+On step 3739 - loss nan, Current Time = 21:38:26
+Elapsed time is 0:04:34.127337
+Rate is 0:00:00.073316 seconds per epoch
+Total estimated run time is 0:12:13.232129
+On step 3749 - loss nan, Current Time = 21:38:27
+Elapsed time is 0:04:34.848804
+Rate is 0:00:00.073313 seconds per epoch
+Total estimated run time is 0:12:13.201680
+On step 3759 - loss nan, Current Time = 21:38:28
+Elapsed time is 0:04:35.570170
+Rate is 0:00:00.073309 seconds per epoch
+Total estimated run time is 0:12:13.164948
+On step 3769 - loss nan, Current Time = 21:38:28
+Elapsed time is 0:04:36.291622
+Rate is 0:00:00.073306 seconds per epoch
+Total estimated run time is 0:12:13.134614
+On step 3779 - loss nan, Current Time = 21:38:29
+Elapsed time is 0:04:37.012661
+Rate is 0:00:00.073303 seconds per epoch
+Total estimated run time is 0:12:13.103927
+On step 3789 - loss nan, Current Time = 21:38:30
+Elapsed time is 0:04:37.733707
+Rate is 0:00:00.073300 seconds per epoch
+Total estimated run time is 0:12:13.073307
+On step 3799 - loss nan, Current Time = 21:38:30
+Elapsed time is 0:04:38.454487
+Rate is 0:00:00.073297 seconds per epoch
+Total estimated run time is 0:12:13.042481
+On step 3809 - loss nan, Current Time = 21:38:31
+Elapsed time is 0:04:39.191317
+Rate is 0:00:00.073298 seconds per epoch
+Total estimated run time is 0:12:13.052533
+On step 3819 - loss nan, Current Time = 21:38:32
+Elapsed time is 0:04:39.912804
+Rate is 0:00:00.073295 seconds per epoch
+Total estimated run time is 0:12:13.022494
+On step 3829 - loss nan, Current Time = 21:38:33
+Elapsed time is 0:04:40.634515
+Rate is 0:00:00.073292 seconds per epoch
+Total estimated run time is 0:12:12.992739
+On step 3839 - loss nan, Current Time = 21:38:33
+Elapsed time is 0:04:41.386964
+Rate is 0:00:00.073297 seconds per epoch
+Total estimated run time is 0:12:13.043078
+On step 3849 - loss nan, Current Time = 21:38:34
+Elapsed time is 0:04:42.156160
+Rate is 0:00:00.073306 seconds per epoch
+Total estimated run time is 0:12:13.134672
+On step 3859 - loss nan, Current Time = 21:38:35
+Elapsed time is 0:04:42.925208
+Rate is 0:00:00.073316 seconds per epoch
+Total estimated run time is 0:12:13.232080
+On step 3869 - loss nan, Current Time = 21:38:36
+Elapsed time is 0:04:43.694391
+Rate is 0:00:00.073325 seconds per epoch
+Total estimated run time is 0:12:13.323291
+On step 3879 - loss nan, Current Time = 21:38:36
+Elapsed time is 0:04:44.441332
+Rate is 0:00:00.073329 seconds per epoch
+Total estimated run time is 0:12:13.361470
+On step 3889 - loss nan, Current Time = 21:38:37
+Elapsed time is 0:04:45.163391
+Rate is 0:00:00.073326 seconds per epoch
+Total estimated run time is 0:12:13.331903
+On step 3899 - loss nan, Current Time = 21:38:38
+Elapsed time is 0:04:45.886159
+Rate is 0:00:00.073323 seconds per epoch
+Total estimated run time is 0:12:13.303105
+On step 3909 - loss nan, Current Time = 21:38:39
+Elapsed time is 0:04:46.622843
+Rate is 0:00:00.073324 seconds per epoch
+Total estimated run time is 0:12:13.312651
+On step 3919 - loss nan, Current Time = 21:38:39
+Elapsed time is 0:04:47.343895
+Rate is 0:00:00.073321 seconds per epoch
+Total estimated run time is 0:12:13.282217
+On step 3929 - loss nan, Current Time = 21:38:40
+Elapsed time is 0:04:48.065009
+Rate is 0:00:00.073318 seconds per epoch
+Total estimated run time is 0:12:13.251905
+On step 3939 - loss nan, Current Time = 21:38:41
+Elapsed time is 0:04:48.786004
+Rate is 0:00:00.073315 seconds per epoch
+Total estimated run time is 0:12:13.221534
+On step 3949 - loss nan, Current Time = 21:38:41
+Elapsed time is 0:04:49.507059
+Rate is 0:00:00.073311 seconds per epoch
+Total estimated run time is 0:12:13.185231
+On step 3959 - loss nan, Current Time = 21:38:42
+Elapsed time is 0:04:50.227990
+Rate is 0:00:00.073308 seconds per epoch
+Total estimated run time is 0:12:13.154926
+On step 3969 - loss nan, Current Time = 21:38:43
+Elapsed time is 0:04:50.948811
+Rate is 0:00:00.073305 seconds per epoch
+Total estimated run time is 0:12:13.124571
+On step 3979 - loss nan, Current Time = 21:38:44
+Elapsed time is 0:04:51.670246
+Rate is 0:00:00.073302 seconds per epoch
+Total estimated run time is 0:12:13.094890
+On step 3989 - loss nan, Current Time = 21:38:44
+Elapsed time is 0:04:52.391449
+Rate is 0:00:00.073299 seconds per epoch
+Total estimated run time is 0:12:13.065037
+On step 3999 - loss nan, Current Time = 21:38:45
+Elapsed time is 0:04:53.112657
+Rate is 0:00:00.073296 seconds per epoch
+Total estimated run time is 0:12:13.035249
+On step 4009 - loss nan, Current Time = 21:38:46
+Elapsed time is 0:04:53.849265
+Rate is 0:00:00.073297 seconds per epoch
+Total estimated run time is 0:12:13.044889
+On step 4019 - loss nan, Current Time = 21:38:47
+Elapsed time is 0:04:54.570240
+Rate is 0:00:00.073294 seconds per epoch
+Total estimated run time is 0:12:13.014948
+On step 4029 - loss nan, Current Time = 21:38:47
+Elapsed time is 0:04:55.291727
+Rate is 0:00:00.073292 seconds per epoch
+Total estimated run time is 0:12:12.991551
+On step 4039 - loss nan, Current Time = 21:38:48
+Elapsed time is 0:04:56.013400
+Rate is 0:00:00.073289 seconds per epoch
+Total estimated run time is 0:12:12.962418
+On step 4049 - loss nan, Current Time = 21:38:49
+Elapsed time is 0:04:56.735080
+Rate is 0:00:00.073286 seconds per epoch
+Total estimated run time is 0:12:12.933352
+On step 4059 - loss nan, Current Time = 21:38:49
+Elapsed time is 0:04:57.456744
+Rate is 0:00:00.073283 seconds per epoch
+Total estimated run time is 0:12:12.904330
+On step 4069 - loss nan, Current Time = 21:38:50
+Elapsed time is 0:04:58.178255
+Rate is 0:00:00.073280 seconds per epoch
+Total estimated run time is 0:12:12.875215
+On step 4079 - loss nan, Current Time = 21:38:51
+Elapsed time is 0:04:58.899616
+Rate is 0:00:00.073278 seconds per epoch
+Total estimated run time is 0:12:12.851932
+On step 4089 - loss nan, Current Time = 21:38:52
+Elapsed time is 0:04:59.620921
+Rate is 0:00:00.073275 seconds per epoch
+Total estimated run time is 0:12:12.822721
+On step 4099 - loss nan, Current Time = 21:38:52
+Elapsed time is 0:05:00.342661
+Rate is 0:00:00.073272 seconds per epoch
+Total estimated run time is 0:12:12.794005
+On step 4109 - loss nan, Current Time = 21:38:53
+Elapsed time is 0:05:01.106893
+Rate is 0:00:00.073280 seconds per epoch
+Total estimated run time is 0:12:12.872653
+On step 4119 - loss nan, Current Time = 21:38:54
+Elapsed time is 0:05:01.828977
+Rate is 0:00:00.073277 seconds per epoch
+Total estimated run time is 0:12:12.844291
+On step 4129 - loss nan, Current Time = 21:38:55
+Elapsed time is 0:05:02.550965
+Rate is 0:00:00.073275 seconds per epoch
+Total estimated run time is 0:12:12.821765
+On step 4139 - loss nan, Current Time = 21:38:55
+Elapsed time is 0:05:03.273301
+Rate is 0:00:00.073272 seconds per epoch
+Total estimated run time is 0:12:12.793765
+On step 4149 - loss nan, Current Time = 21:38:56
+Elapsed time is 0:05:03.995502
+Rate is 0:00:00.073270 seconds per epoch
+Total estimated run time is 0:12:12.771542
+On step 4159 - loss nan, Current Time = 21:38:57
+Elapsed time is 0:05:04.717570
+Rate is 0:00:00.073267 seconds per epoch
+Total estimated run time is 0:12:12.743384
+On step 4169 - loss nan, Current Time = 21:38:57
+Elapsed time is 0:05:05.439409
+Rate is 0:00:00.073264 seconds per epoch
+Total estimated run time is 0:12:12.715057
+On step 4179 - loss nan, Current Time = 21:38:58
+Elapsed time is 0:05:06.161475
+Rate is 0:00:00.073262 seconds per epoch
+Total estimated run time is 0:12:12.692839
+On step 4189 - loss nan, Current Time = 21:38:59
+Elapsed time is 0:05:06.883440
+Rate is 0:00:00.073259 seconds per epoch
+Total estimated run time is 0:12:12.664748
+On step 4199 - loss nan, Current Time = 21:39:00
+Elapsed time is 0:05:07.605089
+Rate is 0:00:00.073257 seconds per epoch
+Total estimated run time is 0:12:12.642203
+On step 4209 - loss nan, Current Time = 21:39:00
+Elapsed time is 0:05:08.341925
+Rate is 0:00:00.073258 seconds per epoch
+Total estimated run time is 0:12:12.652261
+On step 4219 - loss nan, Current Time = 21:39:01
+Elapsed time is 0:05:09.063671
+Rate is 0:00:00.073255 seconds per epoch
+Total estimated run time is 0:12:12.624081
+On step 4229 - loss nan, Current Time = 21:39:02
+Elapsed time is 0:05:09.785206
+Rate is 0:00:00.073253 seconds per epoch
+Total estimated run time is 0:12:12.601522
+On step 4239 - loss nan, Current Time = 21:39:02
+Elapsed time is 0:05:10.506498
+Rate is 0:00:00.073250 seconds per epoch
+Total estimated run time is 0:12:12.572998
+On step 4249 - loss nan, Current Time = 21:39:03
+Elapsed time is 0:05:11.228047
+Rate is 0:00:00.073247 seconds per epoch
+Total estimated run time is 0:12:12.544791
+On step 4259 - loss nan, Current Time = 21:39:04
+Elapsed time is 0:05:11.949747
+Rate is 0:00:00.073245 seconds per epoch
+Total estimated run time is 0:12:12.522537
+On step 4269 - loss nan, Current Time = 21:39:05
+Elapsed time is 0:05:12.671302
+Rate is 0:00:00.073242 seconds per epoch
+Total estimated run time is 0:12:12.494446
+On step 4279 - loss nan, Current Time = 21:39:05
+Elapsed time is 0:05:13.393161
+Rate is 0:00:00.073240 seconds per epoch
+Total estimated run time is 0:12:12.472441
+On step 4289 - loss nan, Current Time = 21:39:06
+Elapsed time is 0:05:14.114716
+Rate is 0:00:00.073237 seconds per epoch
+Total estimated run time is 0:12:12.444460
+On step 4299 - loss nan, Current Time = 21:39:07
+Elapsed time is 0:05:14.836218
+Rate is 0:00:00.073235 seconds per epoch
+Total estimated run time is 0:12:12.422188
+On step 4309 - loss nan, Current Time = 21:39:08
+Elapsed time is 0:05:15.573841
+Rate is 0:00:00.073236 seconds per epoch
+Total estimated run time is 0:12:12.433153
+On step 4319 - loss nan, Current Time = 21:39:08
+Elapsed time is 0:05:16.295859
+Rate is 0:00:00.073234 seconds per epoch
+Total estimated run time is 0:12:12.411447
+On step 4329 - loss nan, Current Time = 21:39:09
+Elapsed time is 0:05:17.017849
+Rate is 0:00:00.073231 seconds per epoch
+Total estimated run time is 0:12:12.384081
+On step 4339 - loss nan, Current Time = 21:39:10
+Elapsed time is 0:05:17.739959
+Rate is 0:00:00.073229 seconds per epoch
+Total estimated run time is 0:12:12.362557
+On step 4349 - loss nan, Current Time = 21:39:10
+Elapsed time is 0:05:18.461770
+Rate is 0:00:00.073226 seconds per epoch
+Total estimated run time is 0:12:12.335122
+On step 4359 - loss nan, Current Time = 21:39:11
+Elapsed time is 0:05:19.183561
+Rate is 0:00:00.073224 seconds per epoch
+Total estimated run time is 0:12:12.313369
+On step 4369 - loss nan, Current Time = 21:39:12
+Elapsed time is 0:05:19.905266
+Rate is 0:00:00.073222 seconds per epoch
+Total estimated run time is 0:12:12.291570
+On step 4379 - loss nan, Current Time = 21:39:13
+Elapsed time is 0:05:20.627150
+Rate is 0:00:00.073219 seconds per epoch
+Total estimated run time is 0:12:12.264368
+On step 4389 - loss nan, Current Time = 21:39:13
+Elapsed time is 0:05:21.348683
+Rate is 0:00:00.073217 seconds per epoch
+Total estimated run time is 0:12:12.242487
+On step 4399 - loss nan, Current Time = 21:39:14
+Elapsed time is 0:05:22.070164
+Rate is 0:00:00.073214 seconds per epoch
+Total estimated run time is 0:12:12.214992
+On step 4409 - loss nan, Current Time = 21:39:15
+Elapsed time is 0:05:22.806939
+Rate is 0:00:00.073215 seconds per epoch
+Total estimated run time is 0:12:12.225219
+On step 4419 - loss nan, Current Time = 21:39:15
+Elapsed time is 0:05:23.529035
+Rate is 0:00:00.073213 seconds per epoch
+Total estimated run time is 0:12:12.204001
+On step 4429 - loss nan, Current Time = 21:39:16
+Elapsed time is 0:05:24.250544
+Rate is 0:00:00.073211 seconds per epoch
+Total estimated run time is 0:12:12.182236
+On step 4439 - loss nan, Current Time = 21:39:17
+Elapsed time is 0:05:24.972025
+Rate is 0:00:00.073208 seconds per epoch
+Total estimated run time is 0:12:12.154921
+On step 4449 - loss nan, Current Time = 21:39:18
+Elapsed time is 0:05:25.693380
+Rate is 0:00:00.073206 seconds per epoch
+Total estimated run time is 0:12:12.133092
+On step 4459 - loss nan, Current Time = 21:39:18
+Elapsed time is 0:05:26.414793
+Rate is 0:00:00.073204 seconds per epoch
+Total estimated run time is 0:12:12.111361
+On step 4469 - loss nan, Current Time = 21:39:19
+Elapsed time is 0:05:27.136257
+Rate is 0:00:00.073201 seconds per epoch
+Total estimated run time is 0:12:12.084189
+On step 4479 - loss nan, Current Time = 21:39:20
+Elapsed time is 0:05:27.858146
+Rate is 0:00:00.073199 seconds per epoch
+Total estimated run time is 0:12:12.063024
+On step 4489 - loss nan, Current Time = 21:39:21
+Elapsed time is 0:05:28.580571
+Rate is 0:00:00.073197 seconds per epoch
+Total estimated run time is 0:12:12.042435
+On step 4499 - loss nan, Current Time = 21:39:21
+Elapsed time is 0:05:29.302412
+Rate is 0:00:00.073195 seconds per epoch
+Total estimated run time is 0:12:12.021302
+On step 4509 - loss nan, Current Time = 21:39:22
+Elapsed time is 0:05:30.039871
+Rate is 0:00:00.073196 seconds per epoch
+Total estimated run time is 0:12:12.032303
+On step 4519 - loss nan, Current Time = 21:39:23
+Elapsed time is 0:05:30.761748
+Rate is 0:00:00.073194 seconds per epoch
+Total estimated run time is 0:12:12.011256
+On step 4529 - loss nan, Current Time = 21:39:23
+Elapsed time is 0:05:31.483399
+Rate is 0:00:00.073191 seconds per epoch
+Total estimated run time is 0:12:11.984551
+On step 4539 - loss nan, Current Time = 21:39:24
+Elapsed time is 0:05:32.205515
+Rate is 0:00:00.073189 seconds per epoch
+Total estimated run time is 0:12:11.963833
+On step 4549 - loss nan, Current Time = 21:39:25
+Elapsed time is 0:05:32.926989
+Rate is 0:00:00.073187 seconds per epoch
+Total estimated run time is 0:12:11.942513
+On step 4559 - loss nan, Current Time = 21:39:26
+Elapsed time is 0:05:33.648318
+Rate is 0:00:00.073185 seconds per epoch
+Total estimated run time is 0:12:11.921088
+On step 4569 - loss nan, Current Time = 21:39:26
+Elapsed time is 0:05:34.369667
+Rate is 0:00:00.073182 seconds per epoch
+Total estimated run time is 0:12:11.894291
+On step 4579 - loss nan, Current Time = 21:39:27
+Elapsed time is 0:05:35.091111
+Rate is 0:00:00.073180 seconds per epoch
+Total estimated run time is 0:12:11.873071
+On step 4589 - loss nan, Current Time = 21:39:28
+Elapsed time is 0:05:35.812725
+Rate is 0:00:00.073178 seconds per epoch
+Total estimated run time is 0:12:11.852061
+On step 4599 - loss nan, Current Time = 21:39:28
+Elapsed time is 0:05:36.534364
+Rate is 0:00:00.073176 seconds per epoch
+Total estimated run time is 0:12:11.831116
+On step 4609 - loss nan, Current Time = 21:39:29
+Elapsed time is 0:05:37.271303
+Rate is 0:00:00.073177 seconds per epoch
+Total estimated run time is 0:12:11.841687
+On step 4619 - loss nan, Current Time = 21:39:30
+Elapsed time is 0:05:37.993074
+Rate is 0:00:00.073175 seconds per epoch
+Total estimated run time is 0:12:11.820924
+On step 4629 - loss nan, Current Time = 21:39:31
+Elapsed time is 0:05:38.714736
+Rate is 0:00:00.073172 seconds per epoch
+Total estimated run time is 0:12:11.794720
+On step 4639 - loss nan, Current Time = 21:39:31
+Elapsed time is 0:05:39.436529
+Rate is 0:00:00.073170 seconds per epoch
+Total estimated run time is 0:12:11.774069
+On step 4649 - loss nan, Current Time = 21:39:32
+Elapsed time is 0:05:40.158111
+Rate is 0:00:00.073168 seconds per epoch
+Total estimated run time is 0:12:11.753247
+On step 4659 - loss nan, Current Time = 21:39:33
+Elapsed time is 0:05:40.880325
+Rate is 0:00:00.073166 seconds per epoch
+Total estimated run time is 0:12:11.733097
+On step 4669 - loss nan, Current Time = 21:39:34
+Elapsed time is 0:05:41.601719
+Rate is 0:00:00.073164 seconds per epoch
+Total estimated run time is 0:12:11.712167
+On step 4679 - loss nan, Current Time = 21:39:34
+Elapsed time is 0:05:42.323498
+Rate is 0:00:00.073162 seconds per epoch
+Total estimated run time is 0:12:11.691662
+On step 4689 - loss nan, Current Time = 21:39:35
+Elapsed time is 0:05:43.044739
+Rate is 0:00:00.073159 seconds per epoch
+Total estimated run time is 0:12:11.665347
+On step 4699 - loss nan, Current Time = 21:39:36
+Elapsed time is 0:05:43.765799
+Rate is 0:00:00.073157 seconds per epoch
+Total estimated run time is 0:12:11.644213
+On step 4709 - loss nan, Current Time = 21:39:36
+Elapsed time is 0:05:44.502244
+Rate is 0:00:00.073158 seconds per epoch
+Total estimated run time is 0:12:11.654380
+On step 4719 - loss nan, Current Time = 21:39:37
+Elapsed time is 0:05:45.223433
+Rate is 0:00:00.073156 seconds per epoch
+Total estimated run time is 0:12:11.633425
+On step 4729 - loss nan, Current Time = 21:39:38
+Elapsed time is 0:05:45.945497
+Rate is 0:00:00.073154 seconds per epoch
+Total estimated run time is 0:12:11.613385
+On step 4739 - loss nan, Current Time = 21:39:39
+Elapsed time is 0:05:46.666993
+Rate is 0:00:00.073152 seconds per epoch
+Total estimated run time is 0:12:11.592817
+On step 4749 - loss nan, Current Time = 21:39:39
+Elapsed time is 0:05:47.388580
+Rate is 0:00:00.073150 seconds per epoch
+Total estimated run time is 0:12:11.572380
+On step 4759 - loss nan, Current Time = 21:39:40
+Elapsed time is 0:05:48.109919
+Rate is 0:00:00.073148 seconds per epoch
+Total estimated run time is 0:12:11.551735
+On step 4769 - loss nan, Current Time = 21:39:41
+Elapsed time is 0:05:48.831360
+Rate is 0:00:00.073146 seconds per epoch
+Total estimated run time is 0:12:11.531232
+On step 4779 - loss nan, Current Time = 21:39:42
+Elapsed time is 0:05:49.552489
+Rate is 0:00:00.073143 seconds per epoch
+Total estimated run time is 0:12:11.505235
+On step 4789 - loss nan, Current Time = 21:39:42
+Elapsed time is 0:05:50.273607
+Rate is 0:00:00.073141 seconds per epoch
+Total estimated run time is 0:12:11.484499
+On step 4799 - loss nan, Current Time = 21:39:43
+Elapsed time is 0:05:50.994852
+Rate is 0:00:00.073139 seconds per epoch
+Total estimated run time is 0:12:11.463930
+On step 4809 - loss nan, Current Time = 21:39:44
+Elapsed time is 0:05:51.731686
+Rate is 0:00:00.073140 seconds per epoch
+Total estimated run time is 0:12:11.474566
+On step 4819 - loss nan, Current Time = 21:39:44
+Elapsed time is 0:05:52.453635
+Rate is 0:00:00.073138 seconds per epoch
+Total estimated run time is 0:12:11.454751
+On step 4829 - loss nan, Current Time = 21:39:45
+Elapsed time is 0:05:53.175469
+Rate is 0:00:00.073136 seconds per epoch
+Total estimated run time is 0:12:11.434861
+On step 4839 - loss nan, Current Time = 21:39:46
+Elapsed time is 0:05:53.897664
+Rate is 0:00:00.073134 seconds per epoch
+Total estimated run time is 0:12:11.415372
+On step 4849 - loss nan, Current Time = 21:39:47
+Elapsed time is 0:05:54.619144
+Rate is 0:00:00.073132 seconds per epoch
+Total estimated run time is 0:12:11.395208
+On step 4859 - loss nan, Current Time = 21:39:47
+Elapsed time is 0:05:55.340562
+Rate is 0:00:00.073130 seconds per epoch
+Total estimated run time is 0:12:11.375022
+On step 4869 - loss nan, Current Time = 21:39:48
+Elapsed time is 0:05:56.062122
+Rate is 0:00:00.073128 seconds per epoch
+Total estimated run time is 0:12:11.355018
+On step 4879 - loss nan, Current Time = 21:39:49
+Elapsed time is 0:05:56.783295
+Rate is 0:00:00.073126 seconds per epoch
+Total estimated run time is 0:12:11.334667
+On step 4889 - loss nan, Current Time = 21:39:49
+Elapsed time is 0:05:57.504685
+Rate is 0:00:00.073124 seconds per epoch
+Total estimated run time is 0:12:11.314573
+On step 4899 - loss nan, Current Time = 21:39:50
+Elapsed time is 0:05:58.225947
+Rate is 0:00:00.073122 seconds per epoch
+Total estimated run time is 0:12:11.294391
+On step 4909 - loss nan, Current Time = 21:39:51
+Elapsed time is 0:05:58.962737
+Rate is 0:00:00.073123 seconds per epoch
+Total estimated run time is 0:12:11.305053
+On step 4919 - loss nan, Current Time = 21:39:52
+Elapsed time is 0:05:59.684140
+Rate is 0:00:00.073121 seconds per epoch
+Total estimated run time is 0:12:11.285062
+On step 4929 - loss nan, Current Time = 21:39:52
+Elapsed time is 0:06:00.405859
+Rate is 0:00:00.073119 seconds per epoch
+Total estimated run time is 0:12:11.265427
+On step 4939 - loss nan, Current Time = 21:39:53
+Elapsed time is 0:06:01.127286
+Rate is 0:00:00.073117 seconds per epoch
+Total estimated run time is 0:12:11.245540
+On step 4949 - loss nan, Current Time = 21:39:54
+Elapsed time is 0:06:01.848834
+Rate is 0:00:00.073116 seconds per epoch
+Total estimated run time is 0:12:11.230866
+On step 4959 - loss nan, Current Time = 21:39:55
+Elapsed time is 0:06:02.570242
+Rate is 0:00:00.073114 seconds per epoch
+Total estimated run time is 0:12:11.211030
+On step 4969 - loss nan, Current Time = 21:39:55
+Elapsed time is 0:06:03.291336
+Rate is 0:00:00.073112 seconds per epoch
+Total estimated run time is 0:12:11.190920
+On step 4979 - loss nan, Current Time = 21:39:56
+Elapsed time is 0:06:04.013457
+Rate is 0:00:00.073110 seconds per epoch
+Total estimated run time is 0:12:11.171877
+On step 4989 - loss nan, Current Time = 21:39:57
+Elapsed time is 0:06:04.735485
+Rate is 0:00:00.073108 seconds per epoch
+Total estimated run time is 0:12:11.152781
+On step 4999 - loss nan, Current Time = 21:39:57
+Elapsed time is 0:06:05.457124
+Rate is 0:00:00.073106 seconds per epoch
+Total estimated run time is 0:12:11.133336
+On step 5009 - loss nan, Current Time = 21:39:58
+Elapsed time is 0:06:06.194159
+Rate is 0:00:00.073107 seconds per epoch
+Total estimated run time is 0:12:11.144303
+On step 5019 - loss nan, Current Time = 21:39:59
+Elapsed time is 0:06:06.915826
+Rate is 0:00:00.073105 seconds per epoch
+Total estimated run time is 0:12:11.124936
+On step 5029 - loss nan, Current Time = 21:40:00
+Elapsed time is 0:06:07.637174
+Rate is 0:00:00.073103 seconds per epoch
+Total estimated run time is 0:12:11.105290
+On step 5039 - loss nan, Current Time = 21:40:00
+Elapsed time is 0:06:08.358741
+Rate is 0:00:00.073102 seconds per epoch
+Total estimated run time is 0:12:11.090865
+On step 5049 - loss nan, Current Time = 21:40:01
+Elapsed time is 0:06:09.080046
+Rate is 0:00:00.073100 seconds per epoch
+Total estimated run time is 0:12:11.071246
+On step 5059 - loss nan, Current Time = 21:40:02
+Elapsed time is 0:06:09.801316
+Rate is 0:00:00.073098 seconds per epoch
+Total estimated run time is 0:12:11.051632
+On step 5069 - loss nan, Current Time = 21:40:02
+Elapsed time is 0:06:10.522958
+Rate is 0:00:00.073096 seconds per epoch
+Total estimated run time is 0:12:11.032430
+On step 5079 - loss nan, Current Time = 21:40:03
+Elapsed time is 0:06:11.244340
+Rate is 0:00:00.073094 seconds per epoch
+Total estimated run time is 0:12:11.013008
+On step 5089 - loss nan, Current Time = 21:40:04
+Elapsed time is 0:06:11.966033
+Rate is 0:00:00.073092 seconds per epoch
+Total estimated run time is 0:12:10.993937
+On step 5099 - loss nan, Current Time = 21:40:05
+Elapsed time is 0:06:12.687611
+Rate is 0:00:00.073090 seconds per epoch
+Total estimated run time is 0:12:10.974791
+On step 5109 - loss nan, Current Time = 21:40:05
+Elapsed time is 0:06:13.424704
+Rate is 0:00:00.073092 seconds per epoch
+Total estimated run time is 0:12:10.990768
+On step 5119 - loss nan, Current Time = 21:40:06
+Elapsed time is 0:06:14.146079
+Rate is 0:00:00.073090 seconds per epoch
+Total estimated run time is 0:12:10.971459
+On step 5129 - loss nan, Current Time = 21:40:07
+Elapsed time is 0:06:14.867575
+Rate is 0:00:00.073088 seconds per epoch
+Total estimated run time is 0:12:10.952311
+On step 5139 - loss nan, Current Time = 21:40:08
+Elapsed time is 0:06:15.592809
+Rate is 0:00:00.073087 seconds per epoch
+Total estimated run time is 0:12:10.941803
+On step 5149 - loss nan, Current Time = 21:40:08
+Elapsed time is 0:06:16.320452
+Rate is 0:00:00.073086 seconds per epoch
+Total estimated run time is 0:12:10.933724
+On step 5159 - loss nan, Current Time = 21:40:09
+Elapsed time is 0:06:17.041644
+Rate is 0:00:00.073084 seconds per epoch
+Total estimated run time is 0:12:10.914372
+On step 5169 - loss nan, Current Time = 21:40:10
+Elapsed time is 0:06:17.762975
+Rate is 0:00:00.073082 seconds per epoch
+Total estimated run time is 0:12:10.895199
+On step 5179 - loss nan, Current Time = 21:40:10
+Elapsed time is 0:06:18.484226
+Rate is 0:00:00.073081 seconds per epoch
+Total estimated run time is 0:12:10.880808
+On step 5189 - loss nan, Current Time = 21:40:11
+Elapsed time is 0:06:19.205304
+Rate is 0:00:00.073079 seconds per epoch
+Total estimated run time is 0:12:10.861452
+On step 5199 - loss nan, Current Time = 21:40:12
+Elapsed time is 0:06:19.926475
+Rate is 0:00:00.073077 seconds per epoch
+Total estimated run time is 0:12:10.842229
+On step 5209 - loss nan, Current Time = 21:40:13
+Elapsed time is 0:06:20.663128
+Rate is 0:00:00.073078 seconds per epoch
+Total estimated run time is 0:12:10.852904
+On step 5219 - loss nan, Current Time = 21:40:13
+Elapsed time is 0:06:21.384478
+Rate is 0:00:00.073076 seconds per epoch
+Total estimated run time is 0:12:10.833910
+On step 5229 - loss nan, Current Time = 21:40:14
+Elapsed time is 0:06:22.105997
+Rate is 0:00:00.073074 seconds per epoch
+Total estimated run time is 0:12:10.815125
+On step 5239 - loss nan, Current Time = 21:40:15
+Elapsed time is 0:06:22.827539
+Rate is 0:00:00.073073 seconds per epoch
+Total estimated run time is 0:12:10.801165
+On step 5249 - loss nan, Current Time = 21:40:16
+Elapsed time is 0:06:23.563719
+Rate is 0:00:00.073074 seconds per epoch
+Total estimated run time is 0:12:10.811367
+On step 5259 - loss nan, Current Time = 21:40:16
+Elapsed time is 0:06:24.351038
+Rate is 0:00:00.073084 seconds per epoch
+Total estimated run time is 0:12:10.915366
+On step 5269 - loss nan, Current Time = 21:40:17
+Elapsed time is 0:06:25.138428
+Rate is 0:00:00.073095 seconds per epoch
+Total estimated run time is 0:12:11.023968
+On step 5279 - loss nan, Current Time = 21:40:18
+Elapsed time is 0:06:25.868372
+Rate is 0:00:00.073095 seconds per epoch
+Total estimated run time is 0:12:11.022962
+On step 5289 - loss nan, Current Time = 21:40:19
+Elapsed time is 0:06:26.589319
+Rate is 0:00:00.073093 seconds per epoch
+Total estimated run time is 0:12:11.003535
+On step 5299 - loss nan, Current Time = 21:40:19
+Elapsed time is 0:06:27.311322
+Rate is 0:00:00.073091 seconds per epoch
+Total estimated run time is 0:12:10.985204
+On step 5309 - loss nan, Current Time = 21:40:20
+Elapsed time is 0:06:28.048404
+Rate is 0:00:00.073093 seconds per epoch
+Total estimated run time is 0:12:11.000760
+On step 5319 - loss nan, Current Time = 21:40:21
+Elapsed time is 0:06:28.770165
+Rate is 0:00:00.073091 seconds per epoch
+Total estimated run time is 0:12:10.982227
+On step 5329 - loss nan, Current Time = 21:40:21
+Elapsed time is 0:06:29.491899
+Rate is 0:00:00.073089 seconds per epoch
+Total estimated run time is 0:12:10.963707
+On step 5339 - loss nan, Current Time = 21:40:22
+Elapsed time is 0:06:30.213361
+Rate is 0:00:00.073087 seconds per epoch
+Total estimated run time is 0:12:10.944955
+On step 5349 - loss nan, Current Time = 21:40:23
+Elapsed time is 0:06:30.935009
+Rate is 0:00:00.073086 seconds per epoch
+Total estimated run time is 0:12:10.931081
+On step 5359 - loss nan, Current Time = 21:40:24
+Elapsed time is 0:06:31.656422
+Rate is 0:00:00.073084 seconds per epoch
+Total estimated run time is 0:12:10.912350
+On step 5369 - loss nan, Current Time = 21:40:24
+Elapsed time is 0:06:32.416778
+Rate is 0:00:00.073089 seconds per epoch
+Total estimated run time is 0:12:10.965026
+On step 5379 - loss nan, Current Time = 21:40:25
+Elapsed time is 0:06:33.205215
+Rate is 0:00:00.073100 seconds per epoch
+Total estimated run time is 0:12:11.073415
+On step 5389 - loss nan, Current Time = 21:40:26
+Elapsed time is 0:06:33.943813
+Rate is 0:00:00.073101 seconds per epoch
+Total estimated run time is 0:12:11.085625
+On step 5399 - loss nan, Current Time = 21:40:27
+Elapsed time is 0:06:34.665104
+Rate is 0:00:00.073100 seconds per epoch
+Total estimated run time is 0:12:11.071304
+On step 5409 - loss nan, Current Time = 21:40:27
+Elapsed time is 0:06:35.401530
+Rate is 0:00:00.073101 seconds per epoch
+Total estimated run time is 0:12:11.081322
+On step 5419 - loss nan, Current Time = 21:40:28
+Elapsed time is 0:06:36.122777
+Rate is 0:00:00.073099 seconds per epoch
+Total estimated run time is 0:12:11.062395
+On step 5429 - loss nan, Current Time = 21:40:29
+Elapsed time is 0:06:36.843774
+Rate is 0:00:00.073097 seconds per epoch
+Total estimated run time is 0:12:11.043258
+On step 5439 - loss nan, Current Time = 21:40:30
+Elapsed time is 0:06:37.620430
+Rate is 0:00:00.073105 seconds per epoch
+Total estimated run time is 0:12:11.125440
+On step 5449 - loss nan, Current Time = 21:40:30
+Elapsed time is 0:06:38.409727
+Rate is 0:00:00.073116 seconds per epoch
+Total estimated run time is 0:12:11.233759
+On step 5459 - loss nan, Current Time = 21:40:31
+Elapsed time is 0:06:39.245459
+Rate is 0:00:00.073135 seconds per epoch
+Total estimated run time is 0:12:11.424629
+On step 5469 - loss nan, Current Time = 21:40:32
+Elapsed time is 0:06:40.080209
+Rate is 0:00:00.073154 seconds per epoch
+Total estimated run time is 0:12:11.614137
+On step 5479 - loss nan, Current Time = 21:40:33
+Elapsed time is 0:06:40.915668
+Rate is 0:00:00.073173 seconds per epoch
+Total estimated run time is 0:12:11.803974
+On step 5489 - loss nan, Current Time = 21:40:34
+Elapsed time is 0:06:41.684042
+Rate is 0:00:00.073180 seconds per epoch
+Total estimated run time is 0:12:11.872202
+On step 5499 - loss nan, Current Time = 21:40:34
+Elapsed time is 0:06:42.442284
+Rate is 0:00:00.073185 seconds per epoch
+Total estimated run time is 0:12:11.921154
+On step 5509 - loss nan, Current Time = 21:40:35
+Elapsed time is 0:06:43.247954
+Rate is 0:00:00.073198 seconds per epoch
+Total estimated run time is 0:12:12.053370
+On step 5519 - loss nan, Current Time = 21:40:36
+Elapsed time is 0:06:44.035853
+Rate is 0:00:00.073208 seconds per epoch
+Total estimated run time is 0:12:12.154109
+On step 5529 - loss nan, Current Time = 21:40:37
+Elapsed time is 0:06:44.823607
+Rate is 0:00:00.073218 seconds per epoch
+Total estimated run time is 0:12:12.254503
+On step 5539 - loss nan, Current Time = 21:40:38
+Elapsed time is 0:06:45.580797
+Rate is 0:00:00.073223 seconds per epoch
+Total estimated run time is 0:12:12.301823
+On step 5549 - loss nan, Current Time = 21:40:38
+Elapsed time is 0:06:46.302864
+Rate is 0:00:00.073221 seconds per epoch
+Total estimated run time is 0:12:12.282756
+On step 5559 - loss nan, Current Time = 21:40:39
+Elapsed time is 0:06:47.026561
+Rate is 0:00:00.073219 seconds per epoch
+Total estimated run time is 0:12:12.265359
+On step 5569 - loss nan, Current Time = 21:40:40
+Elapsed time is 0:06:47.814348
+Rate is 0:00:00.073229 seconds per epoch
+Total estimated run time is 0:12:12.365276
+On step 5579 - loss nan, Current Time = 21:40:41
+Elapsed time is 0:06:48.602439
+Rate is 0:00:00.073239 seconds per epoch
+Total estimated run time is 0:12:12.465297
+On step 5589 - loss nan, Current Time = 21:40:41
+Elapsed time is 0:06:49.390193
+Rate is 0:00:00.073249 seconds per epoch
+Total estimated run time is 0:12:12.564781
+On step 5599 - loss nan, Current Time = 21:40:42
+Elapsed time is 0:06:50.177891
+Rate is 0:00:00.073259 seconds per epoch
+Total estimated run time is 0:12:12.664009
+On step 5609 - loss nan, Current Time = 21:40:43
+Elapsed time is 0:06:50.983195
+Rate is 0:00:00.073272 seconds per epoch
+Total estimated run time is 0:12:12.793819
+On step 5619 - loss nan, Current Time = 21:40:44
+Elapsed time is 0:06:51.770854
+Rate is 0:00:00.073282 seconds per epoch
+Total estimated run time is 0:12:12.892578
+On step 5629 - loss nan, Current Time = 21:40:45
+Elapsed time is 0:06:52.558510
+Rate is 0:00:00.073292 seconds per epoch
+Total estimated run time is 0:12:12.991134
+On step 5639 - loss nan, Current Time = 21:40:45
+Elapsed time is 0:06:53.346116
+Rate is 0:00:00.073301 seconds per epoch
+Total estimated run time is 0:12:13.085078
+On step 5649 - loss nan, Current Time = 21:40:46
+Elapsed time is 0:06:54.133943
+Rate is 0:00:00.073311 seconds per epoch
+Total estimated run time is 0:12:13.183415
+On step 5659 - loss nan, Current Time = 21:40:47
+Elapsed time is 0:06:54.921524
+Rate is 0:00:00.073321 seconds per epoch
+Total estimated run time is 0:12:13.281306
+On step 5669 - loss nan, Current Time = 21:40:48
+Elapsed time is 0:06:55.709068
+Rate is 0:00:00.073330 seconds per epoch
+Total estimated run time is 0:12:13.374628
+On step 5679 - loss nan, Current Time = 21:40:48
+Elapsed time is 0:06:56.496684
+Rate is 0:00:00.073340 seconds per epoch
+Total estimated run time is 0:12:13.472164
+On step 5689 - loss nan, Current Time = 21:40:49
+Elapsed time is 0:06:57.284218
+Rate is 0:00:00.073349 seconds per epoch
+Total estimated run time is 0:12:13.565106
+On step 5699 - loss nan, Current Time = 21:40:50
+Elapsed time is 0:06:58.071753
+Rate is 0:00:00.073359 seconds per epoch
+Total estimated run time is 0:12:13.662171
+On step 5709 - loss nan, Current Time = 21:40:51
+Elapsed time is 0:06:58.840825
+Rate is 0:00:00.073365 seconds per epoch
+Total estimated run time is 0:12:13.723405
+On step 5719 - loss nan, Current Time = 21:40:52
+Elapsed time is 0:06:59.562349
+Rate is 0:00:00.073363 seconds per epoch
+Total estimated run time is 0:12:13.702715
+On step 5729 - loss nan, Current Time = 21:40:52
+Elapsed time is 0:07:00.283460
+Rate is 0:00:00.073361 seconds per epoch
+Total estimated run time is 0:12:13.681652
+On step 5739 - loss nan, Current Time = 21:40:53
+Elapsed time is 0:07:01.004808
+Rate is 0:00:00.073359 seconds per epoch
+Total estimated run time is 0:12:13.660866
+On step 5749 - loss nan, Current Time = 21:40:54
+Elapsed time is 0:07:01.725579
+Rate is 0:00:00.073356 seconds per epoch
+Total estimated run time is 0:12:13.635291
+On step 5759 - loss nan, Current Time = 21:40:54
+Elapsed time is 0:07:02.446895
+Rate is 0:00:00.073354 seconds per epoch
+Total estimated run time is 0:12:13.614563
+On step 5769 - loss nan, Current Time = 21:40:55
+Elapsed time is 0:07:03.168430
+Rate is 0:00:00.073352 seconds per epoch
+Total estimated run time is 0:12:13.594094
+On step 5779 - loss nan, Current Time = 21:40:56
+Elapsed time is 0:07:03.889997
+Rate is 0:00:00.073350 seconds per epoch
+Total estimated run time is 0:12:13.573697
+On step 5789 - loss nan, Current Time = 21:40:57
+Elapsed time is 0:07:04.611387
+Rate is 0:00:00.073348 seconds per epoch
+Total estimated run time is 0:12:13.553163
+On step 5799 - loss nan, Current Time = 21:40:57
+Elapsed time is 0:07:05.332878
+Rate is 0:00:00.073346 seconds per epoch
+Total estimated run time is 0:12:13.532770
+On step 5809 - loss nan, Current Time = 21:40:58
+Elapsed time is 0:07:06.069226
+Rate is 0:00:00.073346 seconds per epoch
+Total estimated run time is 0:12:13.535658
+On step 5819 - loss nan, Current Time = 21:40:59
+Elapsed time is 0:07:06.790441
+Rate is 0:00:00.073344 seconds per epoch
+Total estimated run time is 0:12:13.515049
+On step 5829 - loss nan, Current Time = 21:40:59
+Elapsed time is 0:07:07.511981
+Rate is 0:00:00.073342 seconds per epoch
+Total estimated run time is 0:12:13.494805
+On step 5839 - loss nan, Current Time = 21:41:00
+Elapsed time is 0:07:08.233383
+Rate is 0:00:00.073340 seconds per epoch
+Total estimated run time is 0:12:13.474463
+On step 5849 - loss nan, Current Time = 21:41:01
+Elapsed time is 0:07:08.954900
+Rate is 0:00:00.073338 seconds per epoch
+Total estimated run time is 0:12:13.454276
+On step 5859 - loss nan, Current Time = 21:41:02
+Elapsed time is 0:07:09.676414
+Rate is 0:00:00.073336 seconds per epoch
+Total estimated run time is 0:12:13.434126
+On step 5869 - loss nan, Current Time = 21:41:02
+Elapsed time is 0:07:10.397785
+Rate is 0:00:00.073334 seconds per epoch
+Total estimated run time is 0:12:13.413873
+On step 5879 - loss nan, Current Time = 21:41:03
+Elapsed time is 0:07:11.119190
+Rate is 0:00:00.073332 seconds per epoch
+Total estimated run time is 0:12:13.393694
+On step 5889 - loss nan, Current Time = 21:41:04
+Elapsed time is 0:07:11.840595
+Rate is 0:00:00.073330 seconds per epoch
+Total estimated run time is 0:12:13.373555
+On step 5899 - loss nan, Current Time = 21:41:05
+Elapsed time is 0:07:12.562488
+Rate is 0:00:00.073328 seconds per epoch
+Total estimated run time is 0:12:13.353944
+On step 5909 - loss nan, Current Time = 21:41:05
+Elapsed time is 0:07:13.299687
+Rate is 0:00:00.073329 seconds per epoch
+Total estimated run time is 0:12:13.361955
+On step 5919 - loss nan, Current Time = 21:41:06
+Elapsed time is 0:07:14.020999
+Rate is 0:00:00.073327 seconds per epoch
+Total estimated run time is 0:12:13.341813
+On step 5929 - loss nan, Current Time = 21:41:07
+Elapsed time is 0:07:14.742410
+Rate is 0:00:00.073325 seconds per epoch
+Total estimated run time is 0:12:13.321810
+On step 5939 - loss nan, Current Time = 21:41:07
+Elapsed time is 0:07:15.463902
+Rate is 0:00:00.073323 seconds per epoch
+Total estimated run time is 0:12:13.301928
+On step 5949 - loss nan, Current Time = 21:41:08
+Elapsed time is 0:07:16.186166
+Rate is 0:00:00.073321 seconds per epoch
+Total estimated run time is 0:12:13.282858
+On step 5959 - loss nan, Current Time = 21:41:09
+Elapsed time is 0:07:16.907571
+Rate is 0:00:00.073319 seconds per epoch
+Total estimated run time is 0:12:13.262969
+On step 5969 - loss nan, Current Time = 21:41:10
+Elapsed time is 0:07:17.628773
+Rate is 0:00:00.073317 seconds per epoch
+Total estimated run time is 0:12:13.242917
+On step 5979 - loss nan, Current Time = 21:41:10
+Elapsed time is 0:07:18.350621
+Rate is 0:00:00.073315 seconds per epoch
+Total estimated run time is 0:12:13.223551
+On step 5989 - loss nan, Current Time = 21:41:11
+Elapsed time is 0:07:19.072386
+Rate is 0:00:00.073313 seconds per epoch
+Total estimated run time is 0:12:13.204142
+On step 5999 - loss nan, Current Time = 21:41:12
+Elapsed time is 0:07:19.793876
+Rate is 0:00:00.073311 seconds per epoch
+Total estimated run time is 0:12:13.184498
+On step 6009 - loss nan, Current Time = 21:41:12
+Elapsed time is 0:07:20.530992
+Rate is 0:00:00.073312 seconds per epoch
+Total estimated run time is 0:12:13.192496
+On step 6019 - loss nan, Current Time = 21:41:13
+Elapsed time is 0:07:21.252369
+Rate is 0:00:00.073310 seconds per epoch
+Total estimated run time is 0:12:13.172789
+On step 6029 - loss nan, Current Time = 21:41:14
+Elapsed time is 0:07:21.973640
+Rate is 0:00:00.073308 seconds per epoch
+Total estimated run time is 0:12:13.153016
+On step 6039 - loss nan, Current Time = 21:41:15
+Elapsed time is 0:07:22.694983
+Rate is 0:00:00.073306 seconds per epoch
+Total estimated run time is 0:12:13.133355
+On step 6049 - loss nan, Current Time = 21:41:15
+Elapsed time is 0:07:23.416184
+Rate is 0:00:00.073304 seconds per epoch
+Total estimated run time is 0:12:13.113592
+On step 6059 - loss nan, Current Time = 21:41:16
+Elapsed time is 0:07:24.137563
+Rate is 0:00:00.073302 seconds per epoch
+Total estimated run time is 0:12:13.094047
+On step 6069 - loss nan, Current Time = 21:41:17
+Elapsed time is 0:07:24.859024
+Rate is 0:00:00.073300 seconds per epoch
+Total estimated run time is 0:12:13.074624
+On step 6079 - loss nan, Current Time = 21:41:18
+Elapsed time is 0:07:25.580337
+Rate is 0:00:00.073298 seconds per epoch
+Total estimated run time is 0:12:13.055093
+On step 6089 - loss nan, Current Time = 21:41:18
+Elapsed time is 0:07:26.301441
+Rate is 0:00:00.073296 seconds per epoch
+Total estimated run time is 0:12:13.035393
+On step 6099 - loss nan, Current Time = 21:41:19
+Elapsed time is 0:07:27.022916
+Rate is 0:00:00.073294 seconds per epoch
+Total estimated run time is 0:12:13.016104
+On step 6109 - loss nan, Current Time = 21:41:20
+Elapsed time is 0:07:27.759692
+Rate is 0:00:00.073295 seconds per epoch
+Total estimated run time is 0:12:13.023832
+On step 6119 - loss nan, Current Time = 21:41:20
+Elapsed time is 0:07:28.481145
+Rate is 0:00:00.073293 seconds per epoch
+Total estimated run time is 0:12:13.004571
+On step 6129 - loss nan, Current Time = 21:41:21
+Elapsed time is 0:07:29.202810
+Rate is 0:00:00.073291 seconds per epoch
+Total estimated run time is 0:12:12.985562
+On step 6139 - loss nan, Current Time = 21:41:22
+Elapsed time is 0:07:29.924108
+Rate is 0:00:00.073289 seconds per epoch
+Total estimated run time is 0:12:12.966226
+On step 6149 - loss nan, Current Time = 21:41:23
+Elapsed time is 0:07:30.645364
+Rate is 0:00:00.073288 seconds per epoch
+Total estimated run time is 0:12:12.950740
+On step 6159 - loss nan, Current Time = 21:41:23
+Elapsed time is 0:07:31.366442
+Rate is 0:00:00.073286 seconds per epoch
+Total estimated run time is 0:12:12.931254
+On step 6169 - loss nan, Current Time = 21:41:24
+Elapsed time is 0:07:32.087687
+Rate is 0:00:00.073284 seconds per epoch
+Total estimated run time is 0:12:12.911975
+On step 6179 - loss nan, Current Time = 21:41:25
+Elapsed time is 0:07:32.809435
+Rate is 0:00:00.073282 seconds per epoch
+Total estimated run time is 0:12:12.893239
+On step 6189 - loss nan, Current Time = 21:41:25
+Elapsed time is 0:07:33.531027
+Rate is 0:00:00.073280 seconds per epoch
+Total estimated run time is 0:12:12.874387
+On step 6199 - loss nan, Current Time = 21:41:26
+Elapsed time is 0:07:34.252180
+Rate is 0:00:00.073278 seconds per epoch
+Total estimated run time is 0:12:12.855136
+On step 6209 - loss nan, Current Time = 21:41:27
+Elapsed time is 0:07:34.988740
+Rate is 0:00:00.073279 seconds per epoch
+Total estimated run time is 0:12:12.862708
+On step 6219 - loss nan, Current Time = 21:41:28
+Elapsed time is 0:07:35.711071
+Rate is 0:00:00.073277 seconds per epoch
+Total estimated run time is 0:12:12.844685
+On step 6229 - loss nan, Current Time = 21:41:28
+Elapsed time is 0:07:36.432146
+Rate is 0:00:00.073275 seconds per epoch
+Total estimated run time is 0:12:12.825446
+On step 6239 - loss nan, Current Time = 21:41:29
+Elapsed time is 0:07:37.153054
+Rate is 0:00:00.073273 seconds per epoch
+Total estimated run time is 0:12:12.806080
+On step 6249 - loss nan, Current Time = 21:41:30
+Elapsed time is 0:07:37.874418
+Rate is 0:00:00.073272 seconds per epoch
+Total estimated run time is 0:12:12.790962
+On step 6259 - loss nan, Current Time = 21:41:31
+Elapsed time is 0:07:38.596102
+Rate is 0:00:00.073270 seconds per epoch
+Total estimated run time is 0:12:12.772442
+On step 6269 - loss nan, Current Time = 21:41:31
+Elapsed time is 0:07:39.317842
+Rate is 0:00:00.073268 seconds per epoch
+Total estimated run time is 0:12:12.754018
+On step 6279 - loss nan, Current Time = 21:41:32
+Elapsed time is 0:07:40.039382
+Rate is 0:00:00.073266 seconds per epoch
+Total estimated run time is 0:12:12.735434
+On step 6289 - loss nan, Current Time = 21:41:33
+Elapsed time is 0:07:40.760594
+Rate is 0:00:00.073265 seconds per epoch
+Total estimated run time is 0:12:12.720274
+On step 6299 - loss nan, Current Time = 21:41:33
+Elapsed time is 0:07:41.481773
+Rate is 0:00:00.073263 seconds per epoch
+Total estimated run time is 0:12:12.701399
+On step 6309 - loss nan, Current Time = 21:41:34
+Elapsed time is 0:07:42.218044
+Rate is 0:00:00.073263 seconds per epoch
+Total estimated run time is 0:12:12.705040
+On step 6319 - loss nan, Current Time = 21:41:35
+Elapsed time is 0:07:42.939064
+Rate is 0:00:00.073261 seconds per epoch
+Total estimated run time is 0:12:12.686066
+On step 6329 - loss nan, Current Time = 21:41:36
+Elapsed time is 0:07:43.660109
+Rate is 0:00:00.073260 seconds per epoch
+Total estimated run time is 0:12:12.670829
+On step 6339 - loss nan, Current Time = 21:41:36
+Elapsed time is 0:07:44.380938
+Rate is 0:00:00.073258 seconds per epoch
+Total estimated run time is 0:12:12.651734
+On step 6349 - loss nan, Current Time = 21:41:37
+Elapsed time is 0:07:45.102009
+Rate is 0:00:00.073256 seconds per epoch
+Total estimated run time is 0:12:12.632921
+On step 6359 - loss nan, Current Time = 21:41:38
+Elapsed time is 0:07:45.823957
+Rate is 0:00:00.073254 seconds per epoch
+Total estimated run time is 0:12:12.615025
+On step 6369 - loss nan, Current Time = 21:41:39
+Elapsed time is 0:07:46.545108
+Rate is 0:00:00.073252 seconds per epoch
+Total estimated run time is 0:12:12.596372
+On step 6379 - loss nan, Current Time = 21:41:39
+Elapsed time is 0:07:47.266168
+Rate is 0:00:00.073251 seconds per epoch
+Total estimated run time is 0:12:12.581290
+On step 6389 - loss nan, Current Time = 21:41:40
+Elapsed time is 0:07:47.987299
+Rate is 0:00:00.073249 seconds per epoch
+Total estimated run time is 0:12:12.562687
+On step 6399 - loss nan, Current Time = 21:41:41
+Elapsed time is 0:07:48.708149
+Rate is 0:00:00.073247 seconds per epoch
+Total estimated run time is 0:12:12.543843
+On step 6409 - loss nan, Current Time = 21:41:41
+Elapsed time is 0:07:49.444278
+Rate is 0:00:00.073248 seconds per epoch
+Total estimated run time is 0:12:12.551094
+On step 6419 - loss nan, Current Time = 21:41:42
+Elapsed time is 0:07:50.165219
+Rate is 0:00:00.073246 seconds per epoch
+Total estimated run time is 0:12:12.532391
+On step 6429 - loss nan, Current Time = 21:41:43
+Elapsed time is 0:07:50.886126
+Rate is 0:00:00.073244 seconds per epoch
+Total estimated run time is 0:12:12.513694
+On step 6439 - loss nan, Current Time = 21:41:44
+Elapsed time is 0:07:51.607449
+Rate is 0:00:00.073242 seconds per epoch
+Total estimated run time is 0:12:12.495453
+On step 6449 - loss nan, Current Time = 21:41:44
+Elapsed time is 0:07:52.328997
+Rate is 0:00:00.073241 seconds per epoch
+Total estimated run time is 0:12:12.481029
+On step 6459 - loss nan, Current Time = 21:41:45
+Elapsed time is 0:07:53.050279
+Rate is 0:00:00.073239 seconds per epoch
+Total estimated run time is 0:12:12.462817
+On step 6469 - loss nan, Current Time = 21:41:46
+Elapsed time is 0:07:53.771419
+Rate is 0:00:00.073237 seconds per epoch
+Total estimated run time is 0:12:12.444503
+On step 6479 - loss nan, Current Time = 21:41:46
+Elapsed time is 0:07:54.493299
+Rate is 0:00:00.073236 seconds per epoch
+Total estimated run time is 0:12:12.430491
+On step 6489 - loss nan, Current Time = 21:41:47
+Elapsed time is 0:07:55.215141
+Rate is 0:00:00.073234 seconds per epoch
+Total estimated run time is 0:12:12.412949
+On step 6499 - loss nan, Current Time = 21:41:48
+Elapsed time is 0:07:55.936527
+Rate is 0:00:00.073232 seconds per epoch
+Total estimated run time is 0:12:12.394991
+On step 6509 - loss nan, Current Time = 21:41:49
+Elapsed time is 0:07:56.673490
+Rate is 0:00:00.073233 seconds per epoch
+Total estimated run time is 0:12:12.403126
+On step 6519 - loss nan, Current Time = 21:41:49
+Elapsed time is 0:07:57.395139
+Rate is 0:00:00.073231 seconds per epoch
+Total estimated run time is 0:12:12.385481
+On step 6529 - loss nan, Current Time = 21:41:50
+Elapsed time is 0:07:58.116384
+Rate is 0:00:00.073230 seconds per epoch
+Total estimated run time is 0:12:12.370944
+On step 6539 - loss nan, Current Time = 21:41:51
+Elapsed time is 0:07:58.837847
+Rate is 0:00:00.073228 seconds per epoch
+Total estimated run time is 0:12:12.353183
+On step 6549 - loss nan, Current Time = 21:41:52
+Elapsed time is 0:07:59.558906
+Rate is 0:00:00.073226 seconds per epoch
+Total estimated run time is 0:12:12.335058
+On step 6559 - loss nan, Current Time = 21:41:52
+Elapsed time is 0:08:00.280287
+Rate is 0:00:00.073225 seconds per epoch
+Total estimated run time is 0:12:12.320737
+On step 6569 - loss nan, Current Time = 21:41:53
+Elapsed time is 0:08:01.001881
+Rate is 0:00:00.073223 seconds per epoch
+Total estimated run time is 0:12:12.303217
+On step 6579 - loss nan, Current Time = 21:41:54
+Elapsed time is 0:08:01.723542
+Rate is 0:00:00.073221 seconds per epoch
+Total estimated run time is 0:12:12.285804
+On step 6589 - loss nan, Current Time = 21:41:54
+Elapsed time is 0:08:02.444690
+Rate is 0:00:00.073220 seconds per epoch
+Total estimated run time is 0:12:12.271330
+On step 6599 - loss nan, Current Time = 21:41:55
+Elapsed time is 0:08:03.165609
+Rate is 0:00:00.073218 seconds per epoch
+Total estimated run time is 0:12:12.253245
+On step 6609 - loss nan, Current Time = 21:41:56
+Elapsed time is 0:08:03.902251
+Rate is 0:00:00.073219 seconds per epoch
+Total estimated run time is 0:12:12.261099
+On step 6619 - loss nan, Current Time = 21:41:57
+Elapsed time is 0:08:04.623310
+Rate is 0:00:00.073217 seconds per epoch
+Total estimated run time is 0:12:12.243204
+On step 6629 - loss nan, Current Time = 21:41:57
+Elapsed time is 0:08:05.344430
+Rate is 0:00:00.073215 seconds per epoch
+Total estimated run time is 0:12:12.225410
+On step 6639 - loss nan, Current Time = 21:41:58
+Elapsed time is 0:08:06.065673
+Rate is 0:00:00.073214 seconds per epoch
+Total estimated run time is 0:12:12.211141
+On step 6649 - loss nan, Current Time = 21:41:59
+Elapsed time is 0:08:06.787028
+Rate is 0:00:00.073212 seconds per epoch
+Total estimated run time is 0:12:12.193652
+On step 6659 - loss nan, Current Time = 21:41:59
+Elapsed time is 0:08:07.508479
+Rate is 0:00:00.073210 seconds per epoch
+Total estimated run time is 0:12:12.176299
+On step 6669 - loss nan, Current Time = 21:42:00
+Elapsed time is 0:08:08.236615
+Rate is 0:00:00.073210 seconds per epoch
+Total estimated run time is 0:12:12.172335
+On step 6679 - loss nan, Current Time = 21:42:01
+Elapsed time is 0:08:08.958062
+Rate is 0:00:00.073208 seconds per epoch
+Total estimated run time is 0:12:12.155038
+On step 6689 - loss nan, Current Time = 21:42:02
+Elapsed time is 0:08:09.679546
+Rate is 0:00:00.073207 seconds per epoch
+Total estimated run time is 0:12:12.141130
+On step 6699 - loss nan, Current Time = 21:42:02
+Elapsed time is 0:08:10.400713
+Rate is 0:00:00.073205 seconds per epoch
+Total estimated run time is 0:12:12.123623
+On step 6709 - loss nan, Current Time = 21:42:03
+Elapsed time is 0:08:11.136831
+Rate is 0:00:00.073206 seconds per epoch
+Total estimated run time is 0:12:12.130983
+On step 6719 - loss nan, Current Time = 21:42:04
+Elapsed time is 0:08:11.857585
+Rate is 0:00:00.073204 seconds per epoch
+Total estimated run time is 0:12:12.113113
+On step 6729 - loss nan, Current Time = 21:42:05
+Elapsed time is 0:08:12.578456
+Rate is 0:00:00.073202 seconds per epoch
+Total estimated run time is 0:12:12.095400
+On step 6739 - loss nan, Current Time = 21:42:05
+Elapsed time is 0:08:13.299246
+Rate is 0:00:00.073201 seconds per epoch
+Total estimated run time is 0:12:12.080908
+On step 6749 - loss nan, Current Time = 21:42:06
+Elapsed time is 0:08:14.020072
+Rate is 0:00:00.073199 seconds per epoch
+Total estimated run time is 0:12:12.063220
+On step 6759 - loss nan, Current Time = 21:42:07
+Elapsed time is 0:08:14.740742
+Rate is 0:00:00.073197 seconds per epoch
+Total estimated run time is 0:12:12.045416
+On step 6769 - loss nan, Current Time = 21:42:07
+Elapsed time is 0:08:15.461350
+Rate is 0:00:00.073196 seconds per epoch
+Total estimated run time is 0:12:12.030822
+On step 6779 - loss nan, Current Time = 21:42:08
+Elapsed time is 0:08:16.182843
+Rate is 0:00:00.073194 seconds per epoch
+Total estimated run time is 0:12:12.013911
+On step 6789 - loss nan, Current Time = 21:42:09
+Elapsed time is 0:08:16.903777
+Rate is 0:00:00.073192 seconds per epoch
+Total estimated run time is 0:12:11.996481
+On step 6799 - loss nan, Current Time = 21:42:10
+Elapsed time is 0:08:17.624966
+Rate is 0:00:00.073191 seconds per epoch
+Total estimated run time is 0:12:11.982548
+On step 6809 - loss nan, Current Time = 21:42:10
+Elapsed time is 0:08:18.361693
+Rate is 0:00:00.073192 seconds per epoch
+Total estimated run time is 0:12:11.990557
+On step 6819 - loss nan, Current Time = 21:42:11
+Elapsed time is 0:08:19.083251
+Rate is 0:00:00.073190 seconds per epoch
+Total estimated run time is 0:12:11.973831
+On step 6829 - loss nan, Current Time = 21:42:12
+Elapsed time is 0:08:19.804791
+Rate is 0:00:00.073189 seconds per epoch
+Total estimated run time is 0:12:11.960299
+On step 6839 - loss nan, Current Time = 21:42:12
+Elapsed time is 0:08:20.525948
+Rate is 0:00:00.073187 seconds per epoch
+Total estimated run time is 0:12:11.943242
+On step 6849 - loss nan, Current Time = 21:42:13
+Elapsed time is 0:08:21.247389
+Rate is 0:00:00.073185 seconds per epoch
+Total estimated run time is 0:12:11.926509
+On step 6859 - loss nan, Current Time = 21:42:14
+Elapsed time is 0:08:21.999071
+Rate is 0:00:00.073188 seconds per epoch
+Total estimated run time is 0:12:11.955767
+On step 6869 - loss nan, Current Time = 21:42:15
+Elapsed time is 0:08:22.767690
+Rate is 0:00:00.073194 seconds per epoch
+Total estimated run time is 0:12:12.011298
+On step 6879 - loss nan, Current Time = 21:42:15
+Elapsed time is 0:08:23.530979
+Rate is 0:00:00.073198 seconds per epoch
+Total estimated run time is 0:12:12.055135
+On step 6889 - loss nan, Current Time = 21:42:16
+Elapsed time is 0:08:24.252631
+Rate is 0:00:00.073197 seconds per epoch
+Total estimated run time is 0:12:12.041695
+On step 6899 - loss nan, Current Time = 21:42:17
+Elapsed time is 0:08:24.974132
+Rate is 0:00:00.073195 seconds per epoch
+Total estimated run time is 0:12:12.025022
+On step 6909 - loss nan, Current Time = 21:42:18
+Elapsed time is 0:08:25.710577
+Rate is 0:00:00.073196 seconds per epoch
+Total estimated run time is 0:12:12.032609
+On step 6919 - loss nan, Current Time = 21:42:18
+Elapsed time is 0:08:26.431524
+Rate is 0:00:00.073194 seconds per epoch
+Total estimated run time is 0:12:12.015432
+On step 6929 - loss nan, Current Time = 21:42:19
+Elapsed time is 0:08:27.152344
+Rate is 0:00:00.073193 seconds per epoch
+Total estimated run time is 0:12:12.001240
+On step 6939 - loss nan, Current Time = 21:42:20
+Elapsed time is 0:08:27.873342
+Rate is 0:00:00.073191 seconds per epoch
+Total estimated run time is 0:12:11.984184
+On step 6949 - loss nan, Current Time = 21:42:21
+Elapsed time is 0:08:28.594357
+Rate is 0:00:00.073190 seconds per epoch
+Total estimated run time is 0:12:11.970237
+On step 6959 - loss nan, Current Time = 21:42:21
+Elapsed time is 0:08:29.315583
+Rate is 0:00:00.073188 seconds per epoch
+Total estimated run time is 0:12:11.953479
+On step 6969 - loss nan, Current Time = 21:42:22
+Elapsed time is 0:08:30.036271
+Rate is 0:00:00.073186 seconds per epoch
+Total estimated run time is 0:12:11.936223
+On step 6979 - loss nan, Current Time = 21:42:23
+Elapsed time is 0:08:30.758149
+Rate is 0:00:00.073185 seconds per epoch
+Total estimated run time is 0:12:11.923219
+On step 6989 - loss nan, Current Time = 21:42:23
+Elapsed time is 0:08:31.479974
+Rate is 0:00:00.073184 seconds per epoch
+Total estimated run time is 0:12:11.910182
+On step 6999 - loss nan, Current Time = 21:42:24
+Elapsed time is 0:08:32.201355
+Rate is 0:00:00.073182 seconds per epoch
+Total estimated run time is 0:12:11.893719
+On step 7009 - loss nan, Current Time = 21:42:25
+Elapsed time is 0:08:32.938614
+Rate is 0:00:00.073183 seconds per epoch
+Total estimated run time is 0:12:11.902150
+On step 7019 - loss nan, Current Time = 21:42:26
+Elapsed time is 0:08:33.659956
+Rate is 0:00:00.073181 seconds per epoch
+Total estimated run time is 0:12:11.885698
+On step 7029 - loss nan, Current Time = 21:42:26
+Elapsed time is 0:08:34.380845
+Rate is 0:00:00.073180 seconds per epoch
+Total estimated run time is 0:12:11.871805
+On step 7039 - loss nan, Current Time = 21:42:27
+Elapsed time is 0:08:35.101594
+Rate is 0:00:00.073178 seconds per epoch
+Total estimated run time is 0:12:11.854830
+On step 7049 - loss nan, Current Time = 21:42:28
+Elapsed time is 0:08:35.822244
+Rate is 0:00:00.073177 seconds per epoch
+Total estimated run time is 0:12:11.840748
+On step 7059 - loss nan, Current Time = 21:42:29
+Elapsed time is 0:08:36.542989
+Rate is 0:00:00.073175 seconds per epoch
+Total estimated run time is 0:12:11.823839
+On step 7069 - loss nan, Current Time = 21:42:29
+Elapsed time is 0:08:37.263669
+Rate is 0:00:00.073174 seconds per epoch
+Total estimated run time is 0:12:11.809837
+On step 7079 - loss nan, Current Time = 21:42:30
+Elapsed time is 0:08:37.984894
+Rate is 0:00:00.073172 seconds per epoch
+Total estimated run time is 0:12:11.793478
+On step 7089 - loss nan, Current Time = 21:42:31
+Elapsed time is 0:08:38.706253
+Rate is 0:00:00.073171 seconds per epoch
+Total estimated run time is 0:12:11.780205
+On step 7099 - loss nan, Current Time = 21:42:31
+Elapsed time is 0:08:39.427400
+Rate is 0:00:00.073169 seconds per epoch
+Total estimated run time is 0:12:11.763838
+On step 7109 - loss nan, Current Time = 21:42:32
+Elapsed time is 0:08:40.164399
+Rate is 0:00:00.073170 seconds per epoch
+Total estimated run time is 0:12:11.772039
+On step 7119 - loss nan, Current Time = 21:42:33
+Elapsed time is 0:08:40.886142
+Rate is 0:00:00.073168 seconds per epoch
+Total estimated run time is 0:12:11.756318
+On step 7129 - loss nan, Current Time = 21:42:34
+Elapsed time is 0:08:41.607733
+Rate is 0:00:00.073167 seconds per epoch
+Total estimated run time is 0:12:11.743357
+On step 7139 - loss nan, Current Time = 21:42:34
+Elapsed time is 0:08:42.329318
+Rate is 0:00:00.073166 seconds per epoch
+Total estimated run time is 0:12:11.730410
+On step 7149 - loss nan, Current Time = 21:42:35
+Elapsed time is 0:08:43.051126
+Rate is 0:00:00.073164 seconds per epoch
+Total estimated run time is 0:12:11.714854
+On step 7159 - loss nan, Current Time = 21:42:36
+Elapsed time is 0:08:43.772384
+Rate is 0:00:00.073163 seconds per epoch
+Total estimated run time is 0:12:11.701630
+On step 7169 - loss nan, Current Time = 21:42:36
+Elapsed time is 0:08:44.493888
+Rate is 0:00:00.073161 seconds per epoch
+Total estimated run time is 0:12:11.685840
+On step 7179 - loss nan, Current Time = 21:42:37
+Elapsed time is 0:08:45.216114
+Rate is 0:00:00.073160 seconds per epoch
+Total estimated run time is 0:12:11.673634
+On step 7189 - loss nan, Current Time = 21:42:38
+Elapsed time is 0:08:45.938662
+Rate is 0:00:00.073159 seconds per epoch
+Total estimated run time is 0:12:11.661770
+On step 7199 - loss nan, Current Time = 21:42:39
+Elapsed time is 0:08:46.659990
+Rate is 0:00:00.073157 seconds per epoch
+Total estimated run time is 0:12:11.645904
+On step 7209 - loss nan, Current Time = 21:42:39
+Elapsed time is 0:08:47.396605
+Rate is 0:00:00.073158 seconds per epoch
+Total estimated run time is 0:12:11.653741
+On step 7219 - loss nan, Current Time = 21:42:40
+Elapsed time is 0:08:48.117971
+Rate is 0:00:00.073157 seconds per epoch
+Total estimated run time is 0:12:11.640745
+On step 7229 - loss nan, Current Time = 21:42:41
+Elapsed time is 0:08:48.839055
+Rate is 0:00:00.073155 seconds per epoch
+Total estimated run time is 0:12:11.624715
+On step 7239 - loss nan, Current Time = 21:42:42
+Elapsed time is 0:08:49.560139
+Rate is 0:00:00.073154 seconds per epoch
+Total estimated run time is 0:12:11.611487
+On step 7249 - loss nan, Current Time = 21:42:42
+Elapsed time is 0:08:50.281759
+Rate is 0:00:00.073152 seconds per epoch
+Total estimated run time is 0:12:11.596063
+On step 7259 - loss nan, Current Time = 21:42:43
+Elapsed time is 0:08:51.003277
+Rate is 0:00:00.073151 seconds per epoch
+Total estimated run time is 0:12:11.583319
+On step 7269 - loss nan, Current Time = 21:42:44
+Elapsed time is 0:08:51.724861
+Rate is 0:00:00.073150 seconds per epoch
+Total estimated run time is 0:12:11.570661
+On step 7279 - loss nan, Current Time = 21:42:44
+Elapsed time is 0:08:52.446209
+Rate is 0:00:00.073148 seconds per epoch
+Total estimated run time is 0:12:11.555065
+On step 7289 - loss nan, Current Time = 21:42:45
+Elapsed time is 0:08:53.167739
+Rate is 0:00:00.073147 seconds per epoch
+Total estimated run time is 0:12:11.542403
+On step 7299 - loss nan, Current Time = 21:42:46
+Elapsed time is 0:08:53.889660
+Rate is 0:00:00.073146 seconds per epoch
+Total estimated run time is 0:12:11.530152
+On step 7309 - loss nan, Current Time = 21:42:47
+Elapsed time is 0:08:54.626517
+Rate is 0:00:00.073146 seconds per epoch
+Total estimated run time is 0:12:11.535549
+On step 7319 - loss nan, Current Time = 21:42:47
+Elapsed time is 0:08:55.348323
+Rate is 0:00:00.073145 seconds per epoch
+Total estimated run time is 0:12:11.523213
+On step 7329 - loss nan, Current Time = 21:42:48
+Elapsed time is 0:08:56.069957
+Rate is 0:00:00.073144 seconds per epoch
+Total estimated run time is 0:12:11.510725
+On step 7339 - loss nan, Current Time = 21:42:49
+Elapsed time is 0:08:56.791362
+Rate is 0:00:00.073142 seconds per epoch
+Total estimated run time is 0:12:11.495366
+On step 7349 - loss nan, Current Time = 21:42:49
+Elapsed time is 0:08:57.513061
+Rate is 0:00:00.073141 seconds per epoch
+Total estimated run time is 0:12:11.482993
+On step 7359 - loss nan, Current Time = 21:42:50
+Elapsed time is 0:08:58.234894
+Rate is 0:00:00.073140 seconds per epoch
+Total estimated run time is 0:12:11.470774
+On step 7369 - loss nan, Current Time = 21:42:51
+Elapsed time is 0:08:58.956406
+Rate is 0:00:00.073138 seconds per epoch
+Total estimated run time is 0:12:11.455622
+On step 7379 - loss nan, Current Time = 21:42:52
+Elapsed time is 0:08:59.677937
+Rate is 0:00:00.073137 seconds per epoch
+Total estimated run time is 0:12:11.443151
+On step 7389 - loss nan, Current Time = 21:42:52
+Elapsed time is 0:09:00.399585
+Rate is 0:00:00.073136 seconds per epoch
+Total estimated run time is 0:12:11.430817
+On step 7399 - loss nan, Current Time = 21:42:53
+Elapsed time is 0:09:01.121187
+Rate is 0:00:00.073134 seconds per epoch
+Total estimated run time is 0:12:11.415855
+On step 7409 - loss nan, Current Time = 21:42:54
+Elapsed time is 0:09:01.857584
+Rate is 0:00:00.073135 seconds per epoch
+Total estimated run time is 0:12:11.423504
+On step 7419 - loss nan, Current Time = 21:42:55
+Elapsed time is 0:09:02.578827
+Rate is 0:00:00.073134 seconds per epoch
+Total estimated run time is 0:12:11.410815
+On step 7429 - loss nan, Current Time = 21:42:55
+Elapsed time is 0:09:03.300344
+Rate is 0:00:00.073132 seconds per epoch
+Total estimated run time is 0:12:11.395848
+On step 7439 - loss nan, Current Time = 21:42:56
+Elapsed time is 0:09:04.021666
+Rate is 0:00:00.073131 seconds per epoch
+Total estimated run time is 0:12:11.383288
+On step 7449 - loss nan, Current Time = 21:42:57
+Elapsed time is 0:09:04.743338
+Rate is 0:00:00.073130 seconds per epoch
+Total estimated run time is 0:12:11.371098
+On step 7459 - loss nan, Current Time = 21:42:57
+Elapsed time is 0:09:05.464811
+Rate is 0:00:00.073128 seconds per epoch
+Total estimated run time is 0:12:11.356187
+On step 7469 - loss nan, Current Time = 21:42:58
+Elapsed time is 0:09:06.185998
+Rate is 0:00:00.073127 seconds per epoch
+Total estimated run time is 0:12:11.343562
+On step 7479 - loss nan, Current Time = 21:42:59
+Elapsed time is 0:09:06.907887
+Rate is 0:00:00.073126 seconds per epoch
+Total estimated run time is 0:12:11.331659
+On step 7489 - loss nan, Current Time = 21:43:00
+Elapsed time is 0:09:07.629845
+Rate is 0:00:00.073125 seconds per epoch
+Total estimated run time is 0:12:11.319845
+On step 7499 - loss nan, Current Time = 21:43:00
+Elapsed time is 0:09:08.352035
+Rate is 0:00:00.073123 seconds per epoch
+Total estimated run time is 0:12:11.305781
+On step 7509 - loss nan, Current Time = 21:43:01
+Elapsed time is 0:09:09.088977
+Rate is 0:00:00.073124 seconds per epoch
+Total estimated run time is 0:12:11.313985
+On step 7519 - loss nan, Current Time = 21:43:02
+Elapsed time is 0:09:09.810229
+Rate is 0:00:00.073123 seconds per epoch
+Total estimated run time is 0:12:11.301515
+On step 7529 - loss nan, Current Time = 21:43:02
+Elapsed time is 0:09:10.531592
+Rate is 0:00:00.073121 seconds per epoch
+Total estimated run time is 0:12:11.286704
+On step 7539 - loss nan, Current Time = 21:43:03
+Elapsed time is 0:09:11.253100
+Rate is 0:00:00.073120 seconds per epoch
+Total estimated run time is 0:12:11.274540
+On step 7549 - loss nan, Current Time = 21:43:04
+Elapsed time is 0:09:11.974597
+Rate is 0:00:00.073119 seconds per epoch
+Total estimated run time is 0:12:11.262385
+On step 7559 - loss nan, Current Time = 21:43:05
+Elapsed time is 0:09:12.696313
+Rate is 0:00:00.073118 seconds per epoch
+Total estimated run time is 0:12:11.250469
+On step 7569 - loss nan, Current Time = 21:43:05
+Elapsed time is 0:09:13.417996
+Rate is 0:00:00.073116 seconds per epoch
+Total estimated run time is 0:12:11.236108
+On step 7579 - loss nan, Current Time = 21:43:06
+Elapsed time is 0:09:14.139441
+Rate is 0:00:00.073115 seconds per epoch
+Total estimated run time is 0:12:11.223971
+On step 7589 - loss nan, Current Time = 21:43:07
+Elapsed time is 0:09:14.860472
+Rate is 0:00:00.073114 seconds per epoch
+Total estimated run time is 0:12:11.211440
+On step 7599 - loss nan, Current Time = 21:43:08
+Elapsed time is 0:09:15.581651
+Rate is 0:00:00.073112 seconds per epoch
+Total estimated run time is 0:12:11.196675
+On step 7609 - loss nan, Current Time = 21:43:08
+Elapsed time is 0:09:16.320069
+Rate is 0:00:00.073113 seconds per epoch
+Total estimated run time is 0:12:11.206365
+On step 7619 - loss nan, Current Time = 21:43:09
+Elapsed time is 0:09:17.042191
+Rate is 0:00:00.073112 seconds per epoch
+Total estimated run time is 0:12:11.194975
+On step 7629 - loss nan, Current Time = 21:43:10
+Elapsed time is 0:09:17.764232
+Rate is 0:00:00.073111 seconds per epoch
+Total estimated run time is 0:12:11.183524
+On step 7639 - loss nan, Current Time = 21:43:10
+Elapsed time is 0:09:18.485974
+Rate is 0:00:00.073110 seconds per epoch
+Total estimated run time is 0:12:11.171794
+On step 7649 - loss nan, Current Time = 21:43:11
+Elapsed time is 0:09:19.207455
+Rate is 0:00:00.073109 seconds per epoch
+Total estimated run time is 0:12:11.159823
+On step 7659 - loss nan, Current Time = 21:43:12
+Elapsed time is 0:09:19.930051
+Rate is 0:00:00.073107 seconds per epoch
+Total estimated run time is 0:12:11.146645
+On step 7669 - loss nan, Current Time = 21:43:13
+Elapsed time is 0:09:20.651774
+Rate is 0:00:00.073106 seconds per epoch
+Total estimated run time is 0:12:11.134966
+On step 7679 - loss nan, Current Time = 21:43:13
+Elapsed time is 0:09:21.373797
+Rate is 0:00:00.073105 seconds per epoch
+Total estimated run time is 0:12:11.123607
+On step 7689 - loss nan, Current Time = 21:43:14
+Elapsed time is 0:09:22.095571
+Rate is 0:00:00.073104 seconds per epoch
+Total estimated run time is 0:12:11.112019
+On step 7699 - loss nan, Current Time = 21:43:15
+Elapsed time is 0:09:22.817039
+Rate is 0:00:00.073103 seconds per epoch
+Total estimated run time is 0:12:11.100145
+On step 7709 - loss nan, Current Time = 21:43:16
+Elapsed time is 0:09:23.554051
+Rate is 0:00:00.073103 seconds per epoch
+Total estimated run time is 0:12:11.106127
+On step 7719 - loss nan, Current Time = 21:43:16
+Elapsed time is 0:09:24.275254
+Rate is 0:00:00.073102 seconds per epoch
+Total estimated run time is 0:12:11.094018
+On step 7729 - loss nan, Current Time = 21:43:17
+Elapsed time is 0:09:24.996456
+Rate is 0:00:00.073101 seconds per epoch
+Total estimated run time is 0:12:11.081928
+On step 7739 - loss nan, Current Time = 21:43:18
+Elapsed time is 0:09:25.717433
+Rate is 0:00:00.073100 seconds per epoch
+Total estimated run time is 0:12:11.069633
+On step 7749 - loss nan, Current Time = 21:43:18
+Elapsed time is 0:09:26.438847
+Rate is 0:00:00.073098 seconds per epoch
+Total estimated run time is 0:12:11.055543
+On step 7759 - loss nan, Current Time = 21:43:19
+Elapsed time is 0:09:27.159944
+Rate is 0:00:00.073097 seconds per epoch
+Total estimated run time is 0:12:11.043418
+On step 7769 - loss nan, Current Time = 21:43:20
+Elapsed time is 0:09:27.881054
+Rate is 0:00:00.073096 seconds per epoch
+Total estimated run time is 0:12:11.031326
+On step 7779 - loss nan, Current Time = 21:43:21
+Elapsed time is 0:09:28.602388
+Rate is 0:00:00.073095 seconds per epoch
+Total estimated run time is 0:12:11.019478
+On step 7789 - loss nan, Current Time = 21:43:21
+Elapsed time is 0:09:29.323527
+Rate is 0:00:00.073093 seconds per epoch
+Total estimated run time is 0:12:11.005243
+On step 7799 - loss nan, Current Time = 21:43:22
+Elapsed time is 0:09:30.044838
+Rate is 0:00:00.073092 seconds per epoch
+Total estimated run time is 0:12:10.993422
+On step 7809 - loss nan, Current Time = 21:43:23
+Elapsed time is 0:09:30.781983
+Rate is 0:00:00.073093 seconds per epoch
+Total estimated run time is 0:12:11.001839
+On step 7819 - loss nan, Current Time = 21:43:23
+Elapsed time is 0:09:31.503740
+Rate is 0:00:00.073092 seconds per epoch
+Total estimated run time is 0:12:10.990484
+On step 7829 - loss nan, Current Time = 21:43:24
+Elapsed time is 0:09:32.225724
+Rate is 0:00:00.073091 seconds per epoch
+Total estimated run time is 0:12:10.979376
+On step 7839 - loss nan, Current Time = 21:43:25
+Elapsed time is 0:09:32.947433
+Rate is 0:00:00.073089 seconds per epoch
+Total estimated run time is 0:12:10.965851
+On step 7849 - loss nan, Current Time = 21:43:26
+Elapsed time is 0:09:33.669443
+Rate is 0:00:00.073088 seconds per epoch
+Total estimated run time is 0:12:10.954819
+On step 7859 - loss nan, Current Time = 21:43:26
+Elapsed time is 0:09:34.391410
+Rate is 0:00:00.073087 seconds per epoch
+Total estimated run time is 0:12:10.943764
+On step 7869 - loss nan, Current Time = 21:43:27
+Elapsed time is 0:09:35.113224
+Rate is 0:00:00.073086 seconds per epoch
+Total estimated run time is 0:12:10.932576
+On step 7879 - loss nan, Current Time = 21:43:28
+Elapsed time is 0:09:35.834689
+Rate is 0:00:00.073085 seconds per epoch
+Total estimated run time is 0:12:10.921059
+On step 7889 - loss nan, Current Time = 21:43:29
+Elapsed time is 0:09:36.556185
+Rate is 0:00:00.073084 seconds per epoch
+Total estimated run time is 0:12:10.909593
+On step 7899 - loss nan, Current Time = 21:43:29
+Elapsed time is 0:09:37.278199
+Rate is 0:00:00.073082 seconds per epoch
+Total estimated run time is 0:12:10.896563
+On step 7909 - loss nan, Current Time = 21:43:30
+Elapsed time is 0:09:38.014700
+Rate is 0:00:00.073083 seconds per epoch
+Total estimated run time is 0:12:10.904336
+On step 7919 - loss nan, Current Time = 21:43:31
+Elapsed time is 0:09:38.736350
+Rate is 0:00:00.073082 seconds per epoch
+Total estimated run time is 0:12:10.893074
+On step 7929 - loss nan, Current Time = 21:43:31
+Elapsed time is 0:09:39.457230
+Rate is 0:00:00.073081 seconds per epoch
+Total estimated run time is 0:12:10.881062
+On step 7939 - loss nan, Current Time = 21:43:32
+Elapsed time is 0:09:40.178291
+Rate is 0:00:00.073080 seconds per epoch
+Total estimated run time is 0:12:10.869251
+On step 7949 - loss nan, Current Time = 21:43:33
+Elapsed time is 0:09:40.899457
+Rate is 0:00:00.073078 seconds per epoch
+Total estimated run time is 0:12:10.855513
+On step 7959 - loss nan, Current Time = 21:43:34
+Elapsed time is 0:09:41.620744
+Rate is 0:00:00.073077 seconds per epoch
+Total estimated run time is 0:12:10.843978
+On step 7969 - loss nan, Current Time = 21:43:34
+Elapsed time is 0:09:42.341617
+Rate is 0:00:00.073076 seconds per epoch
+Total estimated run time is 0:12:10.832049
+On step 7979 - loss nan, Current Time = 21:43:35
+Elapsed time is 0:09:43.063635
+Rate is 0:00:00.073075 seconds per epoch
+Total estimated run time is 0:12:10.821285
+On step 7989 - loss nan, Current Time = 21:43:36
+Elapsed time is 0:09:43.785501
+Rate is 0:00:00.073074 seconds per epoch
+Total estimated run time is 0:12:10.810389
+On step 7999 - loss nan, Current Time = 21:43:36
+Elapsed time is 0:09:44.506929
+Rate is 0:00:00.073073 seconds per epoch
+Total estimated run time is 0:12:10.799075
+On step 8009 - loss nan, Current Time = 21:43:37
+Elapsed time is 0:09:45.244032
+Rate is 0:00:00.073073 seconds per epoch
+Total estimated run time is 0:12:10.805448
+On step 8019 - loss nan, Current Time = 21:43:38
+Elapsed time is 0:09:45.966442
+Rate is 0:00:00.073072 seconds per epoch
+Total estimated run time is 0:12:10.795146
+On step 8029 - loss nan, Current Time = 21:43:39
+Elapsed time is 0:09:46.687971
+Rate is 0:00:00.073071 seconds per epoch
+Total estimated run time is 0:12:10.783983
+On step 8039 - loss nan, Current Time = 21:43:39
+Elapsed time is 0:09:47.409452
+Rate is 0:00:00.073070 seconds per epoch
+Total estimated run time is 0:12:10.772792
+On step 8049 - loss nan, Current Time = 21:43:40
+Elapsed time is 0:09:48.130606
+Rate is 0:00:00.073069 seconds per epoch
+Total estimated run time is 0:12:10.761294
+On step 8059 - loss nan, Current Time = 21:43:41
+Elapsed time is 0:09:48.851668
+Rate is 0:00:00.073068 seconds per epoch
+Total estimated run time is 0:12:10.749724
+On step 8069 - loss nan, Current Time = 21:43:42
+Elapsed time is 0:09:49.572736
+Rate is 0:00:00.073066 seconds per epoch
+Total estimated run time is 0:12:10.736248
+On step 8079 - loss nan, Current Time = 21:43:42
+Elapsed time is 0:09:50.293806
+Rate is 0:00:00.073065 seconds per epoch
+Total estimated run time is 0:12:10.724736
+On step 8089 - loss nan, Current Time = 21:43:43
+Elapsed time is 0:09:51.014927
+Rate is 0:00:00.073064 seconds per epoch
+Total estimated run time is 0:12:10.713295
+On step 8099 - loss nan, Current Time = 21:43:44
+Elapsed time is 0:09:51.735984
+Rate is 0:00:00.073063 seconds per epoch
+Total estimated run time is 0:12:10.701810
+On step 8109 - loss nan, Current Time = 21:43:44
+Elapsed time is 0:09:52.473156
+Rate is 0:00:00.073064 seconds per epoch
+Total estimated run time is 0:12:10.710244
+On step 8119 - loss nan, Current Time = 21:43:45
+Elapsed time is 0:09:53.194968
+Rate is 0:00:00.073063 seconds per epoch
+Total estimated run time is 0:12:10.699534
+On step 8129 - loss nan, Current Time = 21:43:46
+Elapsed time is 0:09:53.916894
+Rate is 0:00:00.073061 seconds per epoch
+Total estimated run time is 0:12:10.687086
+On step 8139 - loss nan, Current Time = 21:43:47
+Elapsed time is 0:09:54.645455
+Rate is 0:00:00.073061 seconds per epoch
+Total estimated run time is 0:12:10.685037
+On step 8149 - loss nan, Current Time = 21:43:47
+Elapsed time is 0:09:55.367097
+Rate is 0:00:00.073060 seconds per epoch
+Total estimated run time is 0:12:10.674217
+On step 8159 - loss nan, Current Time = 21:43:48
+Elapsed time is 0:09:56.088789
+Rate is 0:00:00.073059 seconds per epoch
+Total estimated run time is 0:12:10.663467
+On step 8169 - loss nan, Current Time = 21:43:49
+Elapsed time is 0:09:56.810308
+Rate is 0:00:00.073058 seconds per epoch
+Total estimated run time is 0:12:10.652564
+On step 8179 - loss nan, Current Time = 21:43:49
+Elapsed time is 0:09:57.532064
+Rate is 0:00:00.073057 seconds per epoch
+Total estimated run time is 0:12:10.641918
+On step 8189 - loss nan, Current Time = 21:43:50
+Elapsed time is 0:09:58.253827
+Rate is 0:00:00.073056 seconds per epoch
+Total estimated run time is 0:12:10.631299
+On step 8199 - loss nan, Current Time = 21:43:51
+Elapsed time is 0:09:58.975339
+Rate is 0:00:00.073055 seconds per epoch
+Total estimated run time is 0:12:10.620449
+On step 8209 - loss nan, Current Time = 21:43:52
+Elapsed time is 0:09:59.711799
+Rate is 0:00:00.073055 seconds per epoch
+Total estimated run time is 0:12:10.626359
+On step 8219 - loss nan, Current Time = 21:43:52
+Elapsed time is 0:10:00.432721
+Rate is 0:00:00.073054 seconds per epoch
+Total estimated run time is 0:12:10.614949
+On step 8229 - loss nan, Current Time = 21:43:53
+Elapsed time is 0:10:01.153667
+Rate is 0:00:00.073053 seconds per epoch
+Total estimated run time is 0:12:10.603583
+On step 8239 - loss nan, Current Time = 21:43:54
+Elapsed time is 0:10:01.874669
+Rate is 0:00:00.073052 seconds per epoch
+Total estimated run time is 0:12:10.592293
+On step 8249 - loss nan, Current Time = 21:43:55
+Elapsed time is 0:10:02.595663
+Rate is 0:00:00.073051 seconds per epoch
+Total estimated run time is 0:12:10.581015
+On step 8259 - loss nan, Current Time = 21:43:55
+Elapsed time is 0:10:03.316589
+Rate is 0:00:00.073050 seconds per epoch
+Total estimated run time is 0:12:10.569689
+On step 8269 - loss nan, Current Time = 21:43:56
+Elapsed time is 0:10:04.037659
+Rate is 0:00:00.073048 seconds per epoch
+Total estimated run time is 0:12:10.556795
+On step 8279 - loss nan, Current Time = 21:43:57
+Elapsed time is 0:10:04.758661
+Rate is 0:00:00.073047 seconds per epoch
+Total estimated run time is 0:12:10.545595
+On step 8289 - loss nan, Current Time = 21:43:57
+Elapsed time is 0:10:05.479916
+Rate is 0:00:00.073046 seconds per epoch
+Total estimated run time is 0:12:10.534668
+On step 8299 - loss nan, Current Time = 21:43:58
+Elapsed time is 0:10:06.236180
+Rate is 0:00:00.073049 seconds per epoch
+Total estimated run time is 0:12:10.565578
+On step 8309 - loss nan, Current Time = 21:43:59
+Elapsed time is 0:10:07.020055
+Rate is 0:00:00.073056 seconds per epoch
+Total estimated run time is 0:12:10.630807
+On step 8319 - loss nan, Current Time = 21:44:00
+Elapsed time is 0:10:07.789433
+Rate is 0:00:00.073060 seconds per epoch
+Total estimated run time is 0:12:10.676353
+On step 8329 - loss nan, Current Time = 21:44:01
+Elapsed time is 0:10:08.558630
+Rate is 0:00:00.073065 seconds per epoch
+Total estimated run time is 0:12:10.723310
+On step 8339 - loss nan, Current Time = 21:44:01
+Elapsed time is 0:10:09.325570
+Rate is 0:00:00.073069 seconds per epoch
+Total estimated run time is 0:12:10.766248
+On step 8349 - loss nan, Current Time = 21:44:02
+Elapsed time is 0:10:10.047207
+Rate is 0:00:00.073068 seconds per epoch
+Total estimated run time is 0:12:10.755543
+On step 8359 - loss nan, Current Time = 21:44:03
+Elapsed time is 0:10:10.768774
+Rate is 0:00:00.073067 seconds per epoch
+Total estimated run time is 0:12:10.744788
+On step 8369 - loss nan, Current Time = 21:44:03
+Elapsed time is 0:10:11.490517
+Rate is 0:00:00.073066 seconds per epoch
+Total estimated run time is 0:12:10.734229
+On step 8379 - loss nan, Current Time = 21:44:04
+Elapsed time is 0:10:12.212043
+Rate is 0:00:00.073065 seconds per epoch
+Total estimated run time is 0:12:10.723473
+On step 8389 - loss nan, Current Time = 21:44:05
+Elapsed time is 0:10:12.933476
+Rate is 0:00:00.073064 seconds per epoch
+Total estimated run time is 0:12:10.712644
+On step 8399 - loss nan, Current Time = 21:44:06
+Elapsed time is 0:10:13.654877
+Rate is 0:00:00.073063 seconds per epoch
+Total estimated run time is 0:12:10.701803
+On step 8409 - loss nan, Current Time = 21:44:06
+Elapsed time is 0:10:14.391780
+Rate is 0:00:00.073064 seconds per epoch
+Total estimated run time is 0:12:10.709668
+On step 8419 - loss nan, Current Time = 21:44:07
+Elapsed time is 0:10:15.112920
+Rate is 0:00:00.073062 seconds per epoch
+Total estimated run time is 0:12:10.697004
+On step 8429 - loss nan, Current Time = 21:44:08
+Elapsed time is 0:10:15.834900
+Rate is 0:00:00.073061 seconds per epoch
+Total estimated run time is 0:12:10.686792
+On step 8439 - loss nan, Current Time = 21:44:09
+Elapsed time is 0:10:16.556415
+Rate is 0:00:00.073060 seconds per epoch
+Total estimated run time is 0:12:10.676135
+On step 8449 - loss nan, Current Time = 21:44:09
+Elapsed time is 0:10:17.277882
+Rate is 0:00:00.073059 seconds per epoch
+Total estimated run time is 0:12:10.665450
+On step 8459 - loss nan, Current Time = 21:44:10
+Elapsed time is 0:10:17.999237
+Rate is 0:00:00.073058 seconds per epoch
+Total estimated run time is 0:12:10.654673
+On step 8469 - loss nan, Current Time = 21:44:11
+Elapsed time is 0:10:18.720513
+Rate is 0:00:00.073057 seconds per epoch
+Total estimated run time is 0:12:10.643837
+On step 8479 - loss nan, Current Time = 21:44:11
+Elapsed time is 0:10:19.442224
+Rate is 0:00:00.073056 seconds per epoch
+Total estimated run time is 0:12:10.633456
+On step 8489 - loss nan, Current Time = 21:44:12
+Elapsed time is 0:10:20.163984
+Rate is 0:00:00.073055 seconds per epoch
+Total estimated run time is 0:12:10.623144
+On step 8499 - loss nan, Current Time = 21:44:13
+Elapsed time is 0:10:20.885416
+Rate is 0:00:00.073054 seconds per epoch
+Total estimated run time is 0:12:10.612524
+On step 8509 - loss nan, Current Time = 21:44:14
+Elapsed time is 0:10:21.624344
+Rate is 0:00:00.073055 seconds per epoch
+Total estimated run time is 0:12:10.622404
+On step 8519 - loss nan, Current Time = 21:44:14
+Elapsed time is 0:10:22.345971
+Rate is 0:00:00.073054 seconds per epoch
+Total estimated run time is 0:12:10.611999
+On step 8529 - loss nan, Current Time = 21:44:15
+Elapsed time is 0:10:23.067487
+Rate is 0:00:00.073053 seconds per epoch
+Total estimated run time is 0:12:10.601503
+On step 8539 - loss nan, Current Time = 21:44:16
+Elapsed time is 0:10:23.789020
+Rate is 0:00:00.073052 seconds per epoch
+Total estimated run time is 0:12:10.591044
+On step 8549 - loss nan, Current Time = 21:44:16
+Elapsed time is 0:10:24.510507
+Rate is 0:00:00.073051 seconds per epoch
+Total estimated run time is 0:12:10.580559
+On step 8559 - loss nan, Current Time = 21:44:17
+Elapsed time is 0:10:25.231770
+Rate is 0:00:00.073050 seconds per epoch
+Total estimated run time is 0:12:10.569870
+On step 8569 - loss nan, Current Time = 21:44:18
+Elapsed time is 0:10:25.953172
+Rate is 0:00:00.073049 seconds per epoch
+Total estimated run time is 0:12:10.559340
+On step 8579 - loss nan, Current Time = 21:44:19
+Elapsed time is 0:10:26.674555
+Rate is 0:00:00.073048 seconds per epoch
+Total estimated run time is 0:12:10.548811
+On step 8589 - loss nan, Current Time = 21:44:19
+Elapsed time is 0:10:27.395528
+Rate is 0:00:00.073046 seconds per epoch
+Total estimated run time is 0:12:10.536480
+On step 8599 - loss nan, Current Time = 21:44:20
+Elapsed time is 0:10:28.116509
+Rate is 0:00:00.073045 seconds per epoch
+Total estimated run time is 0:12:10.525599
+On step 8609 - loss nan, Current Time = 21:44:21
+Elapsed time is 0:10:28.853286
+Rate is 0:00:00.073046 seconds per epoch
+Total estimated run time is 0:12:10.533318
+On step 8619 - loss nan, Current Time = 21:44:22
+Elapsed time is 0:10:29.574999
+Rate is 0:00:00.073045 seconds per epoch
+Total estimated run time is 0:12:10.523189
+On step 8629 - loss nan, Current Time = 21:44:22
+Elapsed time is 0:10:30.296416
+Rate is 0:00:00.073044 seconds per epoch
+Total estimated run time is 0:12:10.512784
+On step 8639 - loss nan, Current Time = 21:44:23
+Elapsed time is 0:10:31.017786
+Rate is 0:00:00.073043 seconds per epoch
+Total estimated run time is 0:12:10.502352
+On step 8649 - loss nan, Current Time = 21:44:24
+Elapsed time is 0:10:31.739138
+Rate is 0:00:00.073042 seconds per epoch
+Total estimated run time is 0:12:10.491922
+On step 8659 - loss nan, Current Time = 21:44:24
+Elapsed time is 0:10:32.460406
+Rate is 0:00:00.073041 seconds per epoch
+Total estimated run time is 0:12:10.481428
+On step 8669 - loss nan, Current Time = 21:44:25
+Elapsed time is 0:10:33.181985
+Rate is 0:00:00.073040 seconds per epoch
+Total estimated run time is 0:12:10.471265
+On step 8679 - loss nan, Current Time = 21:44:26
+Elapsed time is 0:10:33.903932
+Rate is 0:00:00.073039 seconds per epoch
+Total estimated run time is 0:12:10.461490
+On step 8689 - loss nan, Current Time = 21:44:27
+Elapsed time is 0:10:34.625414
+Rate is 0:00:00.073038 seconds per epoch
+Total estimated run time is 0:12:10.451270
+On step 8699 - loss nan, Current Time = 21:44:27
+Elapsed time is 0:10:35.346958
+Rate is 0:00:00.073037 seconds per epoch
+Total estimated run time is 0:12:10.441132
+On step 8709 - loss nan, Current Time = 21:44:28
+Elapsed time is 0:10:36.083424
+Rate is 0:00:00.073037 seconds per epoch
+Total estimated run time is 0:12:10.447228
+On step 8719 - loss nan, Current Time = 21:44:29
+Elapsed time is 0:10:36.804721
+Rate is 0:00:00.073036 seconds per epoch
+Total estimated run time is 0:12:10.436873
+On step 8729 - loss nan, Current Time = 21:44:29
+Elapsed time is 0:10:37.526008
+Rate is 0:00:00.073035 seconds per epoch
+Total estimated run time is 0:12:10.426528
+On step 8739 - loss nan, Current Time = 21:44:30
+Elapsed time is 0:10:38.247463
+Rate is 0:00:00.073034 seconds per epoch
+Total estimated run time is 0:12:10.416371
+On step 8749 - loss nan, Current Time = 21:44:31
+Elapsed time is 0:10:38.968797
+Rate is 0:00:00.073033 seconds per epoch
+Total estimated run time is 0:12:10.406113
+On step 8759 - loss nan, Current Time = 21:44:32
+Elapsed time is 0:10:39.690240
+Rate is 0:00:00.073032 seconds per epoch
+Total estimated run time is 0:12:10.395984
+On step 8769 - loss nan, Current Time = 21:44:32
+Elapsed time is 0:10:40.411511
+Rate is 0:00:00.073031 seconds per epoch
+Total estimated run time is 0:12:10.385703
+On step 8779 - loss nan, Current Time = 21:44:33
+Elapsed time is 0:10:41.132728
+Rate is 0:00:00.073030 seconds per epoch
+Total estimated run time is 0:12:10.375388
+On step 8789 - loss nan, Current Time = 21:44:34
+Elapsed time is 0:10:41.853841
+Rate is 0:00:00.073029 seconds per epoch
+Total estimated run time is 0:12:10.364989
+On step 8799 - loss nan, Current Time = 21:44:35
+Elapsed time is 0:10:42.575342
+Rate is 0:00:00.073028 seconds per epoch
+Total estimated run time is 0:12:10.354998
+On step 8809 - loss nan, Current Time = 21:44:35
+Elapsed time is 0:10:43.312671
+Rate is 0:00:00.073029 seconds per epoch
+Total estimated run time is 0:12:10.363239
+On step 8819 - loss nan, Current Time = 21:44:36
+Elapsed time is 0:10:44.034467
+Rate is 0:00:00.073028 seconds per epoch
+Total estimated run time is 0:12:10.353563
+On step 8829 - loss nan, Current Time = 21:44:37
+Elapsed time is 0:10:44.756487
+Rate is 0:00:00.073027 seconds per epoch
+Total estimated run time is 0:12:10.344131
+On step 8839 - loss nan, Current Time = 21:44:37
+Elapsed time is 0:10:45.478270
+Rate is 0:00:00.073026 seconds per epoch
+Total estimated run time is 0:12:10.334482
+On step 8849 - loss nan, Current Time = 21:44:38
+Elapsed time is 0:10:46.200993
+Rate is 0:00:00.073025 seconds per epoch
+Total estimated run time is 0:12:10.325793
+On step 8859 - loss nan, Current Time = 21:44:39
+Elapsed time is 0:10:46.922730
+Rate is 0:00:00.073024 seconds per epoch
+Total estimated run time is 0:12:10.316138
+On step 8869 - loss nan, Current Time = 21:44:40
+Elapsed time is 0:10:47.644730
+Rate is 0:00:00.073023 seconds per epoch
+Total estimated run time is 0:12:10.306766
+On step 8879 - loss nan, Current Time = 21:44:40
+Elapsed time is 0:10:48.366580
+Rate is 0:00:00.073022 seconds per epoch
+Total estimated run time is 0:12:10.297264
+On step 8889 - loss nan, Current Time = 21:44:41
+Elapsed time is 0:10:49.088281
+Rate is 0:00:00.073022 seconds per epoch
+Total estimated run time is 0:12:10.288745
+On step 8899 - loss nan, Current Time = 21:44:42
+Elapsed time is 0:10:49.809829
+Rate is 0:00:00.073021 seconds per epoch
+Total estimated run time is 0:12:10.278971
+On step 8909 - loss nan, Current Time = 21:44:43
+Elapsed time is 0:10:50.546814
+Rate is 0:00:00.073021 seconds per epoch
+Total estimated run time is 0:12:10.285746
+On step 8919 - loss nan, Current Time = 21:44:43
+Elapsed time is 0:10:51.268311
+Rate is 0:00:00.073020 seconds per epoch
+Total estimated run time is 0:12:10.275951
+On step 8929 - loss nan, Current Time = 21:44:44
+Elapsed time is 0:10:51.989626
+Rate is 0:00:00.073019 seconds per epoch
+Total estimated run time is 0:12:10.265994
+On step 8939 - loss nan, Current Time = 21:44:45
+Elapsed time is 0:10:52.711408
+Rate is 0:00:00.073018 seconds per epoch
+Total estimated run time is 0:12:10.256524
+On step 8949 - loss nan, Current Time = 21:44:45
+Elapsed time is 0:10:53.433005
+Rate is 0:00:00.073017 seconds per epoch
+Total estimated run time is 0:12:10.246889
+On step 8959 - loss nan, Current Time = 21:44:46
+Elapsed time is 0:10:54.154654
+Rate is 0:00:00.073016 seconds per epoch
+Total estimated run time is 0:12:10.237326
+On step 8969 - loss nan, Current Time = 21:44:47
+Elapsed time is 0:10:54.876167
+Rate is 0:00:00.073016 seconds per epoch
+Total estimated run time is 0:12:10.228679
+On step 8979 - loss nan, Current Time = 21:44:48
+Elapsed time is 0:10:55.597958
+Rate is 0:00:00.073015 seconds per epoch
+Total estimated run time is 0:12:10.219288
+On step 8989 - loss nan, Current Time = 21:44:48
+Elapsed time is 0:10:56.319782
+Rate is 0:00:00.073014 seconds per epoch
+Total estimated run time is 0:12:10.209950
+On step 8999 - loss nan, Current Time = 21:44:49
+Elapsed time is 0:10:57.041491
+Rate is 0:00:00.073013 seconds per epoch
+Total estimated run time is 0:12:10.200517
+On step 9009 - loss nan, Current Time = 21:44:50
+Elapsed time is 0:10:57.778506
+Rate is 0:00:00.073013 seconds per epoch
+Total estimated run time is 0:12:10.207402
+On step 9019 - loss nan, Current Time = 21:44:50
+Elapsed time is 0:10:58.500235
+Rate is 0:00:00.073013 seconds per epoch
+Total estimated run time is 0:12:10.199001
+On step 9029 - loss nan, Current Time = 21:44:51
+Elapsed time is 0:10:59.221811
+Rate is 0:00:00.073012 seconds per epoch
+Total estimated run time is 0:12:10.189475
+On step 9039 - loss nan, Current Time = 21:44:52
+Elapsed time is 0:10:59.943299
+Rate is 0:00:00.073011 seconds per epoch
+Total estimated run time is 0:12:10.179881
+On step 9049 - loss nan, Current Time = 21:44:53
+Elapsed time is 0:11:00.664626
+Rate is 0:00:00.073010 seconds per epoch
+Total estimated run time is 0:12:10.170146
+On step 9059 - loss nan, Current Time = 21:44:53
+Elapsed time is 0:11:01.386055
+Rate is 0:00:00.073009 seconds per epoch
+Total estimated run time is 0:12:10.160533
+On step 9069 - loss nan, Current Time = 21:44:54
+Elapsed time is 0:11:02.108796
+Rate is 0:00:00.073008 seconds per epoch
+Total estimated run time is 0:12:10.152252
+On step 9079 - loss nan, Current Time = 21:44:55
+Elapsed time is 0:11:02.830106
+Rate is 0:00:00.073007 seconds per epoch
+Total estimated run time is 0:12:10.142560
+On step 9089 - loss nan, Current Time = 21:44:56
+Elapsed time is 0:11:03.551554
+Rate is 0:00:00.073006 seconds per epoch
+Total estimated run time is 0:12:10.133026
+On step 9099 - loss nan, Current Time = 21:44:56
+Elapsed time is 0:11:04.272896
+Rate is 0:00:00.073005 seconds per epoch
+Total estimated run time is 0:12:10.123406
+On step 9109 - loss nan, Current Time = 21:44:57
+Elapsed time is 0:11:05.009895
+Rate is 0:00:00.073006 seconds per epoch
+Total estimated run time is 0:12:10.131247
+On step 9119 - loss nan, Current Time = 21:44:58
+Elapsed time is 0:11:05.731482
+Rate is 0:00:00.073005 seconds per epoch
+Total estimated run time is 0:12:10.121892
+On step 9129 - loss nan, Current Time = 21:44:58
+Elapsed time is 0:11:06.452931
+Rate is 0:00:00.073004 seconds per epoch
+Total estimated run time is 0:12:10.112419
+On step 9139 - loss nan, Current Time = 21:44:59
+Elapsed time is 0:11:07.174047
+Rate is 0:00:00.073003 seconds per epoch
+Total estimated run time is 0:12:10.102633
+On step 9149 - loss nan, Current Time = 21:45:00
+Elapsed time is 0:11:07.895327
+Rate is 0:00:00.073002 seconds per epoch
+Total estimated run time is 0:12:10.093031
+On step 9159 - loss nan, Current Time = 21:45:01
+Elapsed time is 0:11:08.617000
+Rate is 0:00:00.073001 seconds per epoch
+Total estimated run time is 0:12:10.083842
+On step 9169 - loss nan, Current Time = 21:45:01
+Elapsed time is 0:11:09.338579
+Rate is 0:00:00.073000 seconds per epoch
+Total estimated run time is 0:12:10.074579
+On step 9179 - loss nan, Current Time = 21:45:02
+Elapsed time is 0:11:10.060167
+Rate is 0:00:00.072999 seconds per epoch
+Total estimated run time is 0:12:10.065345
+On step 9189 - loss nan, Current Time = 21:45:03
+Elapsed time is 0:11:10.781672
+Rate is 0:00:00.072998 seconds per epoch
+Total estimated run time is 0:12:10.056048
+On step 9199 - loss nan, Current Time = 21:45:03
+Elapsed time is 0:11:11.502528
+Rate is 0:00:00.072997 seconds per epoch
+Total estimated run time is 0:12:10.046122
+On step 9209 - loss nan, Current Time = 21:45:04
+Elapsed time is 0:11:12.239140
+Rate is 0:00:00.072998 seconds per epoch
+Total estimated run time is 0:12:10.053556
+On step 9219 - loss nan, Current Time = 21:45:05
+Elapsed time is 0:11:12.960354
+Rate is 0:00:00.072997 seconds per epoch
+Total estimated run time is 0:12:10.044008
+On step 9229 - loss nan, Current Time = 21:45:06
+Elapsed time is 0:11:13.681815
+Rate is 0:00:00.072996 seconds per epoch
+Total estimated run time is 0:12:10.034727
+On step 9239 - loss nan, Current Time = 21:45:06
+Elapsed time is 0:11:14.402876
+Rate is 0:00:00.072995 seconds per epoch
+Total estimated run time is 0:12:10.025066
+On step 9249 - loss nan, Current Time = 21:45:07
+Elapsed time is 0:11:15.123754
+Rate is 0:00:00.072994 seconds per epoch
+Total estimated run time is 0:12:10.015242
+On step 9259 - loss nan, Current Time = 21:45:08
+Elapsed time is 0:11:15.845166
+Rate is 0:00:00.072993 seconds per epoch
+Total estimated run time is 0:12:10.005972
+On step 9269 - loss nan, Current Time = 21:45:09
+Elapsed time is 0:11:16.567309
+Rate is 0:00:00.072992 seconds per epoch
+Total estimated run time is 0:12:09.997453
+On step 9279 - loss nan, Current Time = 21:45:09
+Elapsed time is 0:11:17.288087
+Rate is 0:00:00.072991 seconds per epoch
+Total estimated run time is 0:12:09.987589
+On step 9289 - loss nan, Current Time = 21:45:10
+Elapsed time is 0:11:18.009034
+Rate is 0:00:00.072991 seconds per epoch
+Total estimated run time is 0:12:09.978626
+On step 9299 - loss nan, Current Time = 21:45:11
+Elapsed time is 0:11:18.730101
+Rate is 0:00:00.072990 seconds per epoch
+Total estimated run time is 0:12:09.969081
+On step 9309 - loss nan, Current Time = 21:45:11
+Elapsed time is 0:11:19.466958
+Rate is 0:00:00.072990 seconds per epoch
+Total estimated run time is 0:12:09.976038
+On step 9319 - loss nan, Current Time = 21:45:12
+Elapsed time is 0:11:20.188661
+Rate is 0:00:00.072989 seconds per epoch
+Total estimated run time is 0:12:09.967159
+On step 9329 - loss nan, Current Time = 21:45:13
+Elapsed time is 0:11:20.910435
+Rate is 0:00:00.072989 seconds per epoch
+Total estimated run time is 0:12:09.959043
+On step 9339 - loss nan, Current Time = 21:45:14
+Elapsed time is 0:11:21.631872
+Rate is 0:00:00.072988 seconds per epoch
+Total estimated run time is 0:12:09.949928
+On step 9349 - loss nan, Current Time = 21:45:14
+Elapsed time is 0:11:22.353309
+Rate is 0:00:00.072987 seconds per epoch
+Total estimated run time is 0:12:09.940833
+On step 9359 - loss nan, Current Time = 21:45:15
+Elapsed time is 0:11:23.074943
+Rate is 0:00:00.072986 seconds per epoch
+Total estimated run time is 0:12:09.931955
+On step 9369 - loss nan, Current Time = 21:45:16
+Elapsed time is 0:11:23.796617
+Rate is 0:00:00.072985 seconds per epoch
+Total estimated run time is 0:12:09.923137
+On step 9379 - loss nan, Current Time = 21:45:16
+Elapsed time is 0:11:24.518013
+Rate is 0:00:00.072984 seconds per epoch
+Total estimated run time is 0:12:09.914061
+On step 9389 - loss nan, Current Time = 21:45:17
+Elapsed time is 0:11:25.239210
+Rate is 0:00:00.072983 seconds per epoch
+Total estimated run time is 0:12:09.904806
+On step 9399 - loss nan, Current Time = 21:45:18
+Elapsed time is 0:11:25.960537
+Rate is 0:00:00.072982 seconds per epoch
+Total estimated run time is 0:12:09.895701
+On step 9409 - loss nan, Current Time = 21:45:19
+Elapsed time is 0:11:26.697202
+Rate is 0:00:00.072983 seconds per epoch
+Total estimated run time is 0:12:09.903138
+On step 9419 - loss nan, Current Time = 21:45:19
+Elapsed time is 0:11:27.418194
+Rate is 0:00:00.072982 seconds per epoch
+Total estimated run time is 0:12:09.893718
+On step 9429 - loss nan, Current Time = 21:45:20
+Elapsed time is 0:11:28.139334
+Rate is 0:00:00.072981 seconds per epoch
+Total estimated run time is 0:12:09.884466
+On step 9439 - loss nan, Current Time = 21:45:21
+Elapsed time is 0:11:28.860807
+Rate is 0:00:00.072980 seconds per epoch
+Total estimated run time is 0:12:09.875567
+On step 9449 - loss nan, Current Time = 21:45:22
+Elapsed time is 0:11:29.582421
+Rate is 0:00:00.072979 seconds per epoch
+Total estimated run time is 0:12:09.866829
+On step 9459 - loss nan, Current Time = 21:45:22
+Elapsed time is 0:11:30.303736
+Rate is 0:00:00.072979 seconds per epoch
+Total estimated run time is 0:12:09.858354
+On step 9469 - loss nan, Current Time = 21:45:23
+Elapsed time is 0:11:31.025043
+Rate is 0:00:00.072978 seconds per epoch
+Total estimated run time is 0:12:09.849339
+On step 9479 - loss nan, Current Time = 21:45:24
+Elapsed time is 0:11:31.747015
+Rate is 0:00:00.072977 seconds per epoch
+Total estimated run time is 0:12:09.841009
+On step 9489 - loss nan, Current Time = 21:45:24
+Elapsed time is 0:11:32.468983
+Rate is 0:00:00.072976 seconds per epoch
+Total estimated run time is 0:12:09.832695
+On step 9499 - loss nan, Current Time = 21:45:25
+Elapsed time is 0:11:33.190645
+Rate is 0:00:00.072975 seconds per epoch
+Total estimated run time is 0:12:09.824095
+On step 9509 - loss nan, Current Time = 21:45:26
+Elapsed time is 0:11:33.927296
+Rate is 0:00:00.072976 seconds per epoch
+Total estimated run time is 0:12:09.831488
+On step 9519 - loss nan, Current Time = 21:45:27
+Elapsed time is 0:11:34.648535
+Rate is 0:00:00.072975 seconds per epoch
+Total estimated run time is 0:12:09.822485
+On step 9529 - loss nan, Current Time = 21:45:27
+Elapsed time is 0:11:35.369696
+Rate is 0:00:00.072974 seconds per epoch
+Total estimated run time is 0:12:09.813424
+On step 9539 - loss nan, Current Time = 21:45:28
+Elapsed time is 0:11:36.091031
+Rate is 0:00:00.072973 seconds per epoch
+Total estimated run time is 0:12:09.804557
+On step 9549 - loss nan, Current Time = 21:45:29
+Elapsed time is 0:11:36.812230
+Rate is 0:00:00.072972 seconds per epoch
+Total estimated run time is 0:12:09.795574
+On step 9559 - loss nan, Current Time = 21:45:29
+Elapsed time is 0:11:37.533498
+Rate is 0:00:00.072971 seconds per epoch
+Total estimated run time is 0:12:09.786680
+On step 9569 - loss nan, Current Time = 21:45:30
+Elapsed time is 0:11:38.254911
+Rate is 0:00:00.072971 seconds per epoch
+Total estimated run time is 0:12:09.778383
+On step 9579 - loss nan, Current Time = 21:45:31
+Elapsed time is 0:11:38.983334
+Rate is 0:00:00.072970 seconds per epoch
+Total estimated run time is 0:12:09.776674
+On step 9589 - loss nan, Current Time = 21:45:32
+Elapsed time is 0:11:39.704485
+Rate is 0:00:00.072969 seconds per epoch
+Total estimated run time is 0:12:09.767713
+On step 9599 - loss nan, Current Time = 21:45:32
+Elapsed time is 0:11:40.425501
+Rate is 0:00:00.072969 seconds per epoch
+Total estimated run time is 0:12:09.759039
+On step 9609 - loss nan, Current Time = 21:45:33
+Elapsed time is 0:11:41.162381
+Rate is 0:00:00.072969 seconds per epoch
+Total estimated run time is 0:12:09.766229
+On step 9619 - loss nan, Current Time = 21:45:34
+Elapsed time is 0:11:41.883713
+Rate is 0:00:00.072968 seconds per epoch
+Total estimated run time is 0:12:09.757489
+On step 9629 - loss nan, Current Time = 21:45:35
+Elapsed time is 0:11:42.605268
+Rate is 0:00:00.072968 seconds per epoch
+Total estimated run time is 0:12:09.749364
+On step 9639 - loss nan, Current Time = 21:45:35
+Elapsed time is 0:11:43.326840
+Rate is 0:00:00.072967 seconds per epoch
+Total estimated run time is 0:12:09.740894
+On step 9649 - loss nan, Current Time = 21:45:36
+Elapsed time is 0:11:44.048443
+Rate is 0:00:00.072966 seconds per epoch
+Total estimated run time is 0:12:09.732475
+On step 9659 - loss nan, Current Time = 21:45:37
+Elapsed time is 0:11:44.769850
+Rate is 0:00:00.072965 seconds per epoch
+Total estimated run time is 0:12:09.723880
+On step 9669 - loss nan, Current Time = 21:45:37
+Elapsed time is 0:11:45.491535
+Rate is 0:00:00.072964 seconds per epoch
+Total estimated run time is 0:12:09.715583
+On step 9679 - loss nan, Current Time = 21:45:38
+Elapsed time is 0:11:46.214261
+Rate is 0:00:00.072964 seconds per epoch
+Total estimated run time is 0:12:09.708669
+On step 9689 - loss nan, Current Time = 21:45:39
+Elapsed time is 0:11:46.935735
+Rate is 0:00:00.072963 seconds per epoch
+Total estimated run time is 0:12:09.700191
+On step 9699 - loss nan, Current Time = 21:45:40
+Elapsed time is 0:11:47.657001
+Rate is 0:00:00.072962 seconds per epoch
+Total estimated run time is 0:12:09.691525
+On step 9709 - loss nan, Current Time = 21:45:40
+Elapsed time is 0:11:48.393463
+Rate is 0:00:00.072963 seconds per epoch
+Total estimated run time is 0:12:09.698659
+On step 9719 - loss nan, Current Time = 21:45:41
+Elapsed time is 0:11:49.124302
+Rate is 0:00:00.072963 seconds per epoch
+Total estimated run time is 0:12:09.699868
+On step 9729 - loss nan, Current Time = 21:45:42
+Elapsed time is 0:11:49.855375
+Rate is 0:00:00.072963 seconds per epoch
+Total estimated run time is 0:12:09.701311
+On step 9739 - loss nan, Current Time = 21:45:43
+Elapsed time is 0:11:50.576603
+Rate is 0:00:00.072962 seconds per epoch
+Total estimated run time is 0:12:09.692647
+On step 9749 - loss nan, Current Time = 21:45:43
+Elapsed time is 0:11:51.298081
+Rate is 0:00:00.072961 seconds per epoch
+Total estimated run time is 0:12:09.684253
+On step 9759 - loss nan, Current Time = 21:45:44
+Elapsed time is 0:11:52.019728
+Rate is 0:00:00.072960 seconds per epoch
+Total estimated run time is 0:12:09.676048
+On step 9769 - loss nan, Current Time = 21:45:45
+Elapsed time is 0:11:52.741373
+Rate is 0:00:00.072960 seconds per epoch
+Total estimated run time is 0:12:09.668093
+On step 9779 - loss nan, Current Time = 21:45:45
+Elapsed time is 0:11:53.463558
+Rate is 0:00:00.072959 seconds per epoch
+Total estimated run time is 0:12:09.660456
+On step 9789 - loss nan, Current Time = 21:45:46
+Elapsed time is 0:11:54.184884
+Rate is 0:00:00.072958 seconds per epoch
+Total estimated run time is 0:12:09.651980
+On step 9799 - loss nan, Current Time = 21:45:47
+Elapsed time is 0:11:54.906277
+Rate is 0:00:00.072957 seconds per epoch
+Total estimated run time is 0:12:09.643591
+On step 9809 - loss nan, Current Time = 21:45:48
+Elapsed time is 0:11:55.644196
+Rate is 0:00:00.072958 seconds per epoch
+Total estimated run time is 0:12:09.652132
+On step 9819 - loss nan, Current Time = 21:45:48
+Elapsed time is 0:11:56.365646
+Rate is 0:00:00.072957 seconds per epoch
+Total estimated run time is 0:12:09.643820
+On step 9829 - loss nan, Current Time = 21:45:49
+Elapsed time is 0:11:57.087223
+Rate is 0:00:00.072956 seconds per epoch
+Total estimated run time is 0:12:09.635655
+On step 9839 - loss nan, Current Time = 21:45:50
+Elapsed time is 0:11:57.808874
+Rate is 0:00:00.072955 seconds per epoch
+Total estimated run time is 0:12:09.627584
+On step 9849 - loss nan, Current Time = 21:45:50
+Elapsed time is 0:11:58.530470
+Rate is 0:00:00.072955 seconds per epoch
+Total estimated run time is 0:12:09.619630
+On step 9859 - loss nan, Current Time = 21:45:51
+Elapsed time is 0:11:59.252160
+Rate is 0:00:00.072954 seconds per epoch
+Total estimated run time is 0:12:09.611628
+On step 9869 - loss nan, Current Time = 21:45:52
+Elapsed time is 0:11:59.973918
+Rate is 0:00:00.072953 seconds per epoch
+Total estimated run time is 0:12:09.603714
+On step 9879 - loss nan, Current Time = 21:45:53
+Elapsed time is 0:12:00.695571
+Rate is 0:00:00.072952 seconds per epoch
+Total estimated run time is 0:12:09.595715
+On step 9889 - loss nan, Current Time = 21:45:53
+Elapsed time is 0:12:01.417067
+Rate is 0:00:00.072951 seconds per epoch
+Total estimated run time is 0:12:09.587579
+On step 9899 - loss nan, Current Time = 21:45:54
+Elapsed time is 0:12:02.138935
+Rate is 0:00:00.072951 seconds per epoch
+Total estimated run time is 0:12:09.579937
+On step 9909 - loss nan, Current Time = 21:45:55
+Elapsed time is 0:12:02.875464
+Rate is 0:00:00.072951 seconds per epoch
+Total estimated run time is 0:12:09.586956
+On step 9919 - loss nan, Current Time = 21:45:56
+Elapsed time is 0:12:03.596829
+Rate is 0:00:00.072951 seconds per epoch
+Total estimated run time is 0:12:09.578811
+On step 9929 - loss nan, Current Time = 21:45:56
+Elapsed time is 0:12:04.317902
+Rate is 0:00:00.072950 seconds per epoch
+Total estimated run time is 0:12:09.570302
+On step 9939 - loss nan, Current Time = 21:45:57
+Elapsed time is 0:12:05.038906
+Rate is 0:00:00.072949 seconds per epoch
+Total estimated run time is 0:12:09.561744
+On step 9949 - loss nan, Current Time = 21:45:58
+Elapsed time is 0:12:05.760170
+Rate is 0:00:00.072948 seconds per epoch
+Total estimated run time is 0:12:09.553466
+On step 9959 - loss nan, Current Time = 21:45:58
+Elapsed time is 0:12:06.481452
+Rate is 0:00:00.072947 seconds per epoch
+Total estimated run time is 0:12:09.545226
+On step 9969 - loss nan, Current Time = 21:45:59
+Elapsed time is 0:12:07.202502
+Rate is 0:00:00.072946 seconds per epoch
+Total estimated run time is 0:12:09.536774
+On step 9979 - loss nan, Current Time = 21:46:00
+Elapsed time is 0:12:07.924321
+Rate is 0:00:00.072946 seconds per epoch
+Total estimated run time is 0:12:09.529133
+On step 9989 - loss nan, Current Time = 21:46:01
+Elapsed time is 0:12:08.646382
+Rate is 0:00:00.072945 seconds per epoch
+Total estimated run time is 0:12:09.521722
+On step 9999 - loss nan, Current Time = 21:46:01
+Elapsed time is 0:12:09.367943
+Rate is 0:00:00.072944 seconds per epoch
+Total estimated run time is 0:12:09.513831
+trained model saved to models/Cond/3features/TM-Final-UMNN_phot_3_4_80_128_nan.pt

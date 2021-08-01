@@ -1,2 +1,0 @@
-/var/spool/slurmd/job89487/slurm_script: line 22: train_nflow2.py: command not found
-slurmstepd: error: *** JOB 89487 ON node0053 CANCELLED AT 2021-07-20T08:13:48 DUE TO TIME LIMIT ***

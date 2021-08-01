@@ -43,7 +43,7 @@ class dataXZ:
 
     #Use if not already converted
     with open(file, 'rb') as f:
-        xz = np.array(pickle.load(f), dtype=np.float32)
+        xb = np.array(pickle.load(f), dtype=np.float32)
     '''
     data structure changed.
     epgg.pkl : all epgg events
@@ -56,21 +56,21 @@ class dataXZ:
      20–35 column: z
     '''
 
-    #x = xz[:, 1:17]
-    #z = xz[:, 20:]
+    #x = xb[:, 1:17]
+    #z = xb[:, 20:]
     if mode == "epgg":
-        z = xz[:, 1:17]
-        x = xz[:, 20:]
+        b = xb[:, 1:17]
+        x = xb[:, 20:]
     else:
-        z = xz[:, 1:13]
-        x = xz[:, 13:]
+        b = xb[:, 1:13]
+        x = xb[:, 13:]
 
     #x = spherical_converter(x, mode = mode)
     #z = spherical_converter(z, mode = mode)
     
     if feature_subset != "all": 
       x = x[:,feature_subset]
-      z = z[:,feature_subset]
+      b = b[:,feature_subset]
 
     # xwithoutPid = x
 
@@ -81,10 +81,11 @@ class dataXZ:
     # x_np = df_x.to_numpy() #And then converting back to numpy
     # self.x = torch.from_numpy(np.array(x_np))
 
-    self.xz = xz
+    x = x - b
+    self.xb = xb
     self.x = torch.from_numpy(np.array(x))
     # self.xwithoutPid = torch.from_numpy(np.array(xwithoutPid))
-    self.z = torch.from_numpy(np.array(z))
+    self.b = torch.from_numpy(np.array(b))
 
 
     # if standard:
@@ -111,12 +112,12 @@ class dataXZ:
   #   return data * std + mu
 
   def sample(self, n):
-    randint = np.random.randint( self.xz.shape[0], size =n)
-    xz = self.xz[randint]
+    randint = np.random.randint( self.xb.shape[0], size =n)
+    xb = self.xb[randint]
     x = self.x[randint]
-    z = self.z[randint]
+    b = self.b[randint]
     # xwithoutPid = self.xwithoutPid[randint]
     # zwithoutPid = self.zwithoutPid[randint]
-    # return {"xz":xz, "x": x, "z": z, "xwithoutPid": xwithoutPid, "zwithoutPid": zwithoutPid}
-    # return {"xz":xz, "x": x,"z": z, "xwithoutPid": xwithoutPid}
-    return {"xz":xz, "x": x,"z": z}
+    # return {"xb":xb, "x": x, "z": z, "xwithoutPid": xwithoutPid, "zwithoutPid": zwithoutPid}
+    # return {"xb":xb, "x": x,"z": z, "xwithoutPid": xwithoutPid}
+    return {"xb":xb, "x": x,"b": b}

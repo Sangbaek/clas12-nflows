@@ -111,6 +111,10 @@ for loop_num in range(n_loop):
 
 	truths_guess = []
 
+	start = datetime.now()
+	start_time = start.strftime("%H:%M:%S")
+	print("Start Time =", start_time)
+
 	for i in range(n_sample):
 
 		maxtruth_e = []

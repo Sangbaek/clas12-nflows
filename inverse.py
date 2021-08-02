@@ -43,7 +43,7 @@ num_layers = int(params[3])
 num_hidden_features = int(params[4])
 training_sample_size = int(params[5])
 
-print(num_features,num_layers,num_hidden_features,training_sample_size,training_loss)
+print(num_features,num_layers,num_hidden_features,training_sample_size)
 
 flow_e, optimizer_e = make_model(num_layers,num_features,num_hidden_features,device)
 print("number of params: ", sum(p.numel() for p in flow_e.parameters()))
@@ -58,7 +58,7 @@ num_layers = int(params[3])
 num_hidden_features = int(params[4])
 training_sample_size = int(params[5])
 
-print(num_features,num_layers,num_hidden_features,training_sample_size,training_loss)
+print(num_features,num_layers,num_hidden_features,training_sample_size)
 
 flow_p, optimizer_p = make_model(num_layers,num_features,num_hidden_features,device)
 print("number of params: ", sum(p.numel() for p in flow_p.parameters()))
@@ -74,7 +74,7 @@ num_layers = int(params[3])
 num_hidden_features = int(params[4])
 training_sample_size = int(params[5])
 
-print(num_features,num_layers,num_hidden_features,training_sample_size,training_loss)
+print(num_features,num_layers,num_hidden_features,training_sample_size)
 
 flow_g, optimizer_g = make_model(num_layers,num_features,num_hidden_features,device)
 
@@ -165,8 +165,8 @@ for loop_num in range(maxloops):
         print("Total estimated run time is {}".format(elapsedTime+elapsedTime/i*(max_range+1-i)))
     Truths = np.concatenate(truths_guess)
     df_Truths = pd.DataFrame(Truths)
-    df_Truths.to_pickle("gendata/Cond/3features/UMNN/Truths_UMNN_{}_{}_{}_{}_{}_dvcs_{}.pkl".format(num_features,
-            num_layers,num_hidden_features,training_sample_size,training_loss,loop_num))
+    df_Truths.to_pickle("gendata/Cond/3features/UMNN/Truths_UMNN_{}_{}_{}_{}_dvcs_{}.pkl".format(num_features,
+            num_layers,num_hidden_features,training_sample_size,loop_num))
 
 print("done")
 quit()

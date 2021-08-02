@@ -37,6 +37,7 @@ feature_subset = "all" #All 16 features
 
 print(" reading electron NF model ")
 model_name = "TM-Final-UMNN_elec_3_6_80_128_-9.54.pt"
+model_name ="TM-Final-UMNN_elec_3_6_80_128_-8.26.pt"
 params = model_name.split("_")
 num_features = int(params[2])
 num_layers = int(params[3])
@@ -52,6 +53,7 @@ flow_e.eval()
 
 print(" reading proton NF model ")
 model_name = "TM-Final-UMNN_prot_3_6_80_128_-9.97.pt"
+model_name = "TM-Final-UMNN_prot_3_6_80_128_-9.23.pt"
 params = model_name.split("_")
 num_features = int(params[2])
 num_layers = int(params[3])
@@ -68,6 +70,7 @@ flow_p.eval()
 
 print(" reading photon NF model ")
 model_name = "TM-Final-UMNN_phot_3_2_80_128_-6.81.pt"
+model_name = "TM-Final-UMNN_phot_3_6_80_128_-6.43.pt"
 params = model_name.split("_")
 num_features = int(params[2])
 num_layers = int(params[3])
@@ -95,7 +98,7 @@ print("done with reading validation data")
 
 max_range = 10#Number of sets per loop
 sample_size = 200 #Number of samples per set
-maxloops = len(xentire)//(max_range*sample_size) #Number of overall loops
+maxloops = len(reco_validation)//(max_range*sample_size) #Number of overall loops
 
 for loop_num in range(maxloops):
     print("new loop "+str(loop_num))

@@ -99,6 +99,6 @@ for i in range(num_epoch):
           num_layers,num_hidden_features,training_sample_size,i,loss.item()))
 
 tm_name = "models/Cond/3features/TM-Final-UMNN_"+part+"_{}_{}_{}_{}_{:.2f}.pt".format(num_features,
-          num_layers,num_hidden_fseatures,training_sample_size,losses[-1])
+          num_layers,num_hidden_features,training_sample_size,losses[-1])
 torch.save(flow.state_dict(), tm_name)
 print("trained model saved to {}".format(tm_name))

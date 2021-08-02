@@ -131,7 +131,7 @@ for loop_num in range(maxloops):
         truth_g = torch.tensor(truth_entire[sample_size*(max_range*loop_num+i-1):sample_size*(max_range*loop_num+i), [9,10,11]], dtype=torch.float32).to(device)
 
         # for reco in reco_e:
-        reco_useful = np.tile(reco, (len(truth_e), 1))
+        reco_useful = np.tile(reco_e, (len(truth_e), 1))
         reco_useful = torch.tensor(reco_useful, dtype=torch.float32).to(device)
         logprob = flow_e.log_prob(inputs=reco_useful,context=truth_e)
         ind_max = np.argmax(logprob)
@@ -139,7 +139,7 @@ for loop_num in range(maxloops):
         logprob_e.append(logprob[ind_max])
 
         # for reco in reco_p:
-        reco_useful = np.tile(reco, (len(truth_p), 1))
+        reco_useful = np.tile(reco_p, (len(truth_p), 1))
         reco_useful = torch.tensor(reco_useful, dtype=torch.float32).to(device)
         logprob = flow_p.log_prob(inputs=reco_useful,context=truth_p)
         ind_max = np.argmax(logprob)
@@ -147,7 +147,7 @@ for loop_num in range(maxloops):
         logprob_p.append(logprob[ind_max])
 
         # for reco in reco_g:
-        reco_useful = np.tile(reco, (len(truth_g), 1))
+        reco_useful = np.tile(reco_g, (len(truth_g), 1))
         reco_useful = torch.tensor(reco_useful, dtype=torch.float32).to(device)
         logprob = flow_g.log_prob(inputs=reco_useful,context=truth_g)
         ind_max = np.argmax(logprob)

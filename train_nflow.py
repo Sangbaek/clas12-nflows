@@ -75,6 +75,9 @@ start = datetime.now()
 start_time = start.strftime("%H:%M:%S")
 print("Start Time =", start_time)
 losses = []
+
+save = True
+
 for i in range(num_epoch):
     sampleDict = xb.sample(training_sample_size)
     reco_train = sampleDict["reco"][:, 0:num_features].to(device)
@@ -87,6 +90,10 @@ for i in range(num_epoch):
     optimizer.step()
     losses.append(loss.item())
 
+    if np.isnan(loss.item()):
+      save = False
+      break
+
     if ((i+1)%10) == 0:
       now = datetime.now()
       elapsedTime = (now - start )
@@ -98,7 +105,11 @@ for i in range(num_epoch):
         torch.save(flow.state_dict(), "models/Cond/3features/TM-UMNN_"+part+"_{}_{}_{}_{}_{}_{:.2f}.pt".format(num_features,
           num_layers,num_hidden_features,training_sample_size,i,loss.item()))
 
-tm_name = "models/Cond/3features/TM-Final-UMNN_"+part+"_{}_{}_{}_{}_{:.2f}.pt".format(num_features,
-          num_layers,num_hidden_features,training_sample_size,losses[-1])
-torch.save(flow.state_dict(), tm_name)
-print("trained model saved to {}".format(tm_name))
+
+if save:
+  tm_name = "models/Cond/3features/TM-Final-UMNN_"+part+"_{}_{}_{}_{}_{:.2f}.pt".format(num_features,
+            num_layers,num_hidden_features,training_sample_size,losses[-1])
+  torch.save(flow.state_dict(), tm_name)
+  print("trained model saved to {}".format(tm_name))
+else:
+  print("loss is nan... halt...")

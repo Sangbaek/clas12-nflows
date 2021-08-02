@@ -123,9 +123,9 @@ reco_g = reco_validation[0:1, [6,7,8]]
 mean_g = means[[6,7,8]]
 std_g = stds[[6,7,8]]
 
-truth_e = reco_e + np.normal(mean_e, std_e, (trials, 3))
-truth_p = reco_p + np.normal(mean_p, std_p, (trials, 3))
-truth_g = reco_g + np.normal(mean_g, std_g, (trials, 3))
+truth_e = reco_e + np.random.normal(mean_e, std_e, (trials, 3))
+truth_p = reco_p + np.random.normal(mean_p, std_p, (trials, 3))
+truth_g = reco_g + np.random.normal(mean_g, std_g, (trials, 3))
 
 # for reco in reco_e:
 reco_useful = np.tile(reco_e, (trials, 1))

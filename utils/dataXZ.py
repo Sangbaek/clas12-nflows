@@ -59,33 +59,23 @@ class dataXZ:
     #x = xb[:, 1:17]
     #z = xb[:, 20:]
     if mode == "epgg":
-        b = xb[:, 1:17]
-        x = xb[:, 20:]
+        reco = xb[:, 1:17]
+        truth = xb[:, 20:]
     else:
-        b = xb[:, 1:13]
-        x = xb[:, 13:]
+        reco = xb[:, 1:13]
+        truth = xb[:, 13:]
 
     #x = spherical_converter(x, mode = mode)
     #z = spherical_converter(z, mode = mode)
     
     if feature_subset != "all": 
-      x = x[:,feature_subset]
-      b = b[:,feature_subset]
+      reco = reco[:,feature_subset]
+      truth = truth[:,feature_subset]
 
-    # xwithoutPid = x
-
-    # self.qt = self.quant_tran(x)
-
-    #Commented out because currently ton using Quant trans.
-    # df_x = pd.DataFrame(self.qt.transform(x)) #Don't know how to do this without first making it a DF
-    # x_np = df_x.to_numpy() #And then converting back to numpy
-    # self.x = torch.from_numpy(np.array(x_np))
-
-    x = x - b
     self.xb = xb
-    self.x = torch.from_numpy(np.array(x))
+    self.reco = torch.from_numpy(np.array(reco))
     # self.xwithoutPid = torch.from_numpy(np.array(xwithoutPid))
-    self.b = torch.from_numpy(np.array(b))
+    self.truth = torch.from_numpy(np.array(truth))
 
 
     # if standard:
@@ -114,10 +104,10 @@ class dataXZ:
   def sample(self, n):
     randint = np.random.randint( self.xb.shape[0], size =n)
     xb = self.xb[randint]
-    x = self.x[randint]
-    b = self.b[randint]
+    reco = self.reco[randint]
+    truth = self.truth[randint]
     # xwithoutPid = self.xwithoutPid[randint]
     # zwithoutPid = self.zwithoutPid[randint]
     # return {"xb":xb, "x": x, "z": z, "xwithoutPid": xwithoutPid, "zwithoutPid": zwithoutPid}
     # return {"xb":xb, "x": x,"z": z, "xwithoutPid": xwithoutPid}
-    return {"xb":xb, "x": x,"b": b}
+    return {"xb":xb, "reco": reco,"truth": truth}

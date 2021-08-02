@@ -63,8 +63,8 @@ else:
 #read the data, with the defined data class
 xb = dataXZ.dataXZ(feature_subset=feature_subset, file = "data/train.pkl", mode="epg")
 print("done with reading data")
-print(xb.x)
-print(xb.b)
+print(xb.reco)
+print(xb.truth)
 #construct an nflow model
 flow, optimizer = make_model(num_layers,num_features,num_hidden_features,device)
 print("number of params: ", sum(p.numel() for p in flow.parameters()))
@@ -77,11 +77,11 @@ print("Start Time =", start_time)
 losses = []
 for i in range(num_epoch):
     sampleDict = xb.sample(training_sample_size)
-    x_train = sampleDict["x"][:, 0:num_features].to(device)
-    b_train = sampleDict["b"][:, 0:num_features].to(device)
+    reco_train = sampleDict["reco"][:, 0:num_features].to(device)
+    truth_train = sampleDict["truth"][:, 0:num_features].to(device)
 
     optimizer.zero_grad()
-    loss = -flow.log_prob(inputs=x_train,context=b_train).mean()
+    loss = -flow.log_prob(inputs=reco_train,context=truth_train).mean()
 
     loss.backward()
     optimizer.step()
@@ -99,6 +99,6 @@ for i in range(num_epoch):
           num_layers,num_hidden_features,training_sample_size,i,loss.item()))
 
 tm_name = "models/Cond/3features/TM-Final-UMNN_"+part+"_{}_{}_{}_{}_{:.2f}.pt".format(num_features,
-          num_layers,num_hidden_features,training_sample_size,losses[-1])
+          num_layers,num_hidden_fseatures,training_sample_size,losses[-1])
 torch.save(flow.state_dict(), tm_name)
 print("trained model saved to {}".format(tm_name))

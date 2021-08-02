@@ -94,6 +94,7 @@ print("done with reading truth data")
 
 print("reading validation data")
 validation = dataXZ.dataXZ(feature_subset=feature_subset, file = "data/validation.pkl", mode = "epg")
+truth_validation = validation.truth.detach().numpy()
 reco_validation = validation.reco.detach().numpy()
 print("done with reading validation data")
 
@@ -173,5 +174,7 @@ truths_guess.append(NF_true)
 # df_Truths.to_pickle("gendata/Cond/3features/UMNN/Truths_UMNN_{}_{}_{}_{}_dvcs_{}.pkl".format(num_features,
 #     num_layers,num_hidden_features,training_sample_size,loop_num))
 print(truths_guess)
+print(truth_validation[0, :])
+print(reco_e, reco_p, reco_g)
 print("done")
 quit()

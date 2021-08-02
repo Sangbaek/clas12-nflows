@@ -107,7 +107,7 @@ n_sample = 100
 n_loop = len(reco_validation)//n_sample
 
 for loop_num in range(n_loop):
-    print("new loop "+str(loop_num))
+	print("new loop "+str(loop_num))
 
 	truths_guess = []
 
@@ -132,11 +132,11 @@ for loop_num in range(n_loop):
 		reco_g = reco_validation[i+n_sample*loop_num:i+n_sample*loop_num+1, [6,7,8]]
 		mean_g = means[[6,7,8]]
 		std_g = stds[[6,7,8]]
-		
+
 		truth_e = reco_e + np.random.normal(mean_e, std_e, (trials, 3))
 		truth_p = reco_p + np.random.normal(mean_p, std_p, (trials, 3))
 		truth_g = reco_g + np.random.normal(mean_g, std_g, (trials, 3))
-		
+
 		# for reco in reco_e:
 		reco_useful = np.tile(reco_e, (trials, 1))
 		reco_useful = torch.tensor(reco_useful, dtype=torch.float32).to(device)
@@ -145,7 +145,7 @@ for loop_num in range(n_loop):
 		ind_max = np.argmax(logprob.cpu().detach().numpy())
 		maxtruth_e.append(truth_e[ind_max:ind_max+1, :])
 		logprob_e.append(logprob[ind_max])
-		
+
 		# for reco in reco_p:
 		reco_useful = np.tile(reco_p, (trials, 1))
 		reco_useful = torch.tensor(reco_useful, dtype=torch.float32).to(device)
@@ -154,7 +154,7 @@ for loop_num in range(n_loop):
 		ind_max = np.argmax(logprob.cpu().detach().numpy())
 		maxtruth_p.append(truth_p[ind_max:ind_max+1, :])
 		logprob_p.append(logprob[ind_max])
-		
+
 		# for reco in reco_g:
 		reco_useful = np.tile(reco_g, (trials, 1))
 		reco_useful = torch.tensor(reco_useful, dtype=torch.float32).to(device)
@@ -163,7 +163,7 @@ for loop_num in range(n_loop):
 		ind_max = np.argmax(logprob.cpu().detach().numpy())
 		maxtruth_g.append(truth_g[ind_max:ind_max+1, :])
 		logprob_g.append(logprob[ind_max])
-		
+
 		#electron
 		truth_val_e = maxtruth_e[np.argmax(logprob_e)].cpu().detach().numpy()
 		E_true_e = np.sqrt(truth_val_e[:, 0]**2 + truth_val_e[:, 1]**2  + truth_val_e[:, 2]**2  +  (0.5109989461 * 0.001)**2).reshape((-1, 1))
@@ -173,7 +173,7 @@ for loop_num in range(n_loop):
 		#photon
 		truth_val_g = maxtruth_g[np.argmax(logprob_g)].cpu().detach().numpy()
 		E_true_g = np.sqrt(truth_val_g[:, 0]**2 + truth_val_g[:, 1]**2  + truth_val_g[:, 2]**2).reshape((-1, 1))
-		
+
 		NF_true = np.hstack( (E_true_e, truth_val_e, E_true_p, truth_val_p, E_true_g, truth_val_g))
 		truths_guess.append(NF_true)
 

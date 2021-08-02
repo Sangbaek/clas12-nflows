@@ -188,7 +188,7 @@ for loop_num in range(n_loop):
 	# print("Total estimated run time is {}".format(elapsedTime+elapsedTime/i*(max_range+1-i)))
 	Truths = np.concatenate(truths_guess)
 	df_Truths = pd.DataFrame(Truths)
-	df_Truths.to_pickle("gendata/Cond/3features/UMNN/Truths_dvcs_{}.pkl").format(loop_num)#num_features,
+	df_Truths.to_pickle("gendata/Cond/3features/UMNN/Truths_dvcs_{}.pkl".format(loop_num))#num_features,
 	#     num_layers,num_hidden_features,training_sample_size,loop_num))
 	#print(truths_guess )
 	#print(truth_validation[0:n_sample, :])

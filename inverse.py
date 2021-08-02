@@ -113,15 +113,15 @@ stds = np.std(reco_entire - truth_entire, axis = 1)
 #electron
 reco_e = reco_validation[0:1, [0,1,2]]
 mean_e = means[[0,1,2]]
-std_e = std[[0,1,2]]
+std_e = stds[[0,1,2]]
 #proton
 reco_p = reco_validation[0:1, [3,4,5]]
 mean_p = means[[3,4,5]]
-std_p = std[[3,4,5]]
+std_p = stds[[3,4,5]]
 #photon
 reco_g = reco_validation[0:1, [6,7,8]]
 mean_g = means[[6,7,8]]
-std_g = std[[6,7,8]]
+std_g = stds[[6,7,8]]
 
 truth_e = reco_e + np.normal(mean_e, std_e, (trials, 3))
 truth_p = reco_p + np.normal(mean_p, std_p, (trials, 3))

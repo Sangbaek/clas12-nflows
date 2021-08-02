@@ -33,7 +33,7 @@ device = torch.device(dev)
 #reonstruct an nflow model
 #model_path = "models/"
 model_path = "models/Cond/3features/"
-feature_subset = "all" #All 16 features
+feature_subset = [1,2,3,5,6,7,9,10,11] #All 16 features
 
 print(" reading electron NF model ")
 model_name = "TM-Final-UMNN_elec_3_6_80_128_-9.54.pt"
@@ -89,6 +89,7 @@ flow_g.eval()
 print("reading truth data")
 train = dataXZ.dataXZ(feature_subset=feature_subset, file = "data/train.pkl", mode = "epg")
 truth_entire = train.truth.detach().numpy()
+reco_entire = train.reco.detach().numpy()
 print("done with reading truth data")
 
 print("reading validation data")
@@ -96,9 +97,7 @@ validation = dataXZ.dataXZ(feature_subset=feature_subset, file = "data/validatio
 reco_validation = validation.reco.detach().numpy()
 print("done with reading validation data")
 
-max_range = 10#Number of sets per loop
-sample_size = 200 #Number of samples per set
-maxloops = len(truth_entire)//(max_range*sample_size) #Number of overall loops
+trials = 1000 #Number of overall loops
 
 maxtruth_e = []
 logprob_e = []
@@ -107,52 +106,49 @@ logprob_p = []
 maxtruth_g = []
 logprob_g = []
 
+means = np.mean(reco_entire - truth_entire, axis = 1)
+stds = np.std(reco_entire - truth_entire, axis = 1)
+
 #electron
-reco_e = reco_validation[0:1, [1,2,3]]
+reco_e = reco_validation[0:1, [0,1,2]]
+mean_e = means[[0,1,2]]
+std_e = std[[0,1,2]]
 #proton
-reco_p = reco_validation[0:1, [5,6,7]]
+reco_p = reco_validation[0:1, [3,4,5]]
+mean_p = means[[3,4,5]]
+std_p = std[[3,4,5]]
 #photon
-reco_g = reco_validation[0:1, [9,10,11]]
+reco_g = reco_validation[0:1, [6,7,8]]
+mean_g = means[[6,7,8]]
+std_g = std[[6,7,8]]
 
-for loop_num in range(maxloops):
-    print("new loop "+str(loop_num))
+truth_e = reco_e + np.normal(mean_e, std_e, (trials, 3))
+truth_p = reco_p + np.normal(mean_p, std_p, (trials, 3))
+truth_g = reco_g + np.normal(mean_g, std_g, (trials, 3))
 
-    start = datetime.now()
-    start_time = start.strftime("%H:%M:%S")
-    print("Start Time =", start_time)
-    for i in range(1,max_range+1):
-        print("On set {}".format(i))
+# for reco in reco_e:
+reco_useful = np.tile(reco_e, (trials, 1))
+reco_useful = torch.tensor(reco_useful, dtype=torch.float32).to(device)
+logprob = flow_e.log_prob(inputs=reco_useful,context=truth_e)
+ind_max = np.argmax(logprob.cpu().detach().numpy())
+maxtruth_e.append(truth_e[ind_max:ind_max+1, :])
+logprob_e.append(logprob[ind_max])
 
-        #electron
-        truth_e = torch.tensor(truth_entire[sample_size*(max_range*loop_num+i-1):sample_size*(max_range*loop_num+i), [1,2,3]], dtype=torch.float32).to(device)
-        #proton
-        truth_p = torch.tensor(truth_entire[sample_size*(max_range*loop_num+i-1):sample_size*(max_range*loop_num+i), [5,6,7]], dtype=torch.float32).to(device)
-        #photon
-        truth_g = torch.tensor(truth_entire[sample_size*(max_range*loop_num+i-1):sample_size*(max_range*loop_num+i), [9,10,11]], dtype=torch.float32).to(device)
+# for reco in reco_p:
+reco_useful = np.tile(reco_p, (trials, 1))
+reco_useful = torch.tensor(reco_useful, dtype=torch.float32).to(device)
+logprob = flow_p.log_prob(inputs=reco_useful,context=truth_p)
+ind_max = np.argmax(logprob.cpu().detach().numpy())
+maxtruth_p.append(truth_p[ind_max:ind_max+1, :])
+logprob_p.append(logprob[ind_max])
 
-        # for reco in reco_e:
-        reco_useful = np.tile(reco_e, (len(truth_e), 1))
-        reco_useful = torch.tensor(reco_useful, dtype=torch.float32).to(device)
-        logprob = flow_e.log_prob(inputs=reco_useful,context=truth_e)
-        ind_max = np.argmax(logprob.item())
-        maxtruth_e.append(truth_e[ind_max:ind_max+1, :])
-        logprob_e.append(logprob[ind_max])
-
-        # for reco in reco_p:
-        reco_useful = np.tile(reco_p, (len(truth_p), 1))
-        reco_useful = torch.tensor(reco_useful, dtype=torch.float32).to(device)
-        logprob = flow_p.log_prob(inputs=reco_useful,context=truth_p)
-        ind_max = np.argmax(logprob.item())
-        maxtruth_p.append(truth_p[ind_max:ind_max+1, :])
-        logprob_p.append(logprob[ind_max])
-
-        # for reco in reco_g:
-        reco_useful = np.tile(reco_g, (len(truth_g), 1))
-        reco_useful = torch.tensor(reco_useful, dtype=torch.float32).to(device)
-        logprob = flow_g.log_prob(inputs=reco_useful,context=truth_g)
-        ind_max = np.argmax(logprob.item())
-        maxtruth_g.append(truth_g[ind_max:ind_max+1, :])
-        logprob_g.append(logprob[ind_max])
+# for reco in reco_g:
+reco_useful = np.tile(reco_g, (trials, 1))
+reco_useful = torch.tensor(reco_useful, dtype=torch.float32).to(device)
+logprob = flow_g.log_prob(inputs=reco_useful,context=truth_g)
+ind_max = np.argmax(logprob.cpu().detach().numpy())
+maxtruth_g.append(truth_g[ind_max:ind_max+1, :])
+logprob_g.append(logprob[ind_max])
 
 #electron
 truth_val_e = maxtruth_e[np.argmax(logprob_e)]
@@ -167,15 +163,15 @@ E_true_g = np.sqrt(truth_val_g[:, 0]**2 + truth_val_g[:, 1]**2  + truth_val_g[:,
 NF_true = np.hstack( (E_true_e, val_true_e, E_true_p, val_true_p, E_true_g, val_true_g))
 truths_guess.append(NF_true)
 
-now = datetime.now()
-elapsedTime = (now - start )
-print("Current time is {}".format(now.strftime("%H:%M:%S")))
-print("Elapsed time is {}".format(elapsedTime))
-print("Total estimated run time is {}".format(elapsedTime+elapsedTime/i*(max_range+1-i)))
-Truths = np.concatenate(truths_guess)
-df_Truths = pd.DataFrame(Truths)
-df_Truths.to_pickle("gendata/Cond/3features/UMNN/Truths_UMNN_{}_{}_{}_{}_dvcs_{}.pkl".format(num_features,
-    num_layers,num_hidden_features,training_sample_size,loop_num))
-
+# now = datetime.now()
+# elapsedTime = (now - start )
+# print("Current time is {}".format(now.strftime("%H:%M:%S")))
+# print("Elapsed time is {}".format(elapsedTime))
+# print("Total estimated run time is {}".format(elapsedTime+elapsedTime/i*(max_range+1-i)))
+# Truths = np.concatenate(truths_guess)
+# df_Truths = pd.DataFrame(Truths)
+# df_Truths.to_pickle("gendata/Cond/3features/UMNN/Truths_UMNN_{}_{}_{}_{}_dvcs_{}.pkl".format(num_features,
+#     num_layers,num_hidden_features,training_sample_size,loop_num))
+print(truths_guess)
 print("done")
 quit()

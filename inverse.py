@@ -98,11 +98,25 @@ print("done with reading validation data")
 
 max_range = 10#Number of sets per loop
 sample_size = 200 #Number of samples per set
-maxloops = len(reco_validation)//(max_range*sample_size) #Number of overall loops
+maxloops = len(truth_entire)//(max_range*sample_size) #Number of overall loops
+
+maxtruth_e = []
+logprob_e = []
+maxtruth_p = []
+logprob_p = []
+maxtruth_g = []
+logprob_g = []
+
+#electron
+reco_e = reco_validation[0:1, [1,2,3]]
+#proton
+reco_p = reco_validation[0:1, [5,6,7]]
+#photon
+reco_g = reco_validation[0:1, [9,10,11]]
 
 for loop_num in range(maxloops):
     print("new loop "+str(loop_num))
-    truths_guess = []
+
     start = datetime.now()
     start_time = start.strftime("%H:%M:%S")
     print("Start Time =", start_time)
@@ -110,66 +124,58 @@ for loop_num in range(maxloops):
         print("On set {}".format(i))
 
         #electron
-        truth_e = torch.tensor(truth_entire[:, [1,2,3]], dtype=torch.float32).to(device)
+        truth_e = torch.tensor(truth_entire[sample_size*(max_range*loop_num+i-1):sample_size*(max_range*loop_num+i), [1,2,3]], dtype=torch.float32).to(device)
         #proton
-        truth_p = torch.tensor(truth_entire[:, [5,6,7]], dtype=torch.float32).to(device)
+        truth_p = torch.tensor(truth_entire[sample_size*(max_range*loop_num+i-1):sample_size*(max_range*loop_num+i), [5,6,7]], dtype=torch.float32).to(device)
         #photon
-        truth_g = torch.tensor(truth_entire[:, [9,10,11]], dtype=torch.float32).to(device)
+        truth_g = torch.tensor(truth_entire[sample_size*(max_range*loop_num+i-1):sample_size*(max_range*loop_num+i), [9,10,11]], dtype=torch.float32).to(device)
 
-        #electron
-        reco_e = reco_validation[sample_size*(max_range*loop_num+i-1):sample_size*(max_range*loop_num+i), [1,2,3]]
-        #proton
-        reco_p = reco_validation[sample_size*(max_range*loop_num+i-1):sample_size*(max_range*loop_num+i), [5,6,7]]
-        #photon
-        reco_g = reco_validation[sample_size*(max_range*loop_num+i-1):sample_size*(max_range*loop_num+i), [9,10,11]]
+        # for reco in reco_e:
+        reco_useful = np.tile(reco, (len(truth_e), 1))
+        reco_useful = torch.tensor(reco_useful, dtype=torch.float32).to(device)
+        logprob = flow_e.log_prob(inputs=reco_useful,context=truth_e)
+        ind_max = np.argmax(logprob)
+        maxtruth_e.append(truth_e[ind_max:ind_max+1, :])
+        logprob_e.append(logprob[ind_max])
 
+        # for reco in reco_p:
+        reco_useful = np.tile(reco, (len(truth_p), 1))
+        reco_useful = torch.tensor(reco_useful, dtype=torch.float32).to(device)
+        logprob = flow_p.log_prob(inputs=reco_useful,context=truth_p)
+        ind_max = np.argmax(logprob)
+        maxtruth_p.append(truth_p[ind_max:ind_max+1, :])
+        logprob_p.append(logprob[ind_max])
 
-        for reco in reco_e:
-            reco_useful = np.tile(reco, (len(truth_e), 1))
-            reco_useful = torch.tensor(reco_useful, dtype=torch.float32).to(device)
-            logprob = flow_e.log_prob(inputs=reco_useful,context=truth_e)
-            ind_max = np.argmax(logprob)
-            truth = truth_e[ind_max, [1, 2, 3]].cpu().detach().numpy()
-            truth_val_e.append(truth)
+        # for reco in reco_g:
+        reco_useful = np.tile(reco, (len(truth_g), 1))
+        reco_useful = torch.tensor(reco_useful, dtype=torch.float32).to(device)
+        logprob = flow_g.log_prob(inputs=reco_useful,context=truth_g)
+        ind_max = np.argmax(logprob)
+        maxtruth_g.append(truth_g[ind_max:ind_max+1, :])
+        logprob_g.append(logprob[ind_max])
 
-        for reco in reco_p:
-            reco_useful = np.tile(reco, (len(truth_p), 1))
-            reco_useful = torch.tensor(reco_useful, dtype=torch.float32).to(device)
-            logprob = flow_p.log_prob(inputs=reco_useful,context=truth_p)
-            ind_max = np.argmax(logprob)
-            truth = truth_p[ind_max, [5, 6, 7]].cpu().detach().numpy()
-            truth_val_p.append(truth)
+#electron
+truth_val_e = maxtruth_e[np.argmax(logprob_e)]
+E_true_e = np.sqrt(truth_val_e[:, 0]**2 + truth_val_e[:, 1]**2  + truth_val_e[:, 2]**2  +  (0.5109989461 * 0.001)**2).reshape((-1, 1))
+#proton
+truth_val_p = maxtruth_p[np.argmax(logprob_p)]
+E_true_p = np.sqrt(truth_val_p[:, 0]**2 + truth_val_p[:, 1]**2  + truth_val_p[:, 2]**2 + (0.938272081)**2).reshape((-1, 1))
+#photon
+truth_val_g = maxtruth_g[np.argmax(logprob_g)]
+E_true_g = np.sqrt(truth_val_g[:, 0]**2 + truth_val_g[:, 1]**2  + truth_val_g[:, 2]**2).reshape((-1, 1))
 
-        for reco in reco_g:
-            reco_useful = np.tile(reco, (len(truth_g), 1))
-            reco_useful = torch.tensor(reco_useful, dtype=torch.float32).to(device)
-            logprob = flow_g.log_prob(inputs=reco_useful,context=truth_g)
-            ind_max = np.argmax(logprob)
-            truth = truth_g[ind_max, [9, 10, 11]].cpu().detach().numpy()
-            truth_val_g.append(truth)
+NF_true = np.hstack( (E_true_e, val_true_e, E_true_p, val_true_p, E_true_g, val_true_g))
+truths_guess.append(NF_true)
 
-        #electron
-        truth_val_e = np.array(truth_val_e)
-        E_true_e = np.sqrt(truth_val_e[:, 0]**2 + truth_val_e[:, 1]**2  + truth_val_e[:, 2]**2  +  (0.5109989461 * 0.001)**2).reshape((-1, 1))
-        #proton
-        truth_val_p = np.array(truth_val_p)
-        E_true_p = np.sqrt(truth_val_p[:, 0]**2 + truth_val_p[:, 1]**2  + truth_val_p[:, 2]**2 + (0.938272081)**2).reshape((-1, 1))
-        #photon
-        truth_val_g = np.array(truth_val_g)
-        E_true_g = np.sqrt(truth_val_g[:, 0]**2 + truth_val_g[:, 1]**2  + truth_val_g[:, 2]**2).reshape((-1, 1))
-
-        NF_true = np.hstack( (E_gen_e, val_gen_e, E_gen_p, val_gen_p, E_gen_g, val_gen_g))
-        truths_guess.append(NF_true)
-
-        now = datetime.now()
-        elapsedTime = (now - start )
-        print("Current time is {}".format(now.strftime("%H:%M:%S")))
-        print("Elapsed time is {}".format(elapsedTime))
-        print("Total estimated run time is {}".format(elapsedTime+elapsedTime/i*(max_range+1-i)))
-    Truths = np.concatenate(truths_guess)
-    df_Truths = pd.DataFrame(Truths)
-    df_Truths.to_pickle("gendata/Cond/3features/UMNN/Truths_UMNN_{}_{}_{}_{}_dvcs_{}.pkl".format(num_features,
-            num_layers,num_hidden_features,training_sample_size,loop_num))
+now = datetime.now()
+elapsedTime = (now - start )
+print("Current time is {}".format(now.strftime("%H:%M:%S")))
+print("Elapsed time is {}".format(elapsedTime))
+print("Total estimated run time is {}".format(elapsedTime+elapsedTime/i*(max_range+1-i)))
+Truths = np.concatenate(truths_guess)
+df_Truths = pd.DataFrame(Truths)
+df_Truths.to_pickle("gendata/Cond/3features/UMNN/Truths_UMNN_{}_{}_{}_{}_dvcs_{}.pkl".format(num_features,
+    num_layers,num_hidden_features,training_sample_size,loop_num))
 
 print("done")
 quit()
